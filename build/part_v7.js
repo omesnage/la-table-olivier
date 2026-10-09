@@ -77,17 +77,22 @@ function migrate7(){
 }
 
 /* ---------- mise à jour du texte des recettes : à chaque révision, le carnet et les repas du planning prennent la nouvelle version ---------- */
-const RECIPES_REV = 4;
+const RECIPES_REV = 5;
 function migrate8(){
+  const wasV = S.v || 0;
   const fresh = new Map(NEW_RECIPES.map(r => [r.id, r])), have = new Set(S.recipes.map(r => r.id));
   S.recipes = S.recipes.filter(r => r.own || fresh.has(r.id)).map(r => (!r.own && fresh.has(r.id)) ? recipeToState(fresh.get(r.id)) : r);
   NEW_RECIPES.forEach(r => { if (!have.has(r.id)) S.recipes.push(recipeToState(r)); });
   const sig = a => (a || []).map(i => norm(i.n)).sort().join("|");
   S.weeks.forEach(w => w.days.forEach(d => {
-    delete d.meals.p;
-    ["l", "d"].forEach(k => {
+    if (wasV < 8) delete d.meals.p;
+    ["l", "d", "p"].forEach(k => {
       const m = d.meals[k]; if (!m || !m.recipeId) return;
-      const r = fresh.get(m.recipeId); if (!r || sig(m.ing) !== sig(r.ing)) return;
+      const r = fresh.get(m.recipeId); if (!r) return;
+      /* v8 rev 5 : plus de pak choï ni de fruits à coque (remplacés par des blettes et des raisins secs) */
+      const old = (m.ing || []).some(i => /pak.?cho|noix(?! de coco)|noisette|amande|cacahu/.test(norm(i.n)));
+      if (!old && sig(m.ing) !== sig(r.ing)) return;
+      if (old) m.ing = r.ing.map(i => ({ ...i }));
       m.steps = [...r.steps]; m.tip = r.tip || ""; m.t = r.t; m.tc = r.tc || 0; m.d = r.d; m.name = r.n; m.cat = r.cat;
     });
   }));

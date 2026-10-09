@@ -639,6 +639,14 @@ button,.btn,.chip,.mt,.dt,.wa,.mini,.mini-add,.qb,.qx,.chk,.dur{touch-action:man
 @media (max-width:640px){.ask-row{flex-direction:column}}
 .cs-rest{margin:8px 0 0;color:var(--ink-2,#444);font-size:15px;line-height:1.6}
 
+/* coche « courses faites » sur la carte d'un repas */
+.shopck{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:6px 0;background:none;border:0;font-size:12.5px;letter-spacing:.02em;color:var(--mute);cursor:pointer}
+.shopck .ico-s,.shopck svg{width:18px;height:18px;padding:3px;border:1px solid var(--line-2);border-radius:50%;box-sizing:border-box;stroke:transparent;transition:all .15s}
+.shopck:hover{color:var(--ink)}
+.shopck[aria-pressed="true"]{color:var(--ink)}
+.shopck[aria-pressed="true"] svg{background:var(--celadon);border-color:var(--celadon);stroke:var(--card)}
+.meal.shopped .dish-name{opacity:.78}
+
 </style>
 </head>
 <body>
@@ -1852,22 +1860,22 @@ GR("v7-saumon-laque","Saumon au miel et au soja, brocoli doré à l'huile de sé
   "Servir — Réchauffer {{riz cuit}} de riz cuit s'il est froid et le mettre dans une assiette creuse. Poser le saumon dessus, peau vers le haut, et le brocoli à côté. Verser la sauce restante de la poêle sur le poisson, puis parsemer de {{graines de sésame}} de graines de sésame et de cébette. [3 min]"],
  "Le saumon est cuit quand la chair se sépare en gros morceaux à la fourchette, encore un peu rosée au centre."),
 GR("v7-cabillaud-panais","Cabillaud au beurre doré, purée de panais, carottes au miel","Saumon & poisson","Bistrot","Pommes de terre",2,
- [["dos de cabillaud",150,"g"],["panais",150,"g"],["pommes de terre",80,"g"],["carotte",120,"g"],["lait",50,"ml"],["beurre",12,"g"],["miel",1,"c. à café"],["noisettes",8,"g"],["huile d'olive",1,"c. à café"],["thym","","quelques brins"],["muscade",1,"pincée"],["ciboulette","","quelques brins"]],
- ["Sortir le matériel — Prendre une casserole moyenne avec couvercle, une petite casserole, une poêle antiadhésive, une passoire, un presse-purée ou un mixeur plongeant, une planche et un couteau. Sortir le cabillaud 15 minutes avant et le sécher avec du papier. Hacher grossièrement {{noisettes}} de noisettes au couteau et les mettre dans un bol. [5 min]",
+ [["dos de cabillaud",150,"g"],["panais",150,"g"],["pommes de terre",80,"g"],["carotte",120,"g"],["lait",50,"ml"],["beurre",12,"g"],["miel",1,"c. à café"],["raisins secs",10,"g"],["huile d'olive",1,"c. à café"],["thym","","quelques brins"],["muscade",1,"pincée"],["ciboulette","","quelques brins"]],
+ ["Sortir le matériel — Prendre une casserole moyenne avec couvercle, une petite casserole, une poêle antiadhésive, une passoire, un presse-purée ou un mixeur plongeant, une planche et un couteau. Sortir le cabillaud 15 minutes avant et le sécher avec du papier. Mettre {{raisins secs}} de raisins secs dans un bol d'eau tiède pour qu'ils gonflent. [5 min]",
   "Couper les légumes — Éplucher {{panais}} de panais et {{pommes de terre}} de pommes de terre, puis les couper en cubes de 2 cm pour qu'ils cuisent à la même vitesse. Éplucher {{carotte}} de carotte et la couper en bâtonnets de 5 mm. Mettre les cubes dans la casserole moyenne et les couvrir d'eau froide salée. [8 min]",
   "Cuire la purée — Porter l'eau à frémissement à feu moyen : de petites bulles, pas de gros bouillons. Cuire jusqu'à ce que la pointe d'un couteau traverse les cubes sans résistance. Pendant ce temps, passer à l'étape suivante. Attention : des morceaux encore fermes donnent une purée pleine de grumeaux. [cuisson 18 min]",
   "Cuire les carottes — En même temps, mettre dans la petite casserole les bâtonnets de carotte, 100 ml d'eau, {{miel}} de miel, le thym et un petit morceau de beurre pris sur les {{beurre}} de beurre prévus. Couvrir et cuire 8 minutes à feu doux, puis enlever le couvercle et laisser réduire 4 minutes : les carottes deviennent brillantes. [cuisson 12 min]",
   "Écraser la purée — Égoutter les légumes et les remettre dans la casserole. Chauffer {{lait}} de lait à part, puis l'ajouter avec {{muscade}} de muscade et un petit morceau de beurre. Écraser ou mixer jusqu'à obtenir une purée lisse. Goûter, saler si besoin, couvrir et garder au chaud. [3 min]",
-  "Cuire le cabillaud — Faire chauffer la poêle à feu moyen avec {{huile d'olive}} d'huile d'olive. Poser {{dos de cabillaud}} de cabillaud et cuire 3 minutes sans le bouger. Retourner le poisson, ajouter le beurre qui reste et les noisettes, puis arroser le poisson avec le beurre mousseux. Il est cuit quand la chair se sépare en morceaux. [cuisson 6 min]",
+  "Cuire le cabillaud — Faire chauffer la poêle à feu moyen avec {{huile d'olive}} d'huile d'olive. Poser {{dos de cabillaud}} de cabillaud et cuire 3 minutes sans le bouger. Retourner le poisson, ajouter le beurre qui reste et les raisins égouttés, puis arroser le poisson avec le beurre mousseux. Il est cuit quand la chair se sépare en morceaux. [cuisson 6 min]",
   "Surveiller le beurre — Le beurre doit sentir la noisette grillée et rester blond. Retirer la poêle du feu dès que cette odeur apparaît : il passe vite au brun foncé et devient amer. Laisser le poisson reposer 1 minute dans le beurre encore chaud. [cuisson 1 min]",
-  "Servir — Chauffer les assiettes. Mettre une grande cuillerée de purée au centre et l'étaler un peu. Poser le cabillaud dessus et les carottes autour, puis verser le beurre doré et les noisettes sur le poisson. Couper finement la ciboulette et la parsemer par-dessus. [3 min]"],
+  "Servir — Chauffer les assiettes. Mettre une grande cuillerée de purée au centre et l'étaler un peu. Poser le cabillaud dessus et les carottes autour, puis verser le beurre doré et les raisins sur le poisson. Couper finement la ciboulette et la parsemer par-dessus. [3 min]"],
  "Le beurre est prêt quand il sent la noisette grillée : retire la poêle du feu aussitôt, car il brunit très vite."),
-GR("v7-crevettes-coco","Crevettes au gingembre et au lait de coco, pak choi et courgette, riz jasmin","Crevettes","Asiatique","Riz",1,
- [["crevettes décortiquées",150,"g"],["pak choi",150,"g"],["courgette",100,"g"],["lait de coco",40,"ml"],["gingembre",1,"c. à café"],["sauce soja",1,"c. à café"],["miel",1,"c. à café"],["huile de sésame",1,"c. à café"],["riz cuit",180,"g"],["coriandre","","quelques brins"],["cébette",1,"pièce"]],
+GR("v7-crevettes-coco","Crevettes au gingembre et au lait de coco, blettes et courgette, riz jasmin","Crevettes","Asiatique","Riz",1,
+ [["crevettes décortiquées",150,"g"],["blettes",150,"g"],["courgette",100,"g"],["lait de coco",40,"ml"],["gingembre",1,"c. à café"],["sauce soja",1,"c. à café"],["miel",1,"c. à café"],["huile de sésame",1,"c. à café"],["riz cuit",180,"g"],["coriandre","","quelques brins"],["cébette",1,"pièce"]],
  ["Sortir le matériel — Prendre un wok ou une grande poêle, un petit bol, une planche, un couteau et une spatule. Décongeler les crevettes si besoin, puis les sécher soigneusement avec du papier absorbant : sèches, elles dorent ; mouillées, elles bouillent et deviennent caoutchouteuses. Sortir le riz du frigo pour qu'il ne soit plus froid. [4 min]",
-  "Couper les légumes — Couper {{pak choi}} de pak choi en deux dans la longueur, puis en morceaux de 3 cm. Séparer les tiges blanches des feuilles vertes, car elles ne cuisent pas à la même vitesse. Éplucher {{courgette}} de courgette et la couper en demi-rondelles fines. Couper {{cébette}} en fines rondelles. [6 min]",
+  "Couper les légumes — Couper {{blettes}} de blettes : séparer les côtes blanches des feuilles vertes, puis les couper en morceaux de 3 cm, car elles ne cuisent pas à la même vitesse. Éplucher {{courgette}} de courgette et la couper en demi-rondelles fines. Couper {{cébette}} en fines rondelles. [6 min]",
   "Préparer la sauce — Dans le petit bol, mélanger {{lait de coco}} de lait de coco, {{gingembre}} de gingembre râpé, {{sauce soja}} de sauce soja et {{miel}} de miel. Remuer à la fourchette jusqu'à ce que la sauce soit lisse et de couleur uniforme. Poser le bol près du feu. [2 min]",
-  "Cuire les légumes — Faire chauffer {{huile de sésame}} d'huile de sésame à feu moyen. Ajouter la courgette et les tiges blanches du pak choi, puis remuer 3 minutes : ça grésille. Ajouter les feuilles vertes pour la dernière minute. Les légumes doivent rester un peu croquants. Les mettre dans une assiette. [cuisson 4 min]",
+  "Cuire les légumes — Faire chauffer {{huile de sésame}} d'huile de sésame à feu moyen. Ajouter la courgette et les côtes de blettes, puis remuer 3 minutes : ça grésille. Ajouter les feuilles vertes pour la dernière minute. Les légumes doivent rester un peu croquants. Les mettre dans une assiette. [cuisson 4 min]",
   "Cuire les crevettes — Dans la même poêle chaude, étaler {{crevettes décortiquées}} de crevettes sans les entasser. Les retourner dès qu'elles rosissent, après 1 minute 30 environ. Attention : ne pas les cuire trop longtemps. Elles sont prêtes quand elles forment un « C » ouvert ; en « O » serré, elles sont trop cuites. [cuisson 3 min]",
   "Ajouter la sauce — Baisser le feu et verser la sauce sur les crevettes. Laisser bouillonner doucement 1 minute : elle épaissit un peu. Remettre aussitôt les légumes dans la poêle et bien les enrober pendant 30 secondes, puis éteindre le feu. [cuisson 1 min]",
   "Servir — Réchauffer {{riz cuit}} de riz 1 minute et le mettre dans une assiette creuse chaude. Disposer les crevettes et les légumes autour, puis verser le reste de sauce par-dessus. Parsemer de coriandre hachée et de cébette. Servir tout de suite, pendant que c'est chaud. [3 min]"],
@@ -1892,36 +1900,36 @@ GR("v7-curry-crevettes-butternut","Curry doux de crevettes au lait de coco, cour
   "Ajouter les crevettes — Mettre {{crevettes décortiquées}} de crevettes et {{épinards}} d'épinards dans le curry, remuer, puis couvrir. Les crevettes sont cuites quand elles sont roses et enroulées, et les épinards sont tombés. Éteindre aussitôt : les crevettes continuent de cuire avec la chaleur. [cuisson 4 min]",
   "Servir — Réchauffer {{riz cuit}} de riz et en mettre d'un côté d'un bol large et chaud. Verser le curry de l'autre côté, avec les crevettes sur le dessus pour qu'on les voie. Parsemer de coriandre hachée juste avant de servir. [3 min]"],
  "Écraser un ou deux dés de butternut contre la paroi de la casserole épaissit la sauce sans ajouter de crème."),
-GR("v7-truite-haricots","Truite à la peau croustillante, haricots verts beurre-amandes, pommes de terre dorées","Saumon & poisson","Bistrot","Pommes de terre",2,
- [["filet de truite",140,"g"],["haricots verts",180,"g"],["pommes de terre grenaille",200,"g"],["amandes effilées",8,"g"],["beurre",10,"g"],["huile d'olive",1,"c. à café"],["persil","","quelques brins"]],
+GR("v7-truite-haricots","Truite à la peau croustillante, haricots verts au beurre et aux raisins secs, pommes de terre dorées","Saumon & poisson","Bistrot","Pommes de terre",2,
+ [["filet de truite",140,"g"],["haricots verts",180,"g"],["pommes de terre grenaille",200,"g"],["raisins secs",10,"g"],["beurre",10,"g"],["huile d'olive",1,"c. à café"],["persil","","quelques brins"]],
  ["Sortir le matériel — Prendre deux casseroles (une pour les pommes de terre, une pour les haricots), une poêle antiadhésive, une passoire, une spatule et une planche. Sortir la truite du frigo 10 minutes avant la cuisson. Mettre de l'eau salée à chauffer dans les deux casseroles. [3 min]",
   "Cuire les pommes de terre — Couper {{pommes de terre grenaille}} de pommes de terre en deux, les plonger dans l'eau bouillante salée et les cuire 10 minutes à petits bouillons. Elles sont prêtes quand la pointe d'un couteau entre sans résistance, sans qu'elles s'effritent. Égoutter et laisser sécher dans la passoire. [cuisson 10 min]",
   "Cuire les haricots verts — Pendant ce temps, prendre {{haricots verts}} de haricots verts et casser le bout de chacun avec les doigts. Les plonger dans la seconde casserole d'eau bouillante salée et cuire jusqu'à ce qu'ils soient tendres mais encore bien verts. Égoutter tout de suite : dans l'eau chaude, ils continuent de cuire et ternissent. [cuisson 8 min]",
   "Faire dorer les pommes de terre — Faire chauffer {{huile d'olive}} d'huile d'olive dans la poêle à feu moyen. Poser les pommes de terre côté coupé contre le fond et ne pas les remuer. Après 6 minutes, elles ont une belle croûte dorée et se décollent toutes seules. Les mettre dans un plat au chaud et essuyer la poêle. [cuisson 6 min]",
-  "Griller les amandes — Dans la poêle sèche, à feu moyen, faire dorer {{amandes effilées}} d'amandes effilées 1 à 2 minutes, en remuant sans arrêt. Dès que ça sent bon et que les bords brunissent, les verser dans une assiette : elles passent du doré au brûlé en quelques secondes. [cuisson 2 min]",
+  "Gonfler les raisins — Mettre {{raisins secs}} de raisins secs dans un bol d'eau tiède pendant que la poêle chauffe, puis les égoutter sur du papier : ils deviennent tendres et juteux. [2 min]",
   "Cuire la truite — Sécher très bien la peau du poisson, puis saler. Poser {{filet de truite}} de truite côté peau dans la poêle chaude et appuyer 20 secondes avec la spatule pour qu'il ne se recroqueville pas. Cuire 4 minutes à feu moyen sans bouger : la peau grésille doucement. [cuisson 4 min]",
-  "Cuire dans le beurre — Retourner la truite, ajouter {{beurre}} de beurre et arroser le poisson avec une cuillère pendant 1 minute. Pousser le filet sur le côté et faire revenir les haricots verts dans le même beurre, avec les amandes, pendant 1 minute. La chair doit être rose pâle à cœur. [cuisson 2 min]",
+  "Cuire dans le beurre — Retourner la truite, ajouter {{beurre}} de beurre et arroser le poisson avec une cuillère pendant 1 minute. Pousser le filet sur le côté et faire revenir les haricots verts dans le même beurre, avec les raisins, pendant 1 minute. La chair doit être rose pâle à cœur. [cuisson 2 min]",
   "Servir — Servir sur des assiettes chaudes. Mettre les haricots au centre, poser la truite dessus, peau vers le haut pour qu'elle reste croustillante, et ranger les pommes de terre à côté. Verser le beurre de la poêle sur les haricots, puis parsemer de persil haché. [3 min]"],
  "La peau doit être très sèche et la poêle bien chaude : c'est ce qui rend la peau croustillante."),
-GR("v7-colin-croute","Colin en croûte d'herbes et de noisettes, brocoli rôti, riz au beurre","Saumon & poisson","Bistrot","Riz",2,
- [["colin",150,"g"],["panko",2,"c. à soupe"],["noisettes",8,"g"],["persil","","quelques brins"],["parmesan",6,"g"],["blanc d'œuf",1,"pièce"],["brocoli",200,"g"],["riz cuit",150,"g"],["beurre",8,"g"],["huile d'olive",2,"c. à café"]],
+GR("v7-colin-croute","Colin en croûte d'herbes et de sésame, brocoli rôti, riz au beurre","Saumon & poisson","Bistrot","Riz",2,
+ [["colin",150,"g"],["panko",2,"c. à soupe"],["graines de sésame",1,"c. à soupe"],["persil","","quelques brins"],["parmesan",6,"g"],["blanc d'œuf",1,"pièce"],["brocoli",200,"g"],["riz cuit",150,"g"],["beurre",8,"g"],["huile d'olive",2,"c. à café"]],
  ["Sortir le matériel — Mettre le four à 200 °C (chaleur tournante) et couvrir une plaque de papier cuisson. Prendre un bol, une fourchette, un pinceau ou une cuillère, une petite casserole et une planche. Sortir le colin du frigo 10 minutes avant : il sera plus facile à recouvrir de croûte. [3 min]",
-  "Préparer la croûte — Dans le bol, mélanger {{panko}} de chapelure panko, {{noisettes}} de noisettes hachées grossièrement, le persil haché finement et {{parmesan}} de parmesan râpé. Le mélange doit être sec, un peu comme du sable, et sentir bon. Poser le bol près de la plaque. [4 min]",
+  "Préparer la croûte — Dans le bol, mélanger {{panko}} de chapelure panko, {{graines de sésame}} de graines de sésame, le persil haché finement et {{parmesan}} de parmesan râpé. Le mélange doit être sec, un peu comme du sable, et sentir bon. Poser le bol près de la plaque. [4 min]",
   "Rôtir le brocoli — Détacher {{brocoli}} de brocoli en bouquets de même taille. Les mélanger dans un bol avec {{huile d'olive}} d'huile d'olive (en garder un peu pour le poisson) et une pincée de sel, puis les étaler sur la plaque sans qu'ils se touchent. Enfourner. Attention : ne pas les entasser, ils cuiraient à la vapeur au lieu de dorer. [cuisson 6 min]",
   "Recouvrir le colin — Pendant ce temps, sécher {{colin}} de colin avec du papier absorbant. Battre {{blanc d'œuf}} à la fourchette, en passer sur le dessus du poisson avec le pinceau, puis recouvrir de croûte en appuyant avec la main. Attention : un poisson mouillé ne retient pas la croûte, elle glisse. [4 min]",
   "Cuire au four — Sortir la plaque, pousser les bouquets de brocoli sur un côté et poser le colin sur le papier. Ajouter un petit filet d'huile d'olive sur la croûte. Enfourner 12 minutes : la croûte doit être dorée et croustillante, et le poisson doit se séparer facilement en morceaux à la fourchette. [cuisson 12 min]",
   "Chauffer le riz — Pendant la cuisson, mettre {{riz cuit}} de riz cuit dans la petite casserole avec 2 cuillères à soupe d'eau. Chauffer à feu doux avec le couvercle. Ajouter {{beurre}} de beurre et remuer à la fourchette jusqu'à ce que le riz soit brillant et bien chaud. [3 min]",
   "Servir — Servir dans des assiettes creuses chaudes. Mettre le riz au centre, poser le colin dessus avec une spatule large, croûte vers le haut, puis disposer le brocoli rôti tout autour. Servir tout de suite pour que la croûte reste croustillante. [2 min]"],
  "Appuyer bien sur la croûte avec la main, sur un poisson sec : s'il est mouillé, elle glisse."),
-GR("v7-poulet-laque","Poulet au miel et au soja, pak choi et carottes, riz au sésame","Poulet","Asiatique","Riz",1,
- [["blanc de poulet",130,"g"],["pak choi",150,"g"],["carotte",100,"g"],["riz cuit",170,"g"],["sauce soja",2,"c. à café"],["miel",1,"c. à café"],["mirin",1,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["huile",1,"c. à café"],["graines de sésame",1,"c. à café"],["cébette",1,"pièce"]],
+GR("v7-poulet-laque","Poulet au miel et au soja, blettes et carottes, riz au sésame","Poulet","Asiatique","Riz",1,
+ [["blanc de poulet",130,"g"],["blettes",150,"g"],["carotte",100,"g"],["riz cuit",170,"g"],["sauce soja",2,"c. à café"],["miel",1,"c. à café"],["mirin",1,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["huile",1,"c. à café"],["graines de sésame",1,"c. à café"],["cébette",1,"pièce"]],
  ["Sortir le matériel — Prendre une poêle de 26 cm avec couvercle, un bol, une planche, un couteau bien aiguisé et une spatule. Sortir le poulet du frigo 10 minutes avant : une viande moins froide cuit plus régulièrement. Poser le bol et la planche côte à côte pour travailler sans perdre de temps. [3 min]",
   "Mariner le poulet — Dans le bol, mélanger {{sauce soja}} de sauce soja, {{miel}} de miel, {{mirin}} de mirin et {{gingembre}} de gingembre râpé. Couper {{blanc de poulet}} de poulet en lanières de 1,5 cm d'épaisseur, les mélanger à la sauce, puis laisser mariner pendant qu'on prépare les légumes. [3 min]",
-  "Couper les légumes — Éplucher {{carotte}} de carotte et la couper en fins bâtonnets de 5 mm. Couper {{pak choi}} de pak choi en morceaux de 3 cm, en séparant le blanc du vert, car ils ne cuisent pas à la même vitesse. Couper {{cébette}} en fines rondelles. [6 min]",
-  "Cuire les légumes — Dans la poêle, faire chauffer {{huile de sésame}} d'huile de sésame avec 4 cuillères à soupe d'eau, à feu moyen. Ajouter les carottes, couvrir et cuire jusqu'à ce qu'elles soient tendres sous la pointe du couteau. Ajouter le blanc du pak choi 2 minutes, puis les feuilles 1 minute. Mettre dans une assiette. [cuisson 7 min]",
+  "Couper les légumes — Éplucher {{carotte}} de carotte et la couper en fins bâtonnets de 5 mm. Couper {{blettes}} de blettes en morceaux de 3 cm, en séparant les côtes blanches des feuilles vertes, car ils ne cuisent pas à la même vitesse. Couper {{cébette}} en fines rondelles. [6 min]",
+  "Cuire les légumes — Dans la poêle, faire chauffer {{huile de sésame}} d'huile de sésame avec 4 cuillères à soupe d'eau, à feu moyen. Ajouter les carottes, couvrir et cuire jusqu'à ce qu'elles soient tendres sous la pointe du couteau. Ajouter les côtes de blettes 3 minutes, puis les feuilles 1 minute. Mettre dans une assiette. [cuisson 7 min]",
   "Faire dorer le poulet — Essuyer la poêle et la chauffer à feu moyen avec {{huile}} d'huile. Sortir les lanières de la marinade, en gardant la sauce dans le bol. Les poser dans la poêle sans les entasser et les laisser dorer 2 à 3 minutes de chaque côté. Attention : ne pas remuer sans arrêt, la viande doit rester posée pour dorer. [cuisson 4 min]",
   "Ajouter la sauce — Baisser à feu moyen, verser la sauce du bol sur le poulet et laisser réduire 2 minutes en retournant les lanières, jusqu'à ce qu'elles soient brillantes. Couper une lanière pour vérifier : le poulet doit être blanc à cœur, sans trace rose. Éteindre le feu. [cuisson 2 min]",
-  "Servir — Réchauffer {{riz cuit}} de riz et le mettre dans une assiette creuse chaude. Poser le poulet dessus, puis ranger les carottes et le pak choi sur le côté. Verser la sauce de la poêle sur le poulet, puis parsemer de {{graines de sésame}} de graines de sésame et de cébette. [3 min]"],
+  "Servir — Réchauffer {{riz cuit}} de riz et le mettre dans une assiette creuse chaude. Poser le poulet dessus, puis ranger les carottes et les blettes sur le côté. Verser la sauce de la poêle sur le poulet, puis parsemer de {{graines de sésame}} de graines de sésame et de cébette. [3 min]"],
  "Le miel brûle vite : reste à feu moyen et ne laisse pas la poêle sans surveillance quand la sauce est dedans."),
 GR("v7-poulet-champignons","Poulet à la crème de champignons, gnocchis dorés et épinards","Poulet","Bistrot","Pommes de terre",2,
  [["blanc de poulet",130,"g"],["champignons",150,"g"],["épinards",100,"g"],["gnocchis",170,"g"],["crème légère",50,"g"],["beurre",6,"g"],["bouillon",50,"ml"],["thym","","quelques brins"],["persil","","quelques brins"],["parmesan",8,"g"]],
@@ -1973,11 +1981,11 @@ GR("v7-burger-dinde","Burger de dinde aux champignons poêlés et emmental fondu
  "Servir — Poser le burger au centre d'une assiette chaude, avec les carottes rôties à côté. Mettre le reste de sauce dans un petit bol pour tremper les carottes. Piquer un pic en bois dans le burger s'il ne tient pas. Se mange tiède. [1 min]"
  ],
  "Sans huile au début, les champignons rendent leur eau puis dorent au lieu de bouillir."),
-GR("v7-tamagoyaki","Omelette roulée à la japonaise, épinards et pak choi, riz et nori","Œufs","Japonais","Riz",2,
- [["œuf",3,"pièce"],["épinards",120,"g"],["pak choi",100,"g"],["riz cuit",150,"g"],["sauce soja",1,"c. à café"],["mirin",1,"c. à café"],["sucre",1,"c. à café"],["huile",1,"c. à café"],["nori",1,"pièce"],["graines de sésame",1,"c. à café"]],
+GR("v7-tamagoyaki","Omelette roulée à la japonaise, épinards et blettes, riz et nori","Œufs","Japonais","Riz",2,
+ [["œuf",3,"pièce"],["épinards",120,"g"],["blettes",100,"g"],["riz cuit",150,"g"],["sauce soja",1,"c. à café"],["mirin",1,"c. à café"],["sucre",1,"c. à café"],["huile",1,"c. à café"],["nori",1,"pièce"],["graines de sésame",1,"c. à café"]],
 [
  "Sortir le matériel — Sortir une poêle ronde antiadhésive d'environ 20 cm avec un couvercle, une casserole, un bol, une fourchette, une spatule large et une planche. Mettre l'eau à chauffer dans la casserole. Si {{riz cuit}} de riz cuit est froid, le réchauffer doucement. [3 min]",
- "Cuire les légumes — Laver {{épinards}} d'épinards et couper {{pak choi}} de pak choi en tronçons. Les plonger 2 minutes dans l'eau bouillante, puis les passer sous l'eau froide pour garder leur belle couleur verte. Attention : bien les presser à l'étape suivante, sinon l'omelette sera trop liquide. [cuisson 4 min]",
+ "Cuire les légumes — Laver {{épinards}} d'épinards et couper {{blettes}} de blettes en tronçons. Les plonger 3 minutes dans l'eau bouillante, puis les passer sous l'eau froide pour garder leur belle couleur verte. Attention : bien les presser à l'étape suivante, sinon l'omelette sera trop liquide. [cuisson 4 min]",
  "Presser les légumes — Prendre les légumes par poignées et les presser fermement entre les mains pour enlever toute l'eau. Les poser sur la planche et les couper en petits morceaux. Ils doivent former une petite boule compacte et presque sèche. [2 min]",
  "Battre les œufs — Casser {{œuf}} dans le bol. Les battre doucement à la fourchette avec {{mirin}} de mirin, {{sauce soja}} de sauce soja et {{sucre}} de sucre. Ne pas faire mousser. Le mélange doit être jaune et bien lisse, sans morceaux de blanc. [2 min]",
  "Cuire l'omelette — Faire chauffer la poêle à feu doux avec {{huile}} d'huile. Verser tout le mélange d'œufs d'un seul coup, puis répartir les légumes dessus. Couvrir et laisser cuire 3 à 4 minutes, jusqu'à ce que le dessus soit presque pris mais encore un peu brillant. Attention : garder le feu doux, sinon l'omelette brunit. [cuisson 5 min]",
@@ -1998,16 +2006,16 @@ GR("v7-frittata","Frittata dorée aux pommes de terre, courgette et parmesan, sa
  "Servir — Sortir la poêle du four avec un torchon, car le manche est brûlant. Laisser tiédir 3 minutes. Passer un couteau le long du bord et faire glisser la frittata sur une planche. La couper en parts triangulaires et parsemer de ciboulette coupée finement. [4 min]"
  ],
  "Une frittata se mange tiède : elle est plus moelleuse et ses saveurs ressortent mieux."),
-GR("v7-risotto-butternut","Risotto crémeux au butternut et à la sauge, parmesan et noisettes","Végétarien","Bistrot","Riz",2,
- [["riz cru",75,"g"],["butternut",180,"g"],["épinards",70,"g"],["bouillon",300,"ml"],["beurre",10,"g"],["huile",1,"c. à café"],["parmesan",20,"g"],["sauge","","quelques brins"],["noisettes",8,"g"]],
+GR("v7-risotto-butternut","Risotto crémeux au butternut et à la sauge, parmesan et raisins secs","Végétarien","Bistrot","Riz",2,
+ [["riz cru",75,"g"],["butternut",180,"g"],["épinards",70,"g"],["bouillon",300,"ml"],["beurre",10,"g"],["huile",1,"c. à café"],["parmesan",20,"g"],["sauge","","quelques brins"],["raisins secs",10,"g"]],
 [
- "Sortir le matériel — Sortir une grande poêle ou sauteuse à fond épais, une casserole, une louche et une cuillère en bois. Faire chauffer {{bouillon}} de bouillon jusqu'à frémissement, puis le garder sur feu très doux : un bouillon froid ralentirait la cuisson du riz. Poser un petit bol pour les noisettes. [4 min]",
- "Couper les ingrédients — Éplucher {{butternut}} de butternut et le couper en dés de 1 cm, bien réguliers. Écraser grossièrement {{noisettes}} de noisettes avec le plat d'un couteau. Laver {{épinards}} d'épinards et les égoutter. Couper la sauge en tout petits morceaux. [7 min]",
+ "Sortir le matériel — Sortir une grande poêle ou sauteuse à fond épais, une casserole, une louche et une cuillère en bois. Faire chauffer {{bouillon}} de bouillon jusqu'à frémissement, puis le garder sur feu très doux : un bouillon froid ralentirait la cuisson du riz. Poser un petit bol pour les raisins secs. [4 min]",
+ "Couper les ingrédients — Éplucher {{butternut}} de butternut et le couper en dés de 1 cm, bien réguliers. Rincer {{raisins secs}} de raisins secs et les égoutter. Laver {{épinards}} d'épinards et les égoutter. Couper la sauge en tout petits morceaux. [7 min]",
  "Faire chauffer le riz — Dans la sauteuse, faire chauffer {{huile}} d'huile à feu moyen. Ajouter {{riz cru}} de riz et remuer 2 minutes, jusqu'à ce que le bord des grains devienne transparent. Attention : ne pas rincer le riz avant, son amidon rend le risotto crémeux. [cuisson 2 min]",
  "Cuire le riz — Ajouter une louche de bouillon chaud et remuer doucement jusqu'à ce qu'il soit absorbé, puis ajouter la louche suivante. Continuer ainsi pendant 8 minutes, à feu doux à moyen. Le riz doit toujours être à peine couvert de liquide. Peu à peu, le mélange devient crémeux. [cuisson 8 min]",
  "Ajouter le butternut — Ajouter les dés de butternut et continuer louche après louche pendant 10 minutes. Le risotto est prêt quand le riz est tendre mais encore un peu ferme sous la dent, et que le butternut s'écrase facilement. Attention : ne pas verser tout le bouillon d'un coup, le risotto serait pâteux. [cuisson 10 min]",
  "Finir le risotto — Retirer la sauteuse du feu. Ajouter les épinards, {{beurre}} de beurre, {{parmesan}} de parmesan et la sauge, puis remuer énergiquement 1 minute pour bien mélanger. Couvrir 2 minutes : les épinards fondent grâce à la chaleur qui reste. [cuisson 3 min]",
- "Servir — Servir le risotto dans des assiettes creuses et chaudes. Il doit être souple et couler doucement, ni trop liquide ni trop ferme. Parsemer des noisettes écrasées et d'un peu de sauge. Se mange tout de suite, avant qu'il ne refroidisse. [2 min]"
+ "Servir — Servir le risotto dans des assiettes creuses et chaudes. Il doit être souple et couler doucement, ni trop liquide ni trop ferme. Parsemer des raisins secs et d'un peu de sauge. Se mange tout de suite, avant qu'il ne refroidisse. [2 min]"
  ],
  "Ajoute le bouillon toujours chaud, petit à petit : c'est ce qui rend le risotto crémeux sans crème."),
 GR("v7-saumon-patate-douce","Saumon rôti au miso, purée de patate douce et haricots verts au beurre","Saumon & poisson","Français léger","Pommes de terre",2,
@@ -2022,15 +2030,15 @@ GR("v7-saumon-patate-douce","Saumon rôti au miso, purée de patate douce et har
  "Servir — Poser la purée au centre d'une assiette chaude et le saumon par-dessus. Ranger les haricots verts brillants de beurre à côté. Parsemer le saumon de {{graines de sésame}} de graines de sésame et de ciboulette coupée finement. [3 min]"
  ],
  "Le miso est déjà salé : n'ajoute pas de sel sur le saumon."),
-GR("v7-tagliatelles-champignons","Tagliatelles crémeuses aux champignons, courgette et noix, copeaux de parmesan","Végétarien","Bistrot","Pâtes",1,
- [["tagliatelles cuites",170,"g"],["champignons",200,"g"],["courgette",100,"g"],["crème légère",60,"g"],["parmesan",15,"g"],["beurre",8,"g"],["noix",8,"g"],["persil","","quelques brins"],["thym","","quelques brins"],["muscade",1,"pincée"]],
+GR("v7-tagliatelles-champignons","Tagliatelles crémeuses aux champignons, courgette et raisins secs, copeaux de parmesan","Végétarien","Bistrot","Pâtes",1,
+ [["tagliatelles cuites",170,"g"],["champignons",200,"g"],["courgette",100,"g"],["crème légère",60,"g"],["parmesan",15,"g"],["beurre",8,"g"],["raisins secs",10,"g"],["persil","","quelques brins"],["thym","","quelques brins"],["muscade",1,"pincée"]],
 [
  "Sortir le matériel — Sortir une grande casserole pour les pâtes, une grande poêle, une écumoire, une planche et un couteau. Remplir la casserole d'eau, la mettre à chauffer et la saler légèrement. Sortir la crème et le beurre du frigo pour qu'ils soient souples. [3 min]",
- "Couper les légumes — Nettoyer {{champignons}} de champignons avec un chiffon humide, sans les passer sous l'eau : ils absorberaient trop d'eau. Les couper en lamelles. Éplucher {{courgette}} de courgette et la couper en fines demi-rondelles. Écraser grossièrement {{noix}} de noix et couper le persil finement. [7 min]",
+ "Couper les légumes — Nettoyer {{champignons}} de champignons avec un chiffon humide, sans les passer sous l'eau : ils absorberaient trop d'eau. Les couper en lamelles. Éplucher {{courgette}} de courgette et la couper en fines demi-rondelles. Rincer {{raisins secs}} de raisins secs, les égoutter et couper le persil finement. [7 min]",
  "Faire dorer les champignons — Mettre les champignons dans la poêle sèche, à feu moyen à fort, et les remuer peu : ils rendent d'abord leur eau, puis dorent après 4 minutes. Ajouter {{beurre}} de beurre et le thym effeuillé. Attention : ne pas trop remplir la poêle, les champignons cuiraient dans leur eau. [cuisson 6 min]",
  "Préparer la sauce — Ajouter la courgette et cuire 3 minutes en remuant, jusqu'à ce qu'elle soit tendre. Baisser le feu, verser {{crème légère}} de crème légère et râper {{muscade}} de muscade. Laisser épaissir 2 minutes : la sauce doit enrober le dos d'une cuillère. [cuisson 5 min]",
  "Réchauffer les pâtes — Plonger {{tagliatelles cuites}} de tagliatelles dans l'eau bouillante pendant 1 minute pour les réchauffer. Avant d'égoutter, garder un petit verre d'eau de cuisson. Égoutter avec l'écumoire. Attention : ne pas les laisser plus longtemps, elles sont déjà cuites et deviendraient molles. [cuisson 2 min]",
- "Mélanger et servir — Verser les pâtes dans la sauce, ajouter une louche d'eau de cuisson et mélanger 1 minute à feu doux. Servir dans des assiettes creuses chaudes. Parsemer de noix, de persil et de {{parmesan}} de parmesan en copeaux, coupés avec un économe. [3 min]"
+ "Mélanger et servir — Verser les pâtes dans la sauce, ajouter une louche d'eau de cuisson et mélanger 1 minute à feu doux. Servir dans des assiettes creuses chaudes. Parsemer de raisins secs, de persil et de {{parmesan}} de parmesan en copeaux, coupés avec un économe. [3 min]"
  ],
  "L'eau de cuisson des pâtes contient de l'amidon : quelques cuillères suffisent à lier la sauce."),
 GR("v7-oyakodon","Oyakodon : poulet et œufs fondants sur riz, carotte et épinards au dashi doux","Poulet","Japonais","Riz",2,
@@ -2044,14 +2052,14 @@ GR("v7-oyakodon","Oyakodon : poulet et œufs fondants sur riz, carotte et épina
  "Servir — Mettre le riz tiède dans un grand bol creux. Faire glisser le contenu de la poêle par-dessus, avec tout le jus : il va parfumer le riz. Parsemer de cébette et servir tout de suite. [2 min]"
  ],
  "Éteins le feu quand l'œuf est encore un peu liquide : il termine sa cuisson dans le bol."),
-GR("v7-cabillaud-vapeur","Cabillaud vapeur au gingembre, pak choi et champignons sautés, riz au sésame","Saumon & poisson","Asiatique","Riz",1,
- [["dos de cabillaud",160,"g"],["pak choi",150,"g"],["champignons",100,"g"],["riz cuit",200,"g"],["sauce soja",2,"c. à café"],["mirin",1,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["graines de sésame",1,"c. à café"],["cébette",1,"pièce"]],
+GR("v7-cabillaud-vapeur","Cabillaud vapeur au gingembre, blettes et champignons sautés, riz au sésame","Saumon & poisson","Asiatique","Riz",1,
+ [["dos de cabillaud",160,"g"],["blettes",150,"g"],["champignons",100,"g"],["riz cuit",200,"g"],["sauce soja",2,"c. à café"],["mirin",1,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["graines de sésame",1,"c. à café"],["cébette",1,"pièce"]],
 [
  "Sortir le matériel — Sortir une casserole avec un panier vapeur, ou une grande poêle avec couvercle et une assiette creuse posée sur un petit support. Sortir aussi un bol, une poêle et une planche. Verser 3 cm d'eau et la faire frémir. Réchauffer {{riz cuit}} de riz si besoin. [3 min]",
  "Assaisonner le poisson — Dans le bol, mélanger {{sauce soja}} de sauce soja, {{mirin}} de mirin et {{gingembre}} de gingembre râpé. Poser {{dos de cabillaud}} de cabillaud dans l'assiette creuse et verser la moitié de la sauce dessus. Couper {{cébette}} en fines rondelles. [3 min]",
- "Couper les légumes — Couper {{pak choi}} de pak choi en tronçons de 3 cm, en séparant les côtes blanches des feuilles vertes. Couper {{champignons}} de champignons en lamelles. Les côtes cuisent plus lentement que les feuilles : elles iront dans la poêle en premier. [4 min]",
+ "Couper les légumes — Couper {{blettes}} de blettes en tronçons de 3 cm, en séparant les côtes blanches des feuilles vertes. Couper {{champignons}} de champignons en lamelles. Les côtes cuisent plus lentement que les feuilles : elles iront dans la poêle en premier. [4 min]",
  "Cuire le poisson — Poser l'assiette dans le panier, couvrir et cuire 9 minutes à feu moyen. Ne pas soulever le couvercle trop souvent. Le cabillaud est cuit quand sa chair devient blanche, opaque, et se sépare en morceaux. Attention : un poisson trop cuit devient sec. [cuisson 9 min]",
- "Faire revenir les légumes — Pendant ce temps, faire chauffer {{huile de sésame}} d'huile de sésame dans la poêle à feu moyen. Faire revenir les champignons 3 minutes en remuant, puis ajouter les côtes de pak choi. Ajouter les feuilles 2 minutes plus tard avec le reste de sauce. Les légumes doivent rester brillants et un peu croquants. [cuisson 5 min]",
+ "Faire revenir les légumes — Pendant ce temps, faire chauffer {{huile de sésame}} d'huile de sésame dans la poêle à feu moyen. Faire revenir les champignons 3 minutes en remuant, puis ajouter les côtes de blettes. Ajouter les feuilles 2 minutes plus tard avec le reste de sauce. Les légumes doivent rester brillants et un peu croquants. [cuisson 5 min]",
  "Servir — Mettre le riz au centre d'une assiette creuse chaude et disposer les légumes autour. Poser le cabillaud sur le riz et verser dessus son jus de cuisson. Parsemer de {{graines de sésame}} de graines de sésame et de cébette. [3 min]"
  ],
  "Le poisson vapeur est cuit quand la chair passe du translucide au blanc opaque : surveille-le dès 8 minutes."),
@@ -2071,26 +2079,26 @@ GR("v7-tartine-saumon-fume","Tartine de saumon fumé à l'aneth, œuf mollet et 
 ];
 
 const GOURMAND_C = [
-GR("v7-salade-carotte-pomme","Salade de carottes râpées, pomme, jambon cru et noix, sauce douce au yaourt de soja","Jambon & dinde","Français léger","Pain",1,
- [["carotte",200,"g"],["pomme",1,"pièce"],["jambon cru",100,"g"],["noix",8,"g"],["pain de campagne",60,"g"],["yaourt de soja",60,"g"],["huile d'olive",1,"c. à café"],["miel",1,"c. à café"],["ciboulette","","quelques brins"]],
+GR("v7-salade-carotte-pomme","Salade de carottes râpées, pomme, jambon cru et raisins secs, sauce douce au yaourt de soja","Jambon & dinde","Français léger","Pain",1,
+ [["carotte",200,"g"],["pomme",1,"pièce"],["jambon cru",100,"g"],["raisins secs",10,"g"],["pain de campagne",60,"g"],["yaourt de soja",60,"g"],["huile d'olive",1,"c. à café"],["miel",1,"c. à café"],["ciboulette","","quelques brins"]],
  ["Sortir le matériel — Prendre un saladier, une petite assiette, une râpe, une planche, un couteau, un petit bol et une fourchette. Sortir le jambon du frigo 10 minutes avant : il aura plus de goût. Poser le pain près du grille-pain. [3 min]",
   "Préparer la sauce — Dans le petit bol, mélanger {{yaourt de soja}} de yaourt de soja, {{huile d'olive}} d'huile d'olive et {{miel}} de miel. Ajouter une pincée de sel et fouetter à la fourchette. La sauce doit être lisse et un peu épaisse. Goûter : elle doit être douce, pas trop sucrée. [3 min]",
   "Râper les carottes — Éplucher {{carotte}} de carottes avec un économe. Les râper au-dessus du saladier, avec le côté à gros trous. Appuyer doucement pour obtenir de longs filaments. Attention : arrêter de râper quand il reste un petit bout, pour ne pas se blesser les doigts. [5 min]",
   "Couper la pomme — Laver {{pomme}}, la couper en quatre et enlever le cœur avec le couteau. Couper chaque quart en fines lamelles, puis en petits bâtonnets. Les mettre tout de suite dans le saladier avec les carottes et mélanger : la pomme noircit vite à l'air. [4 min]",
-  "Couper le jambon et les noix — Couper {{jambon cru}} de jambon cru en bandes de 1 cm de large. Les séparer avec les doigts pour qu'elles ne collent pas entre elles. Casser {{noix}} de noix en gros morceaux avec la main et les mettre dans la petite assiette. [3 min]",
+  "Couper le jambon et préparer les raisins — Couper {{jambon cru}} de jambon cru en bandes de 1 cm de large. Les séparer avec les doigts pour qu'elles ne collent pas entre elles. Rincer {{raisins secs}} de raisins secs, les égoutter et les mettre dans la petite assiette. [3 min]",
   "Griller le pain — Mettre {{pain de campagne}} de pain de campagne en tranches dans le grille-pain. Sans grille-pain, utiliser une poêle sèche à feu moyen, 2 minutes de chaque côté. Le pain est prêt quand il est doré et croustillant. Attention : surveiller, il brûle très vite. [cuisson 3 min]",
-  "Assembler la salade — Verser la moitié de la sauce sur les carottes et la pomme, puis mélanger. Poser le jambon dessus en petits tas aérés, sans les tasser. Ajouter les noix. Finir avec le reste de sauce, en la versant en zigzag. [3 min]",
+  "Assembler la salade — Verser la moitié de la sauce sur les carottes et la pomme, puis mélanger. Poser le jambon dessus en petits tas aérés, sans les tasser. Ajouter les raisins secs. Finir avec le reste de sauce, en la versant en zigzag. [3 min]",
   "Servir — Couper la ciboulette avec des ciseaux au-dessus de la salade. Servir tout de suite, avec le pain grillé à côté. [2 min]"],
  "Plus les carottes sont râpées finement, mieux elles absorbent la sauce. Râpe-les juste avant de servir pour qu'elles restent croquantes."),
-GR("v7-salade-poire-roquette","Salade de poire, roquette, jambon cru et parmesan, noix et sauce miel-huile d'olive","Jambon & dinde","Bistrot","Pommes de terre",1,
- [["roquette",80,"g"],["concombre",100,"g"],["poire",1,"pièce"],["jambon cru",100,"g"],["parmesan",8,"g"],["noix",8,"g"],["pommes de terre",140,"g"],["huile d'olive",1,"c. à café"],["miel",1,"c. à café"],["yaourt de soja",30,"g"]],
+GR("v7-salade-poire-roquette","Salade de poire, roquette, jambon cru et parmesan, raisins secs et sauce miel-huile d'olive","Jambon & dinde","Bistrot","Pommes de terre",1,
+ [["roquette",80,"g"],["concombre",100,"g"],["poire",1,"pièce"],["jambon cru",100,"g"],["parmesan",8,"g"],["raisins secs",10,"g"],["pommes de terre",140,"g"],["huile d'olive",1,"c. à café"],["miel",1,"c. à café"],["yaourt de soja",30,"g"]],
  ["Sortir le matériel — Prendre une casserole, une passoire, un saladier, un économe, un couteau, une planche et un petit bol. Sortir le jambon du frigo 10 minutes avant. Remplir la casserole d'eau salée et la mettre sur le feu fort. [3 min]",
   "Cuire les pommes de terre — Laver {{pommes de terre}} de pommes de terre et les couper en gros morceaux de 3 cm. Les plonger dans l'eau qui bout, puis baisser à feu moyen. Elles sont cuites quand la pointe d'un couteau rentre sans résistance. Les égoutter. Attention : ne pas les laisser trop longtemps, elles s'émietteraient. [cuisson 15 min]",
   "Préparer la sauce — Dans le petit bol, mélanger {{huile d'olive}} d'huile d'olive, {{miel}} de miel et {{yaourt de soja}} de yaourt de soja. Ajouter une pincée de sel et fouetter à la fourchette. La sauce doit être lisse, claire et un peu épaisse. [3 min]",
   "Couper la poire — Laver {{poire}}, la couper en quatre et enlever le cœur et les pépins avec le couteau. Couper chaque quart en lamelles fines, d'environ 3 mm. Les poser dans le saladier et ajouter un peu de sauce dessus : elle empêche la poire de noircir. [4 min]",
   "Préparer les légumes — Éplucher {{concombre}} de concombre avec l'économe, le couper en deux et retirer les graines avec une cuillère. Le couper en demi-lunes fines. Laver {{roquette}} de roquette et bien la sécher. Mettre le tout dans le saladier. [5 min]",
-  "Couper le reste — Couper {{jambon cru}} de jambon cru en bandes de 1 cm. Avec l'économe, tirer {{parmesan}} de parmesan en copeaux fins. Casser {{noix}} de noix en gros morceaux avec la main. [3 min]",
-  "Assembler la salade — Verser la moitié de la sauce sur la roquette, la poire et le concombre, puis mélanger doucement. Poser le jambon en petits tas, puis les copeaux de parmesan et les noix. Verser le reste de sauce en zigzag. Attention : assembler au dernier moment, la roquette ramollit vite. [3 min]",
+  "Couper le reste — Couper {{jambon cru}} de jambon cru en bandes de 1 cm. Avec l'économe, tirer {{parmesan}} de parmesan en copeaux fins. Rincer {{raisins secs}} de raisins secs et les égoutter. [3 min]",
+  "Assembler la salade — Verser la moitié de la sauce sur la roquette, la poire et le concombre, puis mélanger doucement. Poser le jambon en petits tas, puis les copeaux de parmesan et les raisins secs. Verser le reste de sauce en zigzag. Attention : assembler au dernier moment, la roquette ramollit vite. [3 min]",
   "Servir — Poser les pommes de terre tièdes à côté de la salade, dans la même assiette. Servir tout de suite. [2 min]"],
  "Les pommes de terre tièdes avec la salade fraîche : le contraste est la bonne surprise de ce plat."),
 GR("v7-lapin-creme-soja","Lapin mijoté à la crème de soja, carottes et champignons, pommes de terre vapeur","Lapin","Bistrot","Pommes de terre",2,
@@ -2220,16 +2228,16 @@ GR("v7-gnocchis-champignons-epinards","Gnocchis dorés à la poêle, champignons
   "Mélanger — Remettre les gnocchis dans la poêle. Mélanger doucement pendant 1 minute, pour qu'ils soient bien enrobés d'une sauce crémeuse et verte. Éteindre le feu. [1 min]",
   "Servir — Verser dans une assiette creuse. Parsemer de parmesan et de basilic déchiré avec les doigts. Servir tout de suite, bien chaud. [1 min]"],
  "Bien sécher les gnocchis après la cuisson : plus ils sont secs, plus ils dorent."),
-GR("v7-nouilles-sautees-legumes","Nouilles sautées aux légumes, sauce soja-sésame et noisettes concassées","Végétarien","Asiatique","Pâtes",1,
- [["nouilles de blé cuites",170,"g"],["carotte",100,"g"],["courgette",100,"g"],["champignons",80,"g"],["sauce soja",2,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["huile",1,"c. à café"],["graines de sésame",1,"c. à café"],["noisettes",15,"g"],["cébette",1,"pièce"]],
+GR("v7-nouilles-sautees-legumes","Nouilles sautées aux légumes, sauce soja-sésame et raisins secs","Végétarien","Asiatique","Pâtes",1,
+ [["nouilles de blé cuites",170,"g"],["carotte",100,"g"],["courgette",100,"g"],["champignons",80,"g"],["sauce soja",2,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["huile",1,"c. à café"],["graines de sésame",1,"c. à café"],["raisins secs",15,"g"],["cébette",1,"pièce"]],
  ["Sortir le matériel — Prendre une grande poêle ou un wok, une spatule, une planche, un couteau, un économe, une râpe fine et un petit bol. Sortir les nouilles cuites du frigo et les séparer avec les doigts : elles doivent se détacher sans former de paquet. [3 min]",
   "Préparer la sauce — Dans le petit bol, mélanger {{sauce soja}} de sauce soja, {{gingembre}} de gingembre râpé finement et {{huile de sésame}} d'huile de sésame. Remuer. Cette sauce sera versée à la fin de la cuisson. [2 min]",
   "Couper les légumes — Éplucher {{carotte}} de carottes et les couper en fins bâtonnets de 4 cm. Éplucher {{courgette}} de courgette et la couper de la même façon. Essuyer {{champignons}} de champignons et les couper en lamelles. Couper {{cébette}} en rondelles. [7 min]",
-  "Écraser les noisettes — Mettre {{noisettes}} de noisettes dans un torchon plié, puis les écraser avec le fond d'une casserole. Il doit rester des morceaux de la taille d'un grain de riz. [2 min]",
+  "Gonfler les raisins — Mettre {{raisins secs}} de raisins secs dans un bol d'eau tiède, puis les égoutter sur un torchon propre. [2 min]",
   "Cuire les carottes — Chauffer {{huile}} d'huile à feu vif dans la poêle. Ajouter les bâtonnets de carotte et remuer sans arrêt pendant 3 minutes, jusqu'à ce qu'ils deviennent souples. [cuisson 3 min]",
   "Cuire les autres légumes — Ajouter la courgette et les champignons. Remuer 4 minutes : les champignons rendent leur eau, puis elle s'évapore et les légumes dorent un peu. [cuisson 4 min]",
   "Ajouter les nouilles — Ajouter {{nouilles de blé cuites}} de nouilles cuites dans la poêle. Remuer pendant 3 minutes avec la spatule, en soulevant bien les nouilles du fond pour qu'elles chauffent partout. Verser la sauce et mélanger 1 minute de plus. [cuisson 4 min]",
-  "Servir — Mettre les nouilles dans un bol creux. Parsemer de noisettes, de cébette et de {{graines de sésame}} de graines de sésame. Servir tout de suite. [1 min]"],
+  "Servir — Mettre les nouilles dans un bol creux. Parsemer de raisins secs, de cébette et de {{graines de sésame}} de graines de sésame. Servir tout de suite. [1 min]"],
  "Garder les légumes un peu fermes : ils font un bon contraste avec les nouilles moelleuses."),
 GR("v7-crevettes-gingembre-riz","Crevettes sautées au gingembre et au miel, poivron doux et courgette, riz","Crevettes","Asiatique","Riz",1,
  [["crevettes décortiquées",150,"g"],["poivron",100,"g"],["courgette",120,"g"],["riz cuit",170,"g"],["sauce soja",2,"c. à café"],["gingembre",1,"c. à café"],["miel",1,"c. à café"],["huile",1,"c. à café"],["huile de sésame",1,"c. à café"],["cébette",1,"pièce"],["coriandre","","quelques brins"]],
@@ -2304,18 +2312,18 @@ const PD = (id, n, st, base, t, d, ing, steps, tip) => NR(id, n, "Petit-déjeune
 const PDJ_RECIPES = [
 /* ---- SUCRÉS ---- */
 /* ---- SUCRÉS ---- */
-PD("pdj-porridge-kiwi","Porridge crémeux à la cannelle, kiwi & noix","Sucré","Avoine",10,1,
- [["flocons d'avoine",50,"g"],["lait",200,"ml"],["kiwi",1,"pièce"],["noix",10,"g"],["sirop d'érable",1,"c. à café"],["cannelle",1,"pincée"]],
+PD("pdj-porridge-kiwi","Porridge crémeux à la cannelle, kiwi & raisins secs","Sucré","Avoine",10,1,
+ [["flocons d'avoine",50,"g"],["lait",200,"ml"],["kiwi",1,"pièce"],["raisins secs",15,"g"],["sirop d'érable",1,"c. à café"],["cannelle",1,"pincée"]],
  ["Cuire le porridge — Verser {{flocons d'avoine}} de flocons d'avoine et {{lait}} de lait dans une casserole. Cuire à feu doux en remuant jusqu'à obtenir une crème épaisse. [cuisson 5 min]",
   "Parfumer — Retirer du feu. Ajouter {{cannelle}} de cannelle et {{sirop d'érable}} de sirop d'érable, puis bien mélanger. [1 min]",
-  "Préparer les fruits — Éplucher {{kiwi}} et le couper en fines rondelles. Écraser grossièrement {{noix}} de noix avec un couteau. [2 min]",
-  "Servir — Verser le porridge dans un bol chaud. Poser les rondelles de kiwi dessus et parsemer de noix. [1 min]"],
+  "Préparer les fruits — Éplucher {{kiwi}} et le couper en fines rondelles. Rincer {{raisins secs}} de raisins secs et les égoutter. [2 min]",
+  "Servir — Verser le porridge dans un bol chaud. Poser les rondelles de kiwi dessus et parsemer de raisins secs. [1 min]"],
  "Remuez sans arrêt pendant la cuisson : c'est ce qui rend le porridge bien crémeux."),
 PD("pdj-yaourt-fraises","Yaourt grec, fraises tièdes & granola maison","Sucré","Avoine",10,1,
- [["yaourt grec",150,"g"],["fraises",100,"g"],["flocons d'avoine",25,"g"],["noisettes",8,"g"],["sirop d'érable",1,"c. à café"]],
- ["Dorer le granola — Écraser grossièrement {{noisettes}} de noisettes. Les faire dorer avec {{flocons d'avoine}} de flocons d'avoine dans une poêle sèche, à feu moyen. [cuisson 3 min]",
+ [["yaourt grec",150,"g"],["fraises",100,"g"],["flocons d'avoine",25,"g"],["raisins secs",15,"g"],["sirop d'érable",1,"c. à café"]],
+ ["Dorer le granola — Faire dorer {{flocons d'avoine}} de flocons d'avoine dans une poêle sèche, à feu moyen. [cuisson 3 min]",
   "Tiédir les fraises — Couper {{fraises}} de fraises en quartiers. Les chauffer 1 minute dans la poêle avec {{sirop d'érable}} de sirop d'érable. [cuisson 1 min]",
-  "Servir — Mettre {{yaourt grec}} de yaourt grec dans un verre. Ajouter les fraises tièdes, puis le granola croustillant. [2 min]"],
+  "Servir — Mettre {{yaourt grec}} de yaourt grec dans un verre. Ajouter les fraises tièdes, puis le granola croustillant et {{raisins secs}} de raisins secs. [2 min]"],
  "Les fraises doivent seulement tiédir : elles gardent ainsi leur forme et leur parfum."),
 PD("pdj-pancakes-myrtilles","Pancakes moelleux à la banane, myrtilles & sirop d'érable","Sucré","Farine",20,2,
  [["banane",1,"pièce"],["œufs",2,"pièce"],["flocons d'avoine",40,"g"],["myrtilles",60,"g"],["sirop d'érable",1,"c. à soupe"],["beurre",5,"g"]],
@@ -2330,9 +2338,9 @@ PD("pdj-chia-ananas","Pudding de chia au lait de coco, ananas & coco toastée","
   "Servir — Verser le pudding dans un verre. Ajouter l'ananas et la noix de coco dorée. [1 min]"],
  "Remuez deux fois au début : cela évite les grumeaux de chia."),
 PD("pdj-tartine-ricotta-figue","Tartine de pain au levain, fromage frais, figues & sirop d'érable","Sucré","Pain",10,1,
- [["pain au levain",60,"g"],["fromage frais",50,"g"],["figue",2,"pièce"],["noisettes",8,"g"],["sirop d'érable",1,"c. à café"]],
+ [["pain au levain",60,"g"],["fromage frais",50,"g"],["figue",2,"pièce"],["raisins secs",15,"g"],["sirop d'érable",1,"c. à café"]],
  ["Griller le pain — Faire griller {{pain au levain}} de pain au levain jusqu'à une belle couleur dorée. [cuisson 3 min]",
-  "Garnir la tartine — Étaler {{fromage frais}} de fromage frais sur le pain. Couper {{figue}} en quartiers et les poser dessus. Parsemer de {{noisettes}} de noisettes écrasées. [3 min]",
+  "Garnir la tartine — Étaler {{fromage frais}} de fromage frais sur le pain. Couper {{figue}} en quartiers et les poser dessus. Parsemer de {{raisins secs}} de raisins secs. [3 min]",
   "Finir — Verser {{sirop d'érable}} de sirop d'érable en filet sur la tartine. [1 min]"],
  "Un pain bien grillé tient mieux sous la garniture crémeuse."),
 PD("pdj-granola-orange","Bol de fromage blanc, orange pelée à vif & graines de courge","Sucré","Fromage blanc",8,1,
@@ -2341,10 +2349,10 @@ PD("pdj-granola-orange","Bol de fromage blanc, orange pelée à vif & graines de
   "Dorer les graines — Faire dorer {{flocons d'avoine}} de flocons d'avoine et {{graines de courge}} de graines de courge dans une poêle sèche. [cuisson 2 min]",
   "Servir — Mettre {{fromage blanc}} de fromage blanc dans un bol. Ajouter les quartiers d'orange et le mélange croquant. Verser {{sirop d'érable}} de sirop d'érable en filet. [1 min]"],
  "Retirer la peau blanche enlève toute l'amertume de l'orange."),
-PD("pdj-smoothie-bowl","Smoothie bowl framboises, banane & beurre de cacahuète","Sucré","Fruits",10,1,
- [["framboises",100,"g"],["banane",1,"pièce"],["yaourt grec",100,"g"],["beurre de cacahuète",1,"c. à soupe"],["flocons de sarrasin",15,"g"]],
+PD("pdj-smoothie-bowl","Smoothie bowl framboises, banane & raisins secs","Sucré","Fruits",10,1,
+ [["framboises",100,"g"],["banane",1,"pièce"],["yaourt grec",100,"g"],["raisins secs",20,"g"],["flocons de sarrasin",15,"g"]],
  ["Mixer — Mixer {{framboises}} de framboises, {{banane}} et {{yaourt grec}} de yaourt grec, jusqu'à obtenir une crème épaisse. [2 min]",
-  "Servir — Verser dans un bol. Poser {{beurre de cacahuète}} de beurre de cacahuète au centre et parsemer de {{flocons de sarrasin}} de flocons de sarrasin. [2 min]"],
+  "Servir — Verser dans un bol. Poser {{raisins secs}} de raisins secs au centre et parsemer de {{flocons de sarrasin}} de flocons de sarrasin. [2 min]"],
  "Prenez une banane très mûre : elle sucre le bol sans rien ajouter."),
 PD("pdj-brioche-perdue","Pain perdu doré, mandarines & cannelle","Sucré","Pain",15,2,
  [["pain au levain",90,"g"],["œufs",1,"pièce"],["lait",80,"ml"],["mandarine",2,"pièce"],["beurre",8,"g"],["cannelle",1,"pincée"],["sirop d'érable",1,"c. à café"]],
@@ -2408,12 +2416,12 @@ PD("pdj-tartine-saumon","Tartine de saumon fumé, fromage frais & aneth","Salé"
 NEW_RECIPES.push(...PDJ_RECIPES); DEFAULT_RECIPES.push(...PDJ_RECIPES);
 /* ===== petits-déjeuners gourmands supplémentaires (v7) : sucrés, sans fruit acide ===== */
 const PDJ7 = [
-PD("pdj7-porridge-poire","Porridge crémeux à la poire rôtie, noix et sirop d'érable","Sucré","Avoine",10,1,
- [["flocons d'avoine",50,"g"],["lait",200,"ml"],["poire",1,"pièce"],["noix",10,"g"],["sirop d'érable",1,"c. à café"],["cannelle",1,"pincée"]],
+PD("pdj7-porridge-poire","Porridge crémeux à la poire rôtie, raisins secs et sirop d'érable","Sucré","Avoine",10,1,
+ [["flocons d'avoine",50,"g"],["lait",200,"ml"],["poire",1,"pièce"],["raisins secs",15,"g"],["sirop d'érable",1,"c. à café"],["cannelle",1,"pincée"]],
  ["Préparer le matériel — Sortir une casserole, une cuillère en bois et une petite poêle. [1 min]",
   "Cuire le porridge — Verser {{flocons d'avoine}} de flocons d'avoine et {{lait}} de lait dans la casserole. Cuire à feu doux en remuant jusqu'à obtenir une crème épaisse. [cuisson 5 min]",
   "Rôtir la poire — Éplucher {{poire}}, la couper en petits dés. La faire cuire dans la poêle avec {{cannelle}} de cannelle, jusqu'à ce qu'elle soit tendre et dorée. [cuisson 4 min]",
-  "Servir — Verser le porridge dans un bol chaud. Ajouter la poire, {{noix}} de noix écrasées grossièrement et {{sirop d'érable}} de sirop d'érable. [2 min]"],
+  "Servir — Verser le porridge dans un bol chaud. Ajouter la poire, {{raisins secs}} de raisins secs et {{sirop d'érable}} de sirop d'érable. [2 min]"],
  "Remuez sans arrêt : c'est ce qui rend le porridge bien crémeux."),
 PD("pdj7-pain-perdu","Pain perdu doré au beurre, sirop d'érable","Sucré","Pain",12,1,
  [["pain au levain",70,"g"],["œuf",1,"pièce"],["lait",80,"ml"],["beurre",5,"g"],["sirop d'érable",1,"c. à café"],["cannelle",1,"pincée"]],
@@ -2422,18 +2430,18 @@ PD("pdj7-pain-perdu","Pain perdu doré au beurre, sirop d'érable","Sucré","Pai
   "Dorer les tranches — Faire fondre {{beurre}} de beurre à feu moyen-doux. Cuire le pain 3 minutes par face, jusqu'à ce qu'il soit doré et gonflé. [cuisson 6 min]",
   "Servir — Poser les tranches dans une assiette et verser {{sirop d'érable}} de sirop d'érable dessus. Déguster tiède. [2 min]"],
  "Un pain un peu rassis boit mieux le mélange et reste moelleux."),
-PD("pdj7-yaourt-banane","Yaourt grec, banane rôtie, noisettes et éclats de chocolat noir","Sucré","Yaourt",8,1,
- [["yaourt grec",150,"g"],["banane",1,"pièce"],["noisettes",10,"g"],["chocolat noir",10,"g"]],
+PD("pdj7-yaourt-banane","Yaourt grec, banane rôtie, raisins secs et éclats de chocolat noir","Sucré","Yaourt",8,1,
+ [["yaourt grec",150,"g"],["banane",1,"pièce"],["raisins secs",15,"g"],["chocolat noir",10,"g"]],
  ["Rôtir la banane — Couper {{banane}} en rondelles. Les dorer dans une poêle chaude, sans matière grasse, 1 minute de chaque côté. [cuisson 3 min]",
-  "Écraser les noisettes — Écraser grossièrement {{noisettes}} de noisettes et {{chocolat noir}} de chocolat noir avec un couteau. [2 min]",
-  "Servir — Mettre {{yaourt grec}} de yaourt grec dans un bol. Poser les bananes tièdes dessus, puis parsemer de noisettes et de chocolat. [2 min]"],
+  "Préparer les garnitures — Rincer {{raisins secs}} de raisins secs et les égoutter. Écraser grossièrement {{chocolat noir}} de chocolat noir avec un couteau. [2 min]",
+  "Servir — Mettre {{yaourt grec}} de yaourt grec dans un bol. Poser les bananes tièdes dessus, puis parsemer de raisins secs et de chocolat. [2 min]"],
  "La banane tiède fait fondre un peu le chocolat : c'est tout le plaisir de ce bol."),
-PD("pdj7-tartine-cacahuete","Tartine croustillante beurre de cacahuète, banane et graines de chia","Sucré","Pain",6,1,
- [["pain au levain",60,"g"],["beurre de cacahuète",2,"c. à café"],["banane",1,"pièce"],["graines de chia",1,"c. à café"]],
+PD("pdj7-tartine-cacahuete","Tartine croustillante au fromage frais, banane, raisins secs et graines de chia","Sucré","Pain",6,1,
+ [["pain au levain",60,"g"],["fromage frais",40,"g"],["banane",1,"pièce"],["raisins secs",15,"g"],["graines de chia",1,"c. à café"]],
  ["Griller le pain — Faire griller {{pain au levain}} de pain au levain jusqu'à ce qu'il soit bien doré. [2 min]",
-  "Garnir la tartine — Étaler {{beurre de cacahuète}} de beurre de cacahuète sur le pain chaud. Couvrir avec {{banane}} coupée en rondelles. [2 min]",
+  "Garnir la tartine — Étaler {{fromage frais}} de fromage frais sur le pain chaud. Couvrir avec {{banane}} coupée en rondelles, puis parsemer de {{raisins secs}} de raisins secs. [2 min]",
   "Finir — Parsemer la tartine de {{graines de chia}} de graines de chia, puis servir aussitôt. [1 min]"],
- "Tartinez quand le pain est encore chaud : le beurre de cacahuète devient bien crémeux."),
+ "Tartinez quand le pain est encore chaud : le fromage frais devient bien crémeux."),
 PD("pdj7-crepes","Crêpes fines au beurre, compote de pomme tiède","Sucré","Farine",20,1,
  [["farine",50,"g"],["œuf",1,"pièce"],["lait",120,"ml"],["beurre",5,"g"],["pomme",1,"pièce"],["sirop d'érable",1,"c. à café"]],
  ["Préparer le matériel — Sortir un saladier, un fouet, une poêle antiadhésive et une casserole. [1 min]",
@@ -2443,9 +2451,9 @@ PD("pdj7-crepes","Crêpes fines au beurre, compote de pomme tiède","Sucré","Fa
   "Servir — Plier les crêpes en quatre. Ajouter la compote tiède et {{sirop d'érable}} de sirop d'érable. [2 min]"],
  "La première crêpe sert d'essai : ajustez le feu, puis recommencez."),
 PD("pdj7-fromage-blanc","Fromage blanc, myrtilles et flocons d'avoine dorés","Sucré","Avoine",8,1,
- [["fromage blanc",150,"g"],["myrtilles",80,"g"],["flocons d'avoine",30,"g"],["miel",1,"c. à café"],["amandes effilées",8,"g"]],
- ["Dorer les flocons — Dans une poêle sèche, à feu moyen, faire dorer {{flocons d'avoine}} de flocons d'avoine et {{amandes effilées}} d'amandes effilées en remuant. [cuisson 3 min]",
-  "Garnir le bol — Mettre {{fromage blanc}} de fromage blanc dans un bol. Poser {{myrtilles}} de myrtilles dessus. [2 min]",
+ [["fromage blanc",150,"g"],["myrtilles",80,"g"],["flocons d'avoine",30,"g"],["miel",1,"c. à café"],["raisins secs",15,"g"]],
+ ["Dorer les flocons — Dans une poêle sèche, à feu moyen, faire dorer {{flocons d'avoine}} de flocons d'avoine en remuant. [cuisson 3 min]",
+  "Garnir le bol — Mettre {{fromage blanc}} de fromage blanc dans un bol. Poser {{myrtilles}} de myrtilles et {{raisins secs}} de raisins secs dessus. [2 min]",
   "Finir — Ajouter les flocons croustillants et {{miel}} de miel en filet. [1 min]"],
  "Dorés à sec, les flocons deviennent croustillants, comme dans un granola."),
 ];
@@ -2945,15 +2953,6 @@ const VEGS = {
     ctl:"les lanières plient sans casser",
     err:"un feu trop fort : le poivron noircit avant de cuire",
     keep:"Le poivron cuit se garde 2 jours au frais."},
-  pakchoi:{ss:[5,6,7,8,9,10,11],n:"pak choï",h:"Le pak choï",ing:[["pak choi",120,"g"]],t:6,
-    mat:"une poêle de 28 cm ou un wok",
-    cut:"séparer les feuilles du pak choï, les rincer et couper les tiges blanches en tronçons de 2 cm en gardant les feuilles entières",
-    feu:"feu vif (plaque 8 sur 9)",
-    cook:"Saisir d'abord les tiges 2 min avec 1 c. à café d'huile de sésame, ajouter les feuilles et 2 c. à soupe d'eau, couvrir 1 min.",
-    rep:"les tiges deviennent translucides et les feuilles flétrissent",
-    ctl:"les tiges plient en gardant du croquant",
-    err:"cuire trop longtemps : le pak choï rend son eau et devient filandreux",
-    keep:"Le pak choï se cuit à la minute."},
   potimarron:{ss:[9,10,11,12,1],n:"potimarron",h:"Le potimarron",ing:[["potimarron",150,"g"]],t:20,
     mat:"une plaque de four, du papier cuisson",
     cut:"laver le potimarron (la peau se mange), retirer les graines et le couper en croissants de 1,5 cm",
@@ -3307,7 +3306,7 @@ Object.assign(SAUCES, {
     err:"mixer trop longtemps : le basilic chauffe et noircit"}
 });
 FORMATS.push(
-  {id:"bibimbap",n:"Bibimbap",st:"Coréen",s:["riz"],p:["oeufplat","tofu","boeuf","poulet"],v:["carotte","epinards","courgette","pakchoi","haricotsverts","daikon","blettes","chouvert"],k:2,d:2,
+  {id:"bibimbap",n:"Bibimbap",st:"Coréen",s:["riz"],p:["oeufplat","tofu","boeuf","poulet"],v:["carotte","epinards","courgette","haricotsverts","daikon","blettes","chouvert"],k:2,d:2,
    sa:["coreenne","sojasesame","misosesame"],x:[["graines de sésame",1,"c. à café"],["huile de sésame",1,"c. à café"],["nori",1,"pièce"]],
    herbs:["ciboulette","coriandre"],mat:"un grand bol de service, de petits bols pour les légumes",
    core:"Les namul. Cuire chaque légume séparément et l'assaisonner d'une goutte d'huile de sésame et d'une pincée de graines de sésame : chaque garniture garde sa propre saveur. Repères : des couleurs bien distinctes, aucun mélange. Point de contrôle : chaque légume garde un petit croquant. À éviter : tout cuire ensemble, les couleurs se ternissent.",
@@ -3315,7 +3314,7 @@ FORMATS.push(
    fin:"Servir la sauce à part et mélanger à table, de bas en haut, pour que le riz s'imprègne de tous les parfums.",
    orga:"Les légumes se cuisent la veille ; le bol se monte à la minute.",
    tip:"Mélanger à table, de bas en haut : c'est le geste qui donne son nom au plat (bibim = mélanger)."},
-  {id:"soba",n:"Soba",st:"Japonais",s:["soba"],p:["tofu","saumon","crevettes","poulet","saumonfume"],v:["concombre","carotte","pakchoi","daikon","epinards","courgette","edamame"],k:2,d:1,
+  {id:"soba",n:"Soba",st:"Japonais",s:["soba"],p:["tofu","saumon","crevettes","poulet","saumonfume"],v:["concombre","carotte","daikon","epinards","courgette","edamame"],k:2,d:1,
    sa:["sojasesame","misosesame","coreenne"],x:[["graines de sésame",1,"c. à café"],["nori",1,"pièce"]],
    herbs:["coriandre","ciboulette","shiso"],fruits:["pamplemousse","orange","kiwi"],mat:"un bol large, des baguettes ou une fourchette",
    core:"L'assaisonnement. Mélanger les soba rincées et bien égouttées avec la moitié de la sauce. Ajouter les légumes en filets minces, puis la protéine tiède. Repères : les nouilles brillent sans baigner dans la sauce. Point de contrôle : on voit chaque garniture. À éviter : verser toute la sauce d'un coup.",
@@ -3323,7 +3322,7 @@ FORMATS.push(
    fin:"Napper du reste de sauce, parsemer de graines de sésame.",
    orga:"Les soba, les légumes et la sauce se préparent la veille ; le bol se monte à la minute.",
    tip:"Les soba se servent tièdes ou froides : rincées à l'eau froide, elles gardent un goût de noisette."},
-  {id:"miso",n:"Soupe-repas miso",st:"Japonais",s:["riz","soba"],p:["tofu","saumon","crevettes","oeufs"],v:["pakchoi","epinards","daikon","carotte","courgette","blettes"],k:2,d:1,
+  {id:"miso",n:"Soupe-repas miso",st:"Japonais",s:["riz","soba"],p:["tofu","saumon","crevettes","oeufs"],v:["epinards","daikon","carotte","courgette","blettes"],k:2,d:1,
    sa:["sojasesame"],x:[["miso blanc",1,"c. à soupe"],["wakamé",3,"g"],["eau",400,"ml"]],
    herbs:["ciboulette","coriandre"],mat:"une casserole de 2 litres, un bol profond, une louche",
    core:"Le bouillon miso. Porter 400 ml d'eau à frémissement, ajouter le wakamé réhydraté, les légumes puis la protéine, 3 min à feu doux (plaque 3 sur 9). Hors du feu, délayer le miso dans une louche de bouillon, puis le remettre dans la casserole. Repères : le bouillon est doré, légèrement trouble. Point de contrôle : il fume sans bouillir. À éviter : faire bouillir le miso, il perd son parfum.",
@@ -3331,7 +3330,7 @@ FORMATS.push(
    fin:"Parsemer d'herbes ciselées et servir aussitôt.",
    orga:"Le bouillon se prépare la veille sans miso ; le miso se délaye à la minute.",
    tip:"Le miso ne bout jamais : on le délaye hors du feu pour garder tout son parfum."},
-  {id:"japchae",n:"Japchae",st:"Coréen",s:["vermicelles"],p:["tofu","boeuf","poulet","crevettes"],v:["epinards","carotte","poivron","pakchoi","courgette","blettes"],k:2,d:2,
+  {id:"japchae",n:"Japchae",st:"Coréen",s:["vermicelles"],p:["tofu","boeuf","poulet","crevettes"],v:["epinards","carotte","poivron","courgette","blettes"],k:2,d:2,
    sa:["coreenne","sojasesame"],x:[["huile de sésame",1,"c. à café"],["graines de sésame",1,"c. à café"]],
    herbs:["ciboulette","coriandre"],mat:"un wok ou une grande poêle, des ciseaux de cuisine, un saladier",
    core:"Le mélange. Dans un grand saladier, mélanger les vermicelles tièdes, les légumes sautés et la protéine avec la sauce, en soulevant délicatement à deux mains. Repères : les vermicelles sont brillants et enrobés. Point de contrôle : tous les légumes sont bien répartis. À éviter : trop mélanger, les légumes se délitent.",
@@ -3347,7 +3346,7 @@ FORMATS.push(
    fin:"Finir d'un tour de moulin à poivre et d'herbes fraîches.",
    orga:"Les légumes rôtis se préparent la veille ; l'assiette se monte à la minute.",
    tip:"Rôtir deux légumes de couleurs différentes sur la même plaque : le contraste fait l'assiette."},
-  {id:"veloute",n:"Velouté & tartine",st:"Français léger",s:["pain"],p:["feta","oeufcomte","jambon","saumonfume","oeufs"],v:["potimarron","carotte","courgette","patatedouce","brocoli","navet","blettes","pakchoi"],k:2,d:1,
+  {id:"veloute",n:"Velouté & tartine",st:"Français léger",s:["pain"],p:["feta","oeufcomte","jambon","saumonfume","oeufs"],v:["potimarron","carotte","courgette","patatedouce","brocoli","navet","blettes"],k:2,d:1,
    sa:["ciboulette","grecque"],x:[["bouillon",300,"ml"],["crème légère 15 %",30,"g"]],
    herbs:["ciboulette","persil","estragon"],mat:"une casserole, un mixeur plongeant, un bol profond",
    core:"Le velouté. Mixer les légumes cuits avec 300 ml de bouillon chaud et la crème jusqu'à une texture de soie. Repères : la soupe est lisse et nappe la cuillère. Point de contrôle : sans fils ni morceaux. À éviter : mixer à feu fort, elle mousse et déborde.",
@@ -3368,9 +3367,9 @@ FORMATS.find(x => x.id === "curry").fruits = ["ananas"];
 const FODMAP_VEG_OUT = ["champignons","oignons","choufleur","avocat"], FODMAP_SAUCE_OUT = ["cremeechalote"];
 /* viande et poisson : au plus 20 % des repas proposés */
 const VEG_CATS = ["Œufs","Végétarien"];
-const EXTRA_VEG2 = { bowl:["pakchoi","edamame","daikon"], donburi:["pakchoi","daikon","blettes"], wok:["pakchoi","chouvert","blettes"], nouilles:["pakchoi","chouvert","daikon"],
+const EXTRA_VEG2 = { bowl:["edamame","daikon"], donburi:["daikon","blettes"], wok:["chouvert","blettes"], nouilles:["chouvert","daikon"],
   cremeuses:["blettes","fenouil","tomate"], bistrot:["navet","endive","potimarron","patatedouce","blettes","fenouil"], burger:["tomate","endive"], wrap:["tomate","chouvert","endive"],
-  tartine:["tomate","endive","fenouil"], omelette:["blettes","pakchoi","tomate"], salade:["endive","fenouil","tomate","chouvert","edamame"], curry:["potimarron","patatedouce","pakchoi","blettes"] };
+  tartine:["tomate","endive","fenouil"], omelette:["blettes","tomate"], salade:["endive","fenouil","tomate","chouvert","edamame"], curry:["potimarron","patatedouce","blettes"] };
 FORMATS.forEach(f => (EXTRA_VEG2[f.id] || []).forEach(v => { if (VEGS[v] && f.v.indexOf(v) < 0) f.v.push(v); }));
 /* tofu, feta et œufs au plat rejoignent aussi les formats existants */
 [["bowl","tofu"],["bowl","feta"],["donburi","tofu"],["wok","tofu"],["nouilles","tofu"],["curry","tofu"],["salade","tofu"],["salade","feta"],["tartine","feta"],["wrap","tofu"],["wrap","feta"],["cremeuses","feta"],["bistrot","tofu"],["bistrot","oeufplat"],["bowl","oeufplat"],["donburi","oeufplat"],["tartine","oeufplat"]]
@@ -5199,11 +5198,13 @@ function mealCell(m, sl, di){
     : `<div class="meal empty slot-${sl.k}"><div class="slot">${sl.label}</div><button class="create" data-act="createMeal" ${at}>＋ ${sl.create}</button></div>`;
   const cls = CAT_KEY[m.cat] ? " has-cat" : "";
   const meta = [m.st || "", kcalOf(m) ? "≈ " + fmtK(kcalOf(m)) + " kcal" : ""].filter(Boolean).join(", ");
-  return `<div class="meal slot-${sl.k}${cls}" ${catSt(m.cat)}><div class="slot">${sl.label}</div>
+  return `<div class="meal slot-${sl.k}${cls}${m.shop ? " shopped" : ""}" ${catSt(m.cat)}><div class="slot">${sl.label}</div>
     <button class="dish" data-act="openMeal" ${at}><span class="dish-name">${esc(m.name || "Repas sans nom")}</span>
     ${m.sub ? `<span class="dish-sub">${esc(m.sub)}</span>` : ""}<span class="dish-meta">${catTag(m.cat)}${seasonChip(m)}<span>${esc(meta)}</span></span>${timesTxt(m) ? `<span class="dish-times">${esc(timesTxt(m))}</span>` : ""}${mealBadges(m)}</button>
+    <button class="shopck" data-act="shopDone" ${at} aria-pressed="${!!m.shop}">${ic("check")}<span>${m.shop ? "Courses faites" : "Courses faites ?"}</span></button>
     ${mealTools(at)}</div>`;
 }
+A.shopDone = ds => { const t = T(ds), m = getMeal(t); if (!m) return; m.shop = !m.shop; save(); render(); };
 let NEWSET = new Set();
 function mealBadges(m){
   const b = []; if (NEWSET.has(m.id)) b.push("nouveau");
@@ -5361,17 +5362,22 @@ function migrate7(){
 }
 
 /* ---------- mise à jour du texte des recettes : à chaque révision, le carnet et les repas du planning prennent la nouvelle version ---------- */
-const RECIPES_REV = 4;
+const RECIPES_REV = 5;
 function migrate8(){
+  const wasV = S.v || 0;
   const fresh = new Map(NEW_RECIPES.map(r => [r.id, r])), have = new Set(S.recipes.map(r => r.id));
   S.recipes = S.recipes.filter(r => r.own || fresh.has(r.id)).map(r => (!r.own && fresh.has(r.id)) ? recipeToState(fresh.get(r.id)) : r);
   NEW_RECIPES.forEach(r => { if (!have.has(r.id)) S.recipes.push(recipeToState(r)); });
   const sig = a => (a || []).map(i => norm(i.n)).sort().join("|");
   S.weeks.forEach(w => w.days.forEach(d => {
-    delete d.meals.p;
-    ["l", "d"].forEach(k => {
+    if (wasV < 8) delete d.meals.p;
+    ["l", "d", "p"].forEach(k => {
       const m = d.meals[k]; if (!m || !m.recipeId) return;
-      const r = fresh.get(m.recipeId); if (!r || sig(m.ing) !== sig(r.ing)) return;
+      const r = fresh.get(m.recipeId); if (!r) return;
+      /* v8 rev 5 : plus de pak choï ni de fruits à coque (remplacés par des blettes et des raisins secs) */
+      const old = (m.ing || []).some(i => /pak.?cho|noix(?! de coco)|noisette|amande|cacahu/.test(norm(i.n)));
+      if (!old && sig(m.ing) !== sig(r.ing)) return;
+      if (old) m.ing = r.ing.map(i => ({ ...i }));
       m.steps = [...r.steps]; m.tip = r.tip || ""; m.t = r.t; m.tc = r.tc || 0; m.d = r.d; m.name = r.n; m.cat = r.cat;
     });
   }));

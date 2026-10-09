@@ -26,3 +26,11 @@
 .tip p{white-space:pre-line}
 @media (max-width:640px){.ask-row{flex-direction:column}}
 .cs-rest{margin:8px 0 0;color:var(--ink-2,#444);font-size:15px;line-height:1.6}
+
+/* coche « courses faites » sur la carte d'un repas */
+.shopck{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:6px 0;background:none;border:0;font-size:12.5px;letter-spacing:.02em;color:var(--mute);cursor:pointer}
+.shopck .ico-s,.shopck svg{width:18px;height:18px;padding:3px;border:1px solid var(--line-2);border-radius:50%;box-sizing:border-box;stroke:transparent;transition:all .15s}
+.shopck:hover{color:var(--ink)}
+.shopck[aria-pressed="true"]{color:var(--ink)}
+.shopck[aria-pressed="true"] svg{background:var(--celadon);border-color:var(--celadon);stroke:var(--card)}
+.meal.shopped .dish-name{opacity:.78}
