@@ -26,11 +26,11 @@ GR("v7-burger-dinde","Burger de dinde aux champignons poêlés et emmental fondu
  "Servir — Poser le burger au centre d'une assiette chaude, avec les carottes rôties à côté. Mettre le reste de sauce dans un petit bol pour tremper les carottes. Piquer un pic en bois dans le burger s'il ne tient pas. Se mange tiède. [1 min]"
  ],
  "Sans huile au début, les champignons rendent leur eau puis dorent au lieu de bouillir."),
-GR("v7-tamagoyaki","Omelette roulée à la japonaise, épinards et pak choi, riz et nori","Œufs","Japonais","Riz",2,
- [["œuf",3,"pièce"],["épinards",120,"g"],["pak choi",100,"g"],["riz cuit",150,"g"],["sauce soja",1,"c. à café"],["mirin",1,"c. à café"],["sucre",1,"c. à café"],["huile",1,"c. à café"],["nori",1,"pièce"],["graines de sésame",1,"c. à café"]],
+GR("v7-tamagoyaki","Omelette roulée à la japonaise, épinards et blettes, riz et nori","Œufs","Japonais","Riz",2,
+ [["œuf",3,"pièce"],["épinards",120,"g"],["blettes",100,"g"],["riz cuit",150,"g"],["sauce soja",1,"c. à café"],["mirin",1,"c. à café"],["sucre",1,"c. à café"],["huile",1,"c. à café"],["nori",1,"pièce"],["graines de sésame",1,"c. à café"]],
 [
  "Sortir le matériel — Sortir une poêle ronde antiadhésive d'environ 20 cm avec un couvercle, une casserole, un bol, une fourchette, une spatule large et une planche. Mettre l'eau à chauffer dans la casserole. Si {{riz cuit}} de riz cuit est froid, le réchauffer doucement. [3 min]",
- "Cuire les légumes — Laver {{épinards}} d'épinards et couper {{pak choi}} de pak choi en tronçons. Les plonger 2 minutes dans l'eau bouillante, puis les passer sous l'eau froide pour garder leur belle couleur verte. Attention : bien les presser à l'étape suivante, sinon l'omelette sera trop liquide. [cuisson 4 min]",
+ "Cuire les légumes — Laver {{épinards}} d'épinards et couper {{blettes}} de blettes en tronçons. Les plonger 3 minutes dans l'eau bouillante, puis les passer sous l'eau froide pour garder leur belle couleur verte. Attention : bien les presser à l'étape suivante, sinon l'omelette sera trop liquide. [cuisson 4 min]",
  "Presser les légumes — Prendre les légumes par poignées et les presser fermement entre les mains pour enlever toute l'eau. Les poser sur la planche et les couper en petits morceaux. Ils doivent former une petite boule compacte et presque sèche. [2 min]",
  "Battre les œufs — Casser {{œuf}} dans le bol. Les battre doucement à la fourchette avec {{mirin}} de mirin, {{sauce soja}} de sauce soja et {{sucre}} de sucre. Ne pas faire mousser. Le mélange doit être jaune et bien lisse, sans morceaux de blanc. [2 min]",
  "Cuire l'omelette — Faire chauffer la poêle à feu doux avec {{huile}} d'huile. Verser tout le mélange d'œufs d'un seul coup, puis répartir les légumes dessus. Couvrir et laisser cuire 3 à 4 minutes, jusqu'à ce que le dessus soit presque pris mais encore un peu brillant. Attention : garder le feu doux, sinon l'omelette brunit. [cuisson 5 min]",
@@ -51,16 +51,16 @@ GR("v7-frittata","Frittata dorée aux pommes de terre, courgette et parmesan, sa
  "Servir — Sortir la poêle du four avec un torchon, car le manche est brûlant. Laisser tiédir 3 minutes. Passer un couteau le long du bord et faire glisser la frittata sur une planche. La couper en parts triangulaires et parsemer de ciboulette coupée finement. [4 min]"
  ],
  "Une frittata se mange tiède : elle est plus moelleuse et ses saveurs ressortent mieux."),
-GR("v7-risotto-butternut","Risotto crémeux au butternut et à la sauge, parmesan et noisettes","Végétarien","Bistrot","Riz",2,
- [["riz cru",75,"g"],["butternut",180,"g"],["épinards",70,"g"],["bouillon",300,"ml"],["beurre",10,"g"],["huile",1,"c. à café"],["parmesan",20,"g"],["sauge","","quelques brins"],["noisettes",8,"g"]],
+GR("v7-risotto-butternut","Risotto crémeux au butternut et à la sauge, parmesan et raisins secs","Végétarien","Bistrot","Riz",2,
+ [["riz cru",75,"g"],["butternut",180,"g"],["épinards",70,"g"],["bouillon",300,"ml"],["beurre",10,"g"],["huile",1,"c. à café"],["parmesan",20,"g"],["sauge","","quelques brins"],["raisins secs",10,"g"]],
 [
- "Sortir le matériel — Sortir une grande poêle ou sauteuse à fond épais, une casserole, une louche et une cuillère en bois. Faire chauffer {{bouillon}} de bouillon jusqu'à frémissement, puis le garder sur feu très doux : un bouillon froid ralentirait la cuisson du riz. Poser un petit bol pour les noisettes. [4 min]",
- "Couper les ingrédients — Éplucher {{butternut}} de butternut et le couper en dés de 1 cm, bien réguliers. Écraser grossièrement {{noisettes}} de noisettes avec le plat d'un couteau. Laver {{épinards}} d'épinards et les égoutter. Couper la sauge en tout petits morceaux. [7 min]",
+ "Sortir le matériel — Sortir une grande poêle ou sauteuse à fond épais, une casserole, une louche et une cuillère en bois. Faire chauffer {{bouillon}} de bouillon jusqu'à frémissement, puis le garder sur feu très doux : un bouillon froid ralentirait la cuisson du riz. Poser un petit bol pour les raisins secs. [4 min]",
+ "Couper les ingrédients — Éplucher {{butternut}} de butternut et le couper en dés de 1 cm, bien réguliers. Rincer {{raisins secs}} de raisins secs et les égoutter. Laver {{épinards}} d'épinards et les égoutter. Couper la sauge en tout petits morceaux. [7 min]",
  "Faire chauffer le riz — Dans la sauteuse, faire chauffer {{huile}} d'huile à feu moyen. Ajouter {{riz cru}} de riz et remuer 2 minutes, jusqu'à ce que le bord des grains devienne transparent. Attention : ne pas rincer le riz avant, son amidon rend le risotto crémeux. [cuisson 2 min]",
  "Cuire le riz — Ajouter une louche de bouillon chaud et remuer doucement jusqu'à ce qu'il soit absorbé, puis ajouter la louche suivante. Continuer ainsi pendant 8 minutes, à feu doux à moyen. Le riz doit toujours être à peine couvert de liquide. Peu à peu, le mélange devient crémeux. [cuisson 8 min]",
  "Ajouter le butternut — Ajouter les dés de butternut et continuer louche après louche pendant 10 minutes. Le risotto est prêt quand le riz est tendre mais encore un peu ferme sous la dent, et que le butternut s'écrase facilement. Attention : ne pas verser tout le bouillon d'un coup, le risotto serait pâteux. [cuisson 10 min]",
  "Finir le risotto — Retirer la sauteuse du feu. Ajouter les épinards, {{beurre}} de beurre, {{parmesan}} de parmesan et la sauge, puis remuer énergiquement 1 minute pour bien mélanger. Couvrir 2 minutes : les épinards fondent grâce à la chaleur qui reste. [cuisson 3 min]",
- "Servir — Servir le risotto dans des assiettes creuses et chaudes. Il doit être souple et couler doucement, ni trop liquide ni trop ferme. Parsemer des noisettes écrasées et d'un peu de sauge. Se mange tout de suite, avant qu'il ne refroidisse. [2 min]"
+ "Servir — Servir le risotto dans des assiettes creuses et chaudes. Il doit être souple et couler doucement, ni trop liquide ni trop ferme. Parsemer des raisins secs et d'un peu de sauge. Se mange tout de suite, avant qu'il ne refroidisse. [2 min]"
  ],
  "Ajoute le bouillon toujours chaud, petit à petit : c'est ce qui rend le risotto crémeux sans crème."),
 GR("v7-saumon-patate-douce","Saumon rôti au miso, purée de patate douce et haricots verts au beurre","Saumon & poisson","Français léger","Pommes de terre",2,
@@ -75,15 +75,15 @@ GR("v7-saumon-patate-douce","Saumon rôti au miso, purée de patate douce et har
  "Servir — Poser la purée au centre d'une assiette chaude et le saumon par-dessus. Ranger les haricots verts brillants de beurre à côté. Parsemer le saumon de {{graines de sésame}} de graines de sésame et de ciboulette coupée finement. [3 min]"
  ],
  "Le miso est déjà salé : n'ajoute pas de sel sur le saumon."),
-GR("v7-tagliatelles-champignons","Tagliatelles crémeuses aux champignons, courgette et noix, copeaux de parmesan","Végétarien","Bistrot","Pâtes",1,
- [["tagliatelles cuites",170,"g"],["champignons",200,"g"],["courgette",100,"g"],["crème légère",60,"g"],["parmesan",15,"g"],["beurre",8,"g"],["noix",8,"g"],["persil","","quelques brins"],["thym","","quelques brins"],["muscade",1,"pincée"]],
+GR("v7-tagliatelles-champignons","Tagliatelles crémeuses aux champignons, courgette et raisins secs, copeaux de parmesan","Végétarien","Bistrot","Pâtes",1,
+ [["tagliatelles cuites",170,"g"],["champignons",200,"g"],["courgette",100,"g"],["crème légère",60,"g"],["parmesan",15,"g"],["beurre",8,"g"],["raisins secs",10,"g"],["persil","","quelques brins"],["thym","","quelques brins"],["muscade",1,"pincée"]],
 [
  "Sortir le matériel — Sortir une grande casserole pour les pâtes, une grande poêle, une écumoire, une planche et un couteau. Remplir la casserole d'eau, la mettre à chauffer et la saler légèrement. Sortir la crème et le beurre du frigo pour qu'ils soient souples. [3 min]",
- "Couper les légumes — Nettoyer {{champignons}} de champignons avec un chiffon humide, sans les passer sous l'eau : ils absorberaient trop d'eau. Les couper en lamelles. Éplucher {{courgette}} de courgette et la couper en fines demi-rondelles. Écraser grossièrement {{noix}} de noix et couper le persil finement. [7 min]",
+ "Couper les légumes — Nettoyer {{champignons}} de champignons avec un chiffon humide, sans les passer sous l'eau : ils absorberaient trop d'eau. Les couper en lamelles. Éplucher {{courgette}} de courgette et la couper en fines demi-rondelles. Rincer {{raisins secs}} de raisins secs, les égoutter et couper le persil finement. [7 min]",
  "Faire dorer les champignons — Mettre les champignons dans la poêle sèche, à feu moyen à fort, et les remuer peu : ils rendent d'abord leur eau, puis dorent après 4 minutes. Ajouter {{beurre}} de beurre et le thym effeuillé. Attention : ne pas trop remplir la poêle, les champignons cuiraient dans leur eau. [cuisson 6 min]",
  "Préparer la sauce — Ajouter la courgette et cuire 3 minutes en remuant, jusqu'à ce qu'elle soit tendre. Baisser le feu, verser {{crème légère}} de crème légère et râper {{muscade}} de muscade. Laisser épaissir 2 minutes : la sauce doit enrober le dos d'une cuillère. [cuisson 5 min]",
  "Réchauffer les pâtes — Plonger {{tagliatelles cuites}} de tagliatelles dans l'eau bouillante pendant 1 minute pour les réchauffer. Avant d'égoutter, garder un petit verre d'eau de cuisson. Égoutter avec l'écumoire. Attention : ne pas les laisser plus longtemps, elles sont déjà cuites et deviendraient molles. [cuisson 2 min]",
- "Mélanger et servir — Verser les pâtes dans la sauce, ajouter une louche d'eau de cuisson et mélanger 1 minute à feu doux. Servir dans des assiettes creuses chaudes. Parsemer de noix, de persil et de {{parmesan}} de parmesan en copeaux, coupés avec un économe. [3 min]"
+ "Mélanger et servir — Verser les pâtes dans la sauce, ajouter une louche d'eau de cuisson et mélanger 1 minute à feu doux. Servir dans des assiettes creuses chaudes. Parsemer de raisins secs, de persil et de {{parmesan}} de parmesan en copeaux, coupés avec un économe. [3 min]"
  ],
  "L'eau de cuisson des pâtes contient de l'amidon : quelques cuillères suffisent à lier la sauce."),
 GR("v7-oyakodon","Oyakodon : poulet et œufs fondants sur riz, carotte et épinards au dashi doux","Poulet","Japonais","Riz",2,
@@ -97,14 +97,14 @@ GR("v7-oyakodon","Oyakodon : poulet et œufs fondants sur riz, carotte et épina
  "Servir — Mettre le riz tiède dans un grand bol creux. Faire glisser le contenu de la poêle par-dessus, avec tout le jus : il va parfumer le riz. Parsemer de cébette et servir tout de suite. [2 min]"
  ],
  "Éteins le feu quand l'œuf est encore un peu liquide : il termine sa cuisson dans le bol."),
-GR("v7-cabillaud-vapeur","Cabillaud vapeur au gingembre, pak choi et champignons sautés, riz au sésame","Saumon & poisson","Asiatique","Riz",1,
- [["dos de cabillaud",160,"g"],["pak choi",150,"g"],["champignons",100,"g"],["riz cuit",200,"g"],["sauce soja",2,"c. à café"],["mirin",1,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["graines de sésame",1,"c. à café"],["cébette",1,"pièce"]],
+GR("v7-cabillaud-vapeur","Cabillaud vapeur au gingembre, blettes et champignons sautés, riz au sésame","Saumon & poisson","Asiatique","Riz",1,
+ [["dos de cabillaud",160,"g"],["blettes",150,"g"],["champignons",100,"g"],["riz cuit",200,"g"],["sauce soja",2,"c. à café"],["mirin",1,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["graines de sésame",1,"c. à café"],["cébette",1,"pièce"]],
 [
  "Sortir le matériel — Sortir une casserole avec un panier vapeur, ou une grande poêle avec couvercle et une assiette creuse posée sur un petit support. Sortir aussi un bol, une poêle et une planche. Verser 3 cm d'eau et la faire frémir. Réchauffer {{riz cuit}} de riz si besoin. [3 min]",
  "Assaisonner le poisson — Dans le bol, mélanger {{sauce soja}} de sauce soja, {{mirin}} de mirin et {{gingembre}} de gingembre râpé. Poser {{dos de cabillaud}} de cabillaud dans l'assiette creuse et verser la moitié de la sauce dessus. Couper {{cébette}} en fines rondelles. [3 min]",
- "Couper les légumes — Couper {{pak choi}} de pak choi en tronçons de 3 cm, en séparant les côtes blanches des feuilles vertes. Couper {{champignons}} de champignons en lamelles. Les côtes cuisent plus lentement que les feuilles : elles iront dans la poêle en premier. [4 min]",
+ "Couper les légumes — Couper {{blettes}} de blettes en tronçons de 3 cm, en séparant les côtes blanches des feuilles vertes. Couper {{champignons}} de champignons en lamelles. Les côtes cuisent plus lentement que les feuilles : elles iront dans la poêle en premier. [4 min]",
  "Cuire le poisson — Poser l'assiette dans le panier, couvrir et cuire 9 minutes à feu moyen. Ne pas soulever le couvercle trop souvent. Le cabillaud est cuit quand sa chair devient blanche, opaque, et se sépare en morceaux. Attention : un poisson trop cuit devient sec. [cuisson 9 min]",
- "Faire revenir les légumes — Pendant ce temps, faire chauffer {{huile de sésame}} d'huile de sésame dans la poêle à feu moyen. Faire revenir les champignons 3 minutes en remuant, puis ajouter les côtes de pak choi. Ajouter les feuilles 2 minutes plus tard avec le reste de sauce. Les légumes doivent rester brillants et un peu croquants. [cuisson 5 min]",
+ "Faire revenir les légumes — Pendant ce temps, faire chauffer {{huile de sésame}} d'huile de sésame dans la poêle à feu moyen. Faire revenir les champignons 3 minutes en remuant, puis ajouter les côtes de blettes. Ajouter les feuilles 2 minutes plus tard avec le reste de sauce. Les légumes doivent rester brillants et un peu croquants. [cuisson 5 min]",
  "Servir — Mettre le riz au centre d'une assiette creuse chaude et disposer les légumes autour. Poser le cabillaud sur le riz et verser dessus son jus de cuisson. Parsemer de {{graines de sésame}} de graines de sésame et de cébette. [3 min]"
  ],
  "Le poisson vapeur est cuit quand la chair passe du translucide au blanc opaque : surveille-le dès 8 minutes."),

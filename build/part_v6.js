@@ -171,11 +171,13 @@ function mealCell(m, sl, di){
     : `<div class="meal empty slot-${sl.k}"><div class="slot">${sl.label}</div><button class="create" data-act="createMeal" ${at}>＋ ${sl.create}</button></div>`;
   const cls = CAT_KEY[m.cat] ? " has-cat" : "";
   const meta = [m.st || "", kcalOf(m) ? "≈ " + fmtK(kcalOf(m)) + " kcal" : ""].filter(Boolean).join(", ");
-  return `<div class="meal slot-${sl.k}${cls}" ${catSt(m.cat)}><div class="slot">${sl.label}</div>
+  return `<div class="meal slot-${sl.k}${cls}${m.shop ? " shopped" : ""}" ${catSt(m.cat)}><div class="slot">${sl.label}</div>
     <button class="dish" data-act="openMeal" ${at}><span class="dish-name">${esc(m.name || "Repas sans nom")}</span>
     ${m.sub ? `<span class="dish-sub">${esc(m.sub)}</span>` : ""}<span class="dish-meta">${catTag(m.cat)}${seasonChip(m)}<span>${esc(meta)}</span></span>${timesTxt(m) ? `<span class="dish-times">${esc(timesTxt(m))}</span>` : ""}${mealBadges(m)}</button>
+    <button class="shopck" data-act="shopDone" ${at} aria-pressed="${!!m.shop}">${ic("check")}<span>${m.shop ? "Courses faites" : "Courses faites ?"}</span></button>
     ${mealTools(at)}</div>`;
 }
+A.shopDone = ds => { const t = T(ds), m = getMeal(t); if (!m) return; m.shop = !m.shop; save(); render(); };
 let NEWSET = new Set();
 function mealBadges(m){
   const b = []; if (NEWSET.has(m.id)) b.push("nouveau");

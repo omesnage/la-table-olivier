@@ -24,11 +24,11 @@ et on commite `build/` **et** `index.html` ensemble. Le script échoue si une an
 - Les recettes fournies sont recopiées dans les données de l'utilisateur. Toute modification de recettes fournies exige une migration (`migrateN`, appelée par `migrateAll` dans `part_app.js`) et une montée de `RECIPES_REV` ou de version. Les recettes faites main ne sont jamais touchées.
 
 ## Contraintes alimentaires d'Olivier (à respecter dans toute recette ou proposition)
-- Jamais : agrumes et citron, vinaigre, tomate, piment, gochujang, cornichons et câpres, fromage de chèvre, chou, poireau, betterave, navet, légumineuses, bœuf gras, soba, beurre de cacahuète et cacahuètes.
+- Jamais : agrumes et citron, vinaigre, tomate, piment, gochujang, cornichons et câpres, fromage de chèvre, chou, poireau, betterave, navet, légumineuses, bœuf gras, soba, pak choï, cacahuètes, beurre de cacahuète et tous les fruits à coque (noix, noisettes, amandes) ; on met des raisins secs à la place.
 - Épices douces seulement ; cuisine pauvre en graisses.
 - Poids cuits : 200 g de riz, 250 g de pomme de terre, 220 g de pâtes. Environ 850 kcal au plus par plat généré. Objectif calorique : 1800 kcal par jour.
 - Pas de boutons « Dupliquer ». Pas de collations.
-- À corriger : le v7 contient encore du beurre de cacahuète (`part_db2.js`, `part_pdj.js` smoothie bowl, `part_pdj7.js` tartine cacahuète). Voir avec Olivier avant de retirer, avec migration.
+- Fait en révision 5 (9 octobre 2026) : plus de pak choï (blettes à la place) ni de fruits à coque (raisins secs). Chaque carte de repas porte une coche « Courses faites » (champ `shop` du repas).
 
 ## Style
 Livrables soignés, épurés, minimalistes, façon luxe. Français simple, sans jargon, solutions directes.
