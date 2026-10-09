@@ -1,0 +1,28 @@
+
+/* v7 : cinq gestes par repas, « Remplacer » en premier */
+.meal-tools{display:flex!important;flex-wrap:wrap;gap:6px}
+.meal-tools .mt{padding:8px 11px}
+.mt.mt-main{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.mt.mt-main:hover{opacity:.88}
+@media (max-width:640px){.meal-tools{display:grid!important;grid-template-columns:1fr 1fr}.mt.mt-main{grid-column:1 / -1}}
+/* le petit-déjeuner ne décale plus les repas dans la colonne du jour */
+.day>.day-head{grid-row:1 / span 2}
+.day>.pdj-row{grid-column:2;grid-row:1;margin:0}
+.day>.meals{grid-column:2;grid-row:2}
+@media (max-width:720px){.day>.day-head{grid-row:auto}.day>.pdj-row,.day>.meals{grid-column:1;grid-row:auto}}
+.sync-mark{margin-left:auto;align-self:center;font-size:12px;color:var(--ink-3,#7a7a72);letter-spacing:.01em}
+.sync-mark[data-bad="1"]{color:var(--danger,#a33)}
+.dish-times{display:block;margin-top:2px;font-size:12.5px;color:var(--ink-3,#7a7a72)}
+.ask-btn{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:6px 0;border:0;background:none;color:var(--celadon,#4f6b5d);font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.ask-btn .ico-s{width:1em;height:1em}
+.ask{margin-top:10px;padding:14px;border:1px solid var(--line-2);border-radius:14px;background:var(--card)}
+.ask[hidden]{display:none}
+.ask-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.ask-row{display:flex;gap:8px}
+.ask-in{flex:1;min-width:0;padding:10px 12px;border:1px solid var(--line-2);border-radius:var(--r);font:inherit;background:transparent;color:inherit}
+.ask-out{margin-top:10px;white-space:pre-line;line-height:1.55;font-size:14.5px}
+.ask-out:empty{display:none}
+.ask-save{margin-top:10px}
+.tip p{white-space:pre-line}
+@media (max-width:640px){.ask-row{flex-direction:column}}
+.cs-rest{margin:8px 0 0;color:var(--ink-2,#444);font-size:15px;line-height:1.6}
