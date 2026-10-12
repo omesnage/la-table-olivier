@@ -9,7 +9,7 @@ const REW_BAN = [
   ["agrumes et citron", /\b(citron|citrons|agrume|agrumes|orange|oranges|pamplemousse|pamplemousses|mandarine|mandarines|clementine|clementines|lime|limes|yuzu)\b/],
   ["vinaigre", /\bvinaigres?\b/], ["tomate", /\btomates?\b/], ["piment", /\bpiments?\b/], ["gochujang", /\bgochujang\b/],
   ["cornichons et câpres", /\b(cornichons?|capres?)\b/], ["fromage de chèvre", /\bchevre\b/],
-  ["chou", /\bchoux?\b(?![- ]?(fleur|rave))/], ["poireau", /\bpoireaux?\b/], ["betterave", /\bbetteraves?\b/], ["navet", /\bnavets?\b/], ["panais", /\bpanais\b/],
+  ["chou", /\bchoux?\b(?![- ]?(fleur|rave))/], ["poireau", /\bpoireaux?\b/], ["betterave", /\bbetteraves?\b/], ["navet", /\bnavets?\b/], ["panais", /\bpanais\b/], ["pak choï", /\bpak ?choi\b/],
   ["légumineuses", /\b(lentilles?|pois chiches?|pois casses?|flageolets?|feves?|graines? de soja|edamames?|houmous|hummus|falafels?|haricots (rouges?|blancs?|secs?|noirs?|azuki))\b/],
   ["soba", /\bsoba\b/], ["cacahuètes", /\bcacahuetes?\b|\barachides?\b/]
 ];

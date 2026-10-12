@@ -132,3 +132,24 @@ function migrate10(){
   })));
   S.v = 10;
 }
+
+/* ---------- version 11 : plus de pak choï (titres compris) dans les recettes fournies ni dans les repas du planning ---------- */
+function migrate11(){
+  try { const raw = localStorage.getItem(LS_KEY); if (raw && !localStorage.getItem(LS_KEY + "-avant-v11")) localStorage.setItem(LS_KEY + "-avant-v11", raw); } catch (e) {}
+  const rx = /pak ?choi/, has = o => rx.test(norm([o.name || o.n || "", o.sub || "", ...(o.ing || []).map(i => i.n), ...(o.steps || [])].join(" "))), fresh = new Map(NEW_RECIPES.map(r => [r.id, r]));
+  S.recipes = S.recipes.map(r => {
+    if (r.own || !has(r)) return r;
+    if (fresh.has(r.id) && !has(fresh.get(r.id))) return recipeToState(fresh.get(r.id));
+    let k; while ((k = (r.ing || []).findIndex(i => rx.test(norm(i.n)))) >= 0) removeIngredient(r, k);
+    return r;
+  });
+  S.weeks.forEach(w => w.days.forEach(d => ["l", "d", "p"].forEach(k => {
+    const m = d.meals && d.meals[k]; if (!m || m.own || !has(m)) return;
+    const r = m.recipeId && S.recipes.find(x => x.id === m.recipeId);
+    if (r && !has(r)) { const nm = mealFromRecipe(r); nm.id = m.id; if (m.adj && Math.abs(m.adj - 1) > .02) scaleMeal(nm, m.adj); d.meals[k] = nm; return; }
+    let i; while ((i = (m.ing || []).findIndex(x => rx.test(norm(x.n)))) >= 0) removeIngredient(m, i);
+    const clean = t => String(t || "").replace(/,?\s*(?:et\s+)?pak ?cho[iï]/gi, "").replace(/\s{2,}/g, " ").trim();
+    m.name = clean(m.name); m.sub = clean(m.sub);
+  })));
+  S.v = 11;
+}

@@ -81,7 +81,7 @@ Object.assign(SAUCES, {
     err:"mixer trop longtemps : le basilic chauffe et noircit"}
 });
 FORMATS.push(
-  {id:"bibimbap",n:"Bibimbap",st:"Coréen",s:["riz"],p:["oeufplat","tofu","boeuf","poulet"],v:["carotte","epinards","courgette","pakchoi","haricotsverts","daikon","blettes","chouvert"],k:2,d:2,
+  {id:"bibimbap",n:"Bibimbap",st:"Coréen",s:["riz"],p:["oeufplat","tofu","boeuf","poulet"],v:["carotte","epinards","courgette","haricotsverts","daikon","blettes","chouvert"],k:2,d:2,
    sa:["coreenne","sojasesame","misosesame"],x:[["graines de sésame",1,"c. à café"],["huile de sésame",1,"c. à café"],["nori",1,"pièce"]],
    herbs:["ciboulette","coriandre"],mat:"un grand bol de service, de petits bols pour les légumes",
    core:"Les namul. Cuire chaque légume séparément et l'assaisonner d'une goutte d'huile de sésame et d'une pincée de graines de sésame : chaque garniture garde sa propre saveur. Repères : des couleurs bien distinctes, aucun mélange. Point de contrôle : chaque légume garde un petit croquant. À éviter : tout cuire ensemble, les couleurs se ternissent.",
@@ -89,7 +89,7 @@ FORMATS.push(
    fin:"Servir la sauce à part et mélanger à table, de bas en haut, pour que le riz s'imprègne de tous les parfums.",
    orga:"Les légumes se cuisent la veille ; le bol se monte à la minute.",
    tip:"Mélanger à table, de bas en haut : c'est le geste qui donne son nom au plat (bibim = mélanger)."},
-  {id:"soba",n:"Soba",st:"Japonais",s:["soba"],p:["tofu","saumon","crevettes","poulet","saumonfume"],v:["concombre","carotte","pakchoi","daikon","epinards","courgette","edamame"],k:2,d:1,
+  {id:"soba",n:"Soba",st:"Japonais",s:["soba"],p:["tofu","saumon","crevettes","poulet","saumonfume"],v:["concombre","carotte","daikon","epinards","courgette","edamame"],k:2,d:1,
    sa:["sojasesame","misosesame","coreenne"],x:[["graines de sésame",1,"c. à café"],["nori",1,"pièce"]],
    herbs:["coriandre","ciboulette","shiso"],fruits:["pamplemousse","orange","kiwi"],mat:"un bol large, des baguettes ou une fourchette",
    core:"L'assaisonnement. Mélanger les soba rincées et bien égouttées avec la moitié de la sauce. Ajouter les légumes en filets minces, puis la protéine tiède. Repères : les nouilles brillent sans baigner dans la sauce. Point de contrôle : on voit chaque garniture. À éviter : verser toute la sauce d'un coup.",
@@ -97,7 +97,7 @@ FORMATS.push(
    fin:"Napper du reste de sauce, parsemer de graines de sésame.",
    orga:"Les soba, les légumes et la sauce se préparent la veille ; le bol se monte à la minute.",
    tip:"Les soba se servent tièdes ou froides : rincées à l'eau froide, elles gardent un goût de noisette."},
-  {id:"miso",n:"Soupe-repas miso",st:"Japonais",s:["riz","soba"],p:["tofu","saumon","crevettes","oeufs"],v:["pakchoi","epinards","daikon","carotte","courgette","blettes"],k:2,d:1,
+  {id:"miso",n:"Soupe-repas miso",st:"Japonais",s:["riz","soba"],p:["tofu","saumon","crevettes","oeufs"],v:["epinards","daikon","carotte","courgette","blettes"],k:2,d:1,
    sa:["sojasesame"],x:[["miso blanc",1,"c. à soupe"],["wakamé",3,"g"],["eau",400,"ml"]],
    herbs:["ciboulette","coriandre"],mat:"une casserole de 2 litres, un bol profond, une louche",
    core:"Le bouillon miso. Porter 400 ml d'eau à frémissement, ajouter le wakamé réhydraté, les légumes puis la protéine, 3 min à feu doux (plaque 3 sur 9). Hors du feu, délayer le miso dans une louche de bouillon, puis le remettre dans la casserole. Repères : le bouillon est doré, légèrement trouble. Point de contrôle : il fume sans bouillir. À éviter : faire bouillir le miso, il perd son parfum.",
@@ -105,7 +105,7 @@ FORMATS.push(
    fin:"Parsemer d'herbes ciselées et servir aussitôt.",
    orga:"Le bouillon se prépare la veille sans miso ; le miso se délaye à la minute.",
    tip:"Le miso ne bout jamais : on le délaye hors du feu pour garder tout son parfum."},
-  {id:"japchae",n:"Japchae",st:"Coréen",s:["vermicelles"],p:["tofu","boeuf","poulet","crevettes"],v:["epinards","carotte","poivron","pakchoi","courgette","blettes"],k:2,d:2,
+  {id:"japchae",n:"Japchae",st:"Coréen",s:["vermicelles"],p:["tofu","boeuf","poulet","crevettes"],v:["epinards","carotte","poivron","courgette","blettes"],k:2,d:2,
    sa:["coreenne","sojasesame"],x:[["huile de sésame",1,"c. à café"],["graines de sésame",1,"c. à café"]],
    herbs:["ciboulette","coriandre"],mat:"un wok ou une grande poêle, des ciseaux de cuisine, un saladier",
    core:"Le mélange. Dans un grand saladier, mélanger les vermicelles tièdes, les légumes sautés et la protéine avec la sauce, en soulevant délicatement à deux mains. Repères : les vermicelles sont brillants et enrobés. Point de contrôle : tous les légumes sont bien répartis. À éviter : trop mélanger, les légumes se délitent.",
@@ -121,7 +121,7 @@ FORMATS.push(
    fin:"Finir d'un tour de moulin à poivre et d'herbes fraîches.",
    orga:"Les légumes rôtis se préparent la veille ; l'assiette se monte à la minute.",
    tip:"Rôtir deux légumes de couleurs différentes sur la même plaque : le contraste fait l'assiette."},
-  {id:"veloute",n:"Velouté & tartine",st:"Français léger",s:["pain"],p:["feta","oeufcomte","jambon","saumonfume","oeufs"],v:["potimarron","carotte","courgette","patatedouce","brocoli","navet","blettes","pakchoi"],k:2,d:1,
+  {id:"veloute",n:"Velouté & tartine",st:"Français léger",s:["pain"],p:["feta","oeufcomte","jambon","saumonfume","oeufs"],v:["potimarron","carotte","courgette","patatedouce","brocoli","navet","blettes"],k:2,d:1,
    sa:["ciboulette","grecque"],x:[["bouillon",300,"ml"],["crème légère 15 %",30,"g"]],
    herbs:["ciboulette","persil","estragon"],mat:"une casserole, un mixeur plongeant, un bol profond",
    core:"Le velouté. Mixer les légumes cuits avec 300 ml de bouillon chaud et la crème jusqu'à une texture de soie. Repères : la soupe est lisse et nappe la cuillère. Point de contrôle : sans fils ni morceaux. À éviter : mixer à feu fort, elle mousse et déborde.",
@@ -142,9 +142,9 @@ FORMATS.find(x => x.id === "curry").fruits = ["ananas"];
 const FODMAP_VEG_OUT = ["champignons","oignons","choufleur","avocat"], FODMAP_SAUCE_OUT = ["cremeechalote"];
 /* viande et poisson : au plus 20 % des repas proposés */
 const VEG_CATS = ["Œufs","Végétarien"];
-const EXTRA_VEG2 = { bowl:["pakchoi","edamame","daikon"], donburi:["pakchoi","daikon","blettes"], wok:["pakchoi","chouvert","blettes"], nouilles:["pakchoi","chouvert","daikon"],
+const EXTRA_VEG2 = { bowl:["edamame","daikon"], donburi:["daikon","blettes"], wok:["chouvert","blettes"], nouilles:["chouvert","daikon"],
   cremeuses:["blettes","fenouil","tomate"], bistrot:["navet","endive","potimarron","patatedouce","blettes","fenouil"], burger:["tomate","endive"], wrap:["tomate","chouvert","endive"],
-  tartine:["tomate","endive","fenouil"], omelette:["blettes","pakchoi","tomate"], salade:["endive","fenouil","tomate","chouvert","edamame"], curry:["potimarron","patatedouce","pakchoi","blettes"] };
+  tartine:["tomate","endive","fenouil"], omelette:["blettes","tomate"], salade:["endive","fenouil","tomate","chouvert","edamame"], curry:["potimarron","patatedouce","blettes"] };
 FORMATS.forEach(f => (EXTRA_VEG2[f.id] || []).forEach(v => { if (VEGS[v] && f.v.indexOf(v) < 0) f.v.push(v); }));
 /* tofu, feta et œufs au plat rejoignent aussi les formats existants */
 [["bowl","tofu"],["bowl","feta"],["donburi","tofu"],["wok","tofu"],["nouilles","tofu"],["curry","tofu"],["salade","tofu"],["salade","feta"],["tartine","feta"],["wrap","tofu"],["wrap","feta"],["cremeuses","feta"],["bistrot","tofu"],["bistrot","oeufplat"],["bowl","oeufplat"],["donburi","oeufplat"],["tartine","oeufplat"]]

@@ -26,11 +26,11 @@ GR("v7-burger-dinde","Burger de dinde aux champignons poêlés et emmental fondu
  "Servir — Poser le burger au centre d'une assiette chaude, avec les carottes rôties à côté. Mettre le reste de sauce dans un petit bol pour tremper les carottes. Piquer un pic en bois dans le burger s'il ne tient pas. Se mange tiède. [1 min]"
  ],
  "Sans huile au début, les champignons rendent leur eau puis dorent au lieu de bouillir."),
-GR("v7-tamagoyaki","Omelette roulée à la japonaise, épinards et pak choi, riz et nori","Œufs","Japonais","Riz",2,
- [["œuf",3,"pièce"],["épinards",120,"g"],["pak choi",100,"g"],["riz cuit",150,"g"],["sauce soja",1,"c. à café"],["mirin",1,"c. à café"],["sucre",1,"c. à café"],["huile",1,"c. à café"],["nori",1,"pièce"],["graines de sésame",1,"c. à café"]],
+GR("v7-tamagoyaki","Omelette roulée à la japonaise, épinards, riz et nori","Œufs","Japonais","Riz",2,
+ [["œuf",3,"pièce"],["épinards",200,"g"],["riz cuit",150,"g"],["sauce soja",1,"c. à café"],["mirin",1,"c. à café"],["sucre",1,"c. à café"],["huile",1,"c. à café"],["nori",1,"pièce"],["graines de sésame",1,"c. à café"]],
 [
  "Sortir le matériel — Sortir une poêle ronde antiadhésive d'environ 20 cm avec un couvercle, une casserole, un bol, une fourchette, une spatule large et une planche. Mettre l'eau à chauffer dans la casserole. Si {{riz cuit}} de riz cuit est froid, le réchauffer doucement. [3 min]",
- "Cuire les légumes — Laver {{épinards}} d'épinards et couper {{pak choi}} de pak choi en tronçons. Les plonger 2 minutes dans l'eau bouillante, puis les passer sous l'eau froide pour garder leur belle couleur verte. Attention : bien les presser à l'étape suivante, sinon l'omelette sera trop liquide. [cuisson 4 min]",
+ "Cuire les légumes — Laver {{épinards}} d'épinards. Les plonger 2 minutes dans l'eau bouillante, puis les passer sous l'eau froide pour garder leur belle couleur verte. Attention : bien les presser à l'étape suivante, sinon l'omelette sera trop liquide. [cuisson 4 min]",
  "Presser les légumes — Prendre les légumes par poignées et les presser fermement entre les mains pour enlever toute l'eau. Les poser sur la planche et les couper en petits morceaux. Ils doivent former une petite boule compacte et presque sèche. [2 min]",
  "Battre les œufs — Casser {{œuf}} dans le bol. Les battre doucement à la fourchette avec {{mirin}} de mirin, {{sauce soja}} de sauce soja et {{sucre}} de sucre. Ne pas faire mousser. Le mélange doit être jaune et bien lisse, sans morceaux de blanc. [2 min]",
  "Cuire l'omelette — Faire chauffer la poêle à feu doux avec {{huile}} d'huile. Verser tout le mélange d'œufs d'un seul coup, puis répartir les légumes dessus. Couvrir et laisser cuire 3 à 4 minutes, jusqu'à ce que le dessus soit presque pris mais encore un peu brillant. Attention : garder le feu doux, sinon l'omelette brunit. [cuisson 5 min]",
@@ -97,14 +97,14 @@ GR("v7-oyakodon","Oyakodon : poulet et œufs fondants sur riz, carotte et épina
  "Servir — Mettre le riz tiède dans un grand bol creux. Faire glisser le contenu de la poêle par-dessus, avec tout le jus : il va parfumer le riz. Parsemer de cébette et servir tout de suite. [2 min]"
  ],
  "Éteins le feu quand l'œuf est encore un peu liquide : il termine sa cuisson dans le bol."),
-GR("v7-cabillaud-vapeur","Cabillaud vapeur au gingembre, pak choi et champignons sautés, riz au sésame","Saumon & poisson","Asiatique","Riz",1,
- [["dos de cabillaud",160,"g"],["pak choi",150,"g"],["champignons",100,"g"],["riz cuit",200,"g"],["sauce soja",2,"c. à café"],["mirin",1,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["graines de sésame",1,"c. à café"],["cébette",1,"pièce"]],
+GR("v7-cabillaud-vapeur","Cabillaud vapeur au gingembre, courgette et champignons sautés, riz au sésame","Saumon & poisson","Asiatique","Riz",1,
+ [["dos de cabillaud",160,"g"],["courgette",150,"g"],["champignons",100,"g"],["riz cuit",200,"g"],["sauce soja",2,"c. à café"],["mirin",1,"c. à café"],["gingembre",1,"c. à café"],["huile de sésame",1,"c. à café"],["graines de sésame",1,"c. à café"],["cébette",1,"pièce"]],
 [
  "Sortir le matériel — Sortir une casserole avec un panier vapeur, ou une grande poêle avec couvercle et une assiette creuse posée sur un petit support. Sortir aussi un bol, une poêle et une planche. Verser 3 cm d'eau et la faire frémir. Réchauffer {{riz cuit}} de riz si besoin. [3 min]",
  "Assaisonner le poisson — Dans le bol, mélanger {{sauce soja}} de sauce soja, {{mirin}} de mirin et {{gingembre}} de gingembre râpé. Poser {{dos de cabillaud}} de cabillaud dans l'assiette creuse et verser la moitié de la sauce dessus. Couper {{cébette}} en fines rondelles. [3 min]",
- "Couper les légumes — Couper {{pak choi}} de pak choi en tronçons de 3 cm, en séparant les côtes blanches des feuilles vertes. Couper {{champignons}} de champignons en lamelles. Les côtes cuisent plus lentement que les feuilles : elles iront dans la poêle en premier. [4 min]",
+ "Couper les légumes — Couper {{courgette}} de courgette en demi-rondelles de 5 mm. Couper {{champignons}} de champignons en lamelles. Les champignons iront dans la poêle en premier, car ils cuisent plus lentement. [4 min]",
  "Cuire le poisson — Poser l'assiette dans le panier, couvrir et cuire 9 minutes à feu moyen. Ne pas soulever le couvercle trop souvent. Le cabillaud est cuit quand sa chair devient blanche, opaque, et se sépare en morceaux. Attention : un poisson trop cuit devient sec. [cuisson 9 min]",
- "Faire revenir les légumes — Pendant ce temps, faire chauffer {{huile de sésame}} d'huile de sésame dans la poêle à feu moyen. Faire revenir les champignons 3 minutes en remuant, puis ajouter les côtes de pak choi. Ajouter les feuilles 2 minutes plus tard avec le reste de sauce. Les légumes doivent rester brillants et un peu croquants. [cuisson 5 min]",
+ "Faire revenir les légumes — Pendant ce temps, faire chauffer {{huile de sésame}} d'huile de sésame dans la poêle à feu moyen. Faire revenir les champignons 3 minutes en remuant, puis ajouter la courgette et le reste de sauce pendant 2 minutes. Les légumes doivent rester brillants et un peu croquants. [cuisson 5 min]",
  "Servir — Mettre le riz au centre d'une assiette creuse chaude et disposer les légumes autour. Poser le cabillaud sur le riz et verser dessus son jus de cuisson. Parsemer de {{graines de sésame}} de graines de sésame et de cébette. [3 min]"
  ],
  "Le poisson vapeur est cuit quand la chair passe du translucide au blanc opaque : surveille-le dès 8 minutes."),
