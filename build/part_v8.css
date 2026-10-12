@@ -58,3 +58,4 @@
 .ck-review .ico-s,.rew-bar .btn .ico-s{width:34px;height:34px;padding:8px;border-radius:50%;background:var(--celadon);color:#fff;stroke-width:1.8;flex:none}
 .rew-bar .btn{min-height:52px;padding:10px 22px 10px 12px;font-size:15px}
 @media (max-width:640px){.rew-bar>.rew-bar-act{width:100%}.rew-bar-act .btn{flex:1 1 auto;justify-content:center}}
+.rew-bar .btn.primary .ico-s{background:rgba(255,255,255,.22);color:#fff}
