@@ -10,7 +10,8 @@ randomGen = function(filters, tries){
   for (let i = 0; i < 40; i++) { const m = _randomGen0(filters, tries || 60); if (!m) return null; if (!isBanned(m)) return m; }
   return null;
 };
-pickFruit = function(){ return ""; };
+const _pickFruit0 = pickFruit;
+pickFruit = function(f){ for (let i = 0; i < 8; i++) { const x = _pickFruit0(f); if (!x || !BAN_RX.test(norm(x))) return x; } return ""; };
 
 /* ---------- remplacer un repas en un geste ---------- */
 const sameDayCat = (t, m) => { const d = S.weeks[t.w].days[t.d]; return ["l", "d"].some(k => k !== t.s && d.meals[k] && d.meals[k].cat === m.cat && m.cat !== "Petit-déjeuner"); };
@@ -92,4 +93,22 @@ function migrate8(){
     });
   }));
   S.cooked = {}; S.rv = RECIPES_REV; S.v = 8;
+}
+
+/* ---------- version 9 : plus de beurre de cacahuète ni d'amande dans les recettes fournies ni dans les repas proposés ---------- */
+function migrate9(){
+  try { const raw = localStorage.getItem(LS_KEY); if (raw && !localStorage.getItem(LS_KEY + "-avant-v9")) localStorage.setItem(LS_KEY + "-avant-v9", raw); } catch (e) {}
+  const bad = i => /cacahu|beurre d.amande|puree d.amande/.test(norm(i.n || ""));
+  S.recipes = S.recipes.filter(r => r.own || !(r.ing || []).some(bad));
+  const ownIds = new Set(S.recipes.filter(r => r.own).map(r => r.id));
+  const fresh = buildDefaultPlan(S.recipes);
+  S.weeks.forEach((w, wi) => w.days.forEach((d, di) => {
+    ["l", "d", "p"].forEach(k => {
+      const m = d.meals && d.meals[k];
+      if (!m || m.own || (m.recipeId && ownIds.has(m.recipeId)) || !(m.ing || []).some(bad)) return;
+      const f = fresh[wi % fresh.length].days[di % 7].meals[k];
+      if (f) d.meals[k] = copyMeal(f); else delete d.meals[k];
+    });
+  }));
+  S.v = 9;
 }

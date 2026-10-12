@@ -6,7 +6,7 @@
   ["soba","Féculents",{g:100}],["vermicelles de patate douce","Féculents",{g:110}],["quinoa","Féculents",{g:120}],["riz complet cuit","Féculents",{g:125}],
   ["pain au levain","Pain",{g:245}],["pain sans gluten","Pain",{g:240}],["flocons d'avoine","Épicerie",{g:370,c:8}],["flocons de sarrasin","Épicerie",{g:340,c:8}],
   ["sirop d'erable","Épicerie",{g:260,c:20}],["pignons","Épicerie",{g:670,c:30}],["graines de courge","Épicerie",{g:560,c:30}],["graines de chia","Épicerie",{g:490,c:30}],
-  ["beurre de cacahuete","Épicerie",{g:600,c:30}],["cacahuetes","Épicerie",{g:590}],["noix de coco rapee","Épicerie",{g:650,c:20}],["chocolat noir","Épicerie",{g:560,c:25}],
+  ["noix de coco rapee","Épicerie",{g:650,c:20}],["chocolat noir","Épicerie",{g:560,c:25}],
   ["furikake","Épicerie",{g:300,c:5}],["huile de sesame","Épicerie",{g:900,c:45}],["sauce soja sucree","Épicerie",{g:90,c:10}],["gochugaru","Épicerie",{c:5}],
   ["fraises","Fruits",{g:33,s:[5,6,7]}],["framboises","Fruits",{g:50,s:[6,7,8,9]}],["myrtilles","Fruits",{g:57,s:[6,7,8,9]}],["kiwi","Fruits",{g:60,p:45,s:[11,12,1,2,3,4]}],
   ["orange","Fruits",{g:47,p:70,s:[12,1,2,3,4]}],["mandarine","Fruits",{g:50,p:40,s:[11,12,1,2]}],["clementine","Fruits",{g:47,p:40,s:[11,12,1,2]}],
