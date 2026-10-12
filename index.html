@@ -3659,7 +3659,7 @@ function openModal(html, opts = {}){
 function closeModal(){
   const m = $("#modal"); m.classList.remove("open"); m.hidden = true; document.body.classList.remove("locked");
   if (MODAL && MODAL.kind === "meal") { const o = getMeal(MODAL.t); if (o && !o.name.trim()) o.name = "Repas sans nom"; }
-  MODAL = null; save(); render();
+  MODAL = null; if (S.ui) delete S.ui.open; save(); render();
 }
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#modal").hidden) closeModal(); });
 
@@ -4531,6 +4531,7 @@ function openEditor(kind, ref, mode){
 function openCook(kind, ref){
   MODAL = kind === "meal" ? { kind, t: ref } : kind === "recipe" ? { kind, id: ref } : { kind, obj: ref };
   const o = edObj(); if (!o) return;
+  if (kind === "meal" || kind === "recipe") { S.ui = S.ui || {}; S.ui.open = { kind, ref }; save(); }
   openModal(cookHTML(o, kind, ref), { wide: true });
 }
 function cookFooter(kind, ref, o){
@@ -5533,6 +5534,7 @@ function viewInsp(){
 
 /* ---------- démarrage ---------- */
 load(); render();
+try { const op = S.ui && S.ui.open; if (op) { const ok = op.kind === "meal" ? getMeal(op.ref) : recipeById(op.ref); if (ok) openCook(op.kind, op.ref); else delete S.ui.open; } } catch (e) {}
 
 </script>
 </body>

@@ -301,6 +301,7 @@ function openEditor(kind, ref, mode){
 function openCook(kind, ref){
   MODAL = kind === "meal" ? { kind, t: ref } : kind === "recipe" ? { kind, id: ref } : { kind, obj: ref };
   const o = edObj(); if (!o) return;
+  if (kind === "meal" || kind === "recipe") { S.ui = S.ui || {}; S.ui.open = { kind, ref }; save(); }
   openModal(cookHTML(o, kind, ref), { wide: true });
 }
 function cookFooter(kind, ref, o){
