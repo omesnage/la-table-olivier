@@ -681,6 +681,21 @@ button,.btn,.chip,.mt,.dt,.wa,.mini,.mini-add,.qb,.qx,.chk,.dur{touch-action:man
   .rew-foot .btn{flex:1 1 auto;justify-content:center}
 }
 
+/* fiche cuisine : changements d'ingrédients en attente */
+.rew-bar>.rew-bar-act{flex-direction:row;align-items:center;gap:8px;flex:none}
+.rew-bar-act .btn{display:inline-flex;align-items:center;gap:6px}
+.ci.pend{grid-template-columns:1fr 40px}
+.ci.pend s{color:var(--mute)}
+.pend-to{font-style:normal;color:var(--celadon)}
+.ci.ci-4{grid-template-columns:1fr auto 40px 40px}
+.ci.ci-4 .qx{color:var(--mute)}
+.ci.ci-4 .qx[aria-expanded="true"]{color:var(--celadon)}
+.ci-form .add-row{flex-wrap:wrap}.ci-form .add-row>*{min-width:0}.ci-form .add-row .btn{flex:1 1 100%}
+#ckPend{position:static;box-shadow:none;margin-top:16px}
+.ci-form{grid-column:1/-1}
+.ck-review{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13.5px;color:var(--celadon);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:640px){.rew-bar>.rew-bar-act{width:100%}.rew-bar-act .btn{flex:1 1 auto;justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -1893,13 +1908,13 @@ GR("v7-saumon-laque","Saumon au miel et au soja, brocoli doré à l'huile de sé
   "Ajouter la sauce — Retourner le saumon avec une spatule et baisser le feu. Verser la sauce dans la poêle et arroser le poisson avec une cuillère pendant 2 minutes, jusqu'à ce qu'elle devienne épaisse et brillante. Attention : si le feu est trop fort, le miel brûle en quelques secondes et devient amer. [cuisson 2 min]",
   "Servir — Réchauffer {{riz cuit}} de riz cuit s'il est froid et le mettre dans une assiette creuse. Poser le saumon dessus, peau vers le haut, et le brocoli à côté. Verser la sauce restante de la poêle sur le poisson, puis parsemer de {{graines de sésame}} de graines de sésame et de cébette. [3 min]"],
  "Le saumon est cuit quand la chair se sépare en gros morceaux à la fourchette, encore un peu rosée au centre."),
-GR("v7-cabillaud-panais","Cabillaud au beurre doré, purée de panais, carottes au miel","Saumon & poisson","Bistrot","Pommes de terre",2,
- [["dos de cabillaud",150,"g"],["panais",150,"g"],["pommes de terre",80,"g"],["carotte",120,"g"],["lait",50,"ml"],["beurre",12,"g"],["miel",1,"c. à café"],["noisettes",8,"g"],["huile d'olive",1,"c. à café"],["thym","","quelques brins"],["muscade",1,"pincée"],["ciboulette","","quelques brins"]],
+GR("v7-cabillaud-panais","Cabillaud au beurre doré, purée de pommes de terre, carottes au miel","Saumon & poisson","Bistrot","Pommes de terre",2,
+ [["dos de cabillaud",150,"g"],["pommes de terre",230,"g"],["carotte",120,"g"],["lait",50,"ml"],["beurre",12,"g"],["miel",1,"c. à café"],["noisettes",8,"g"],["huile d'olive",1,"c. à café"],["thym","","quelques brins"],["muscade",1,"pincée"],["ciboulette","","quelques brins"]],
  ["Sortir le matériel — Prendre une casserole moyenne avec couvercle, une petite casserole, une poêle antiadhésive, une passoire, un presse-purée ou un mixeur plongeant, une planche et un couteau. Sortir le cabillaud 15 minutes avant et le sécher avec du papier. Hacher grossièrement {{noisettes}} de noisettes au couteau et les mettre dans un bol. [5 min]",
-  "Couper les légumes — Éplucher {{panais}} de panais et {{pommes de terre}} de pommes de terre, puis les couper en cubes de 2 cm pour qu'ils cuisent à la même vitesse. Éplucher {{carotte}} de carotte et la couper en bâtonnets de 5 mm. Mettre les cubes dans la casserole moyenne et les couvrir d'eau froide salée. [8 min]",
+  "Couper les légumes — Éplucher {{pommes de terre}} de pommes de terre, puis les couper en cubes de 2 cm pour qu'ils cuisent à la même vitesse. Éplucher {{carotte}} de carotte et la couper en bâtonnets de 5 mm. Mettre les cubes dans la casserole moyenne et les couvrir d'eau froide salée. [8 min]",
   "Cuire la purée — Porter l'eau à frémissement à feu moyen : de petites bulles, pas de gros bouillons. Cuire jusqu'à ce que la pointe d'un couteau traverse les cubes sans résistance. Pendant ce temps, passer à l'étape suivante. Attention : des morceaux encore fermes donnent une purée pleine de grumeaux. [cuisson 18 min]",
   "Cuire les carottes — En même temps, mettre dans la petite casserole les bâtonnets de carotte, 100 ml d'eau, {{miel}} de miel, le thym et un petit morceau de beurre pris sur les {{beurre}} de beurre prévus. Couvrir et cuire 8 minutes à feu doux, puis enlever le couvercle et laisser réduire 4 minutes : les carottes deviennent brillantes. [cuisson 12 min]",
-  "Écraser la purée — Égoutter les légumes et les remettre dans la casserole. Chauffer {{lait}} de lait à part, puis l'ajouter avec {{muscade}} de muscade et un petit morceau de beurre. Écraser ou mixer jusqu'à obtenir une purée lisse. Goûter, saler si besoin, couvrir et garder au chaud. [3 min]",
+  "Écraser la purée — Égoutter les pommes de terre et les remettre dans la casserole. Chauffer {{lait}} de lait à part, puis l'ajouter avec {{muscade}} de muscade et un petit morceau de beurre. Écraser ou mixer jusqu'à obtenir une purée lisse. Goûter, saler si besoin, couvrir et garder au chaud. [3 min]",
   "Cuire le cabillaud — Faire chauffer la poêle à feu moyen avec {{huile d'olive}} d'huile d'olive. Poser {{dos de cabillaud}} de cabillaud et cuire 3 minutes sans le bouger. Retourner le poisson, ajouter le beurre qui reste et les noisettes, puis arroser le poisson avec le beurre mousseux. Il est cuit quand la chair se sépare en morceaux. [cuisson 6 min]",
   "Surveiller le beurre — Le beurre doit sentir la noisette grillée et rester blond. Retirer la poêle du feu dès que cette odeur apparaît : il passe vite au brun foncé et devient amer. Laisser le poisson reposer 1 minute dans le beurre encore chaud. [cuisson 1 min]",
   "Servir — Chauffer les assiettes. Mettre une grande cuillerée de purée au centre et l'étaler un peu. Poser le cabillaud dessus et les carottes autour, puis verser le beurre doré et les noisettes sur le poisson. Couper finement la ciboulette et la parsemer par-dessus. [3 min]"],
@@ -2146,15 +2161,15 @@ GR("v7-lapin-creme-soja","Lapin mijoté à la crème de soja, carottes et champi
   "Ajouter la crème — Verser {{crème de soja}} de crème de soja dans la casserole du lapin et remuer. Laisser chauffer 2 minutes à feu doux. Attention : ne pas faire bouillir fort, la crème de soja peut tourner. La sauce doit être crémeuse et reste un peu sur la cuillère. [cuisson 2 min]",
   "Servir — Mettre les pommes de terre dans une assiette creuse chaude. Verser le lapin et sa sauce à côté. Parsemer de persil haché. [2 min]"],
  "Un feu très doux rend le lapin tendre : s'il bout fort, la viande devient sèche."),
-GR("v7-lapin-miel-carottes","Lapin poêlé au miel et au thym, carottes fondantes et purée de panais","Lapin","Français léger","Pommes de terre",2,
- [["lapin",130,"g"],["carotte",150,"g"],["panais",100,"g"],["pommes de terre",120,"g"],["lait de soja",40,"ml"],["miel",1,"c. à café"],["huile d'olive",1,"c. à café"],["beurre",5,"g"],["thym","","quelques brins"]],
+GR("v7-lapin-miel-carottes","Lapin poêlé au miel et au thym, carottes fondantes et purée de pommes de terre","Lapin","Français léger","Pommes de terre",2,
+ [["lapin",130,"g"],["carotte",150,"g"],["pommes de terre",220,"g"],["lait de soja",40,"ml"],["miel",1,"c. à café"],["huile d'olive",1,"c. à café"],["beurre",5,"g"],["thym","","quelques brins"]],
  ["Sortir le matériel — Prendre une casserole moyenne, une poêle avec couvercle, un presse-purée ou une fourchette, une planche et un couteau. Sortir le lapin du frigo 10 minutes avant la cuisson. Mettre de l'eau salée à chauffer dans la casserole. [3 min]",
-  "Couper les légumes — Éplucher {{panais}} de panais et {{pommes de terre}} de pommes de terre, puis les couper en cubes de 2 cm. Éplucher {{carotte}} de carottes et les couper en bâtonnets de 1 cm d'épaisseur. Garder les carottes à part. [8 min]",
-  "Cuire la purée — Mettre les cubes de panais et de pommes de terre dans l'eau qui bout. Cuire à feu moyen jusqu'à ce que la pointe d'un couteau rentre sans résistance. Attention : des cubes encore fermes donnent une purée avec des grumeaux. [cuisson 18 min]",
+  "Couper les légumes — Éplucher {{pommes de terre}} de pommes de terre, puis les couper en cubes de 2 cm. Éplucher {{carotte}} de carottes et les couper en bâtonnets de 1 cm d'épaisseur. Garder les carottes à part. [8 min]",
+  "Cuire la purée — Mettre les cubes de pommes de terre dans l'eau qui bout. Cuire à feu moyen jusqu'à ce que la pointe d'un couteau rentre sans résistance. Attention : des cubes encore fermes donnent une purée avec des grumeaux. [cuisson 18 min]",
   "Cuire les carottes — Dans la poêle, mettre les carottes, 100 ml d'eau et {{miel}} de miel. Couvrir et cuire à feu doux. Découvrir ensuite et laisser l'eau disparaître en remuant. Les carottes deviennent brillantes et tendres. [cuisson 12 min]",
   "Couper le lapin — Sécher {{lapin}} de lapin avec du papier absorbant. Le couper en morceaux de 3 cm et saler légèrement. Effeuiller le thym et le mélanger aux morceaux avec les doigts. [3 min]",
   "Faire dorer le lapin — Sortir les carottes de la poêle et les garder au chaud. Chauffer {{huile d'olive}} d'huile d'olive à feu moyen. Poser les morceaux de lapin et les retourner toutes les 2 minutes, pendant 8 minutes. Ils doivent être dorés. Attention : ne pas laisser brunir, le miel brûlerait. [cuisson 8 min]",
-  "Écraser la purée — Égoutter les légumes et les remettre dans la casserole. Chauffer {{lait de soja}} de lait de soja, l'ajouter avec {{beurre}} de beurre et écraser jusqu'à obtenir une purée lisse. Goûter et saler si besoin. [3 min]",
+  "Écraser la purée — Égoutter les pommes de terre et les remettre dans la casserole. Chauffer {{lait de soja}} de lait de soja, l'ajouter avec {{beurre}} de beurre et écraser jusqu'à obtenir une purée lisse. Goûter et saler si besoin. [3 min]",
   "Servir — Étaler la purée au centre d'une assiette chaude. Poser le lapin dessus, puis les carottes à côté. Verser le jus de la poêle sur la viande. [2 min]"],
  "Quand les carottes brillent et que l'eau a disparu, elles sont parfaites : ne pas les cuire plus longtemps."),
 GR("v7-poulet-poire-carottes","Poulet doré à la poire, carottes glacées au miel, riz","Poulet","Français léger","Riz",1,
@@ -2493,7 +2508,7 @@ PD("pdj7-fromage-blanc","Fromage blanc, myrtilles et flocons d'avoine dorés","S
 ];
 PDJ_RECIPES.push(...PDJ7);
 /* ===== v7 : le carnet = les recettes gourmandes (plus de petit-déjeuner) ===== */
-const BAN_RX = /citron|vinaigre|\bchoux?\b|poireau|betterave|navet|chevre|soba|piment|tomate|\bail\b|pois chiche|lentille|haricots? (?:blanc|rouge|sec)|edamame|tofu|tempeh|falafel|houmous|hummus|orange|pamplemousse|mandarine|clementine|kimchi|gochugaru|radis|cornichon|cresson|vin blanc|cacahuete|beurre d.amande|puree d.amande/;
+const BAN_RX = /citron|vinaigre|\bchoux?\b|poireau|betterave|navet|panais|chevre|soba|piment|tomate|\bail\b|pois chiche|lentille|haricots? (?:blanc|rouge|sec)|edamame|tofu|tempeh|falafel|houmous|hummus|orange|pamplemousse|mandarine|clementine|kimchi|gochugaru|radis|cornichon|cresson|vin blanc|cacahuete|beurre d.amande|puree d.amande/;
 const BAN_STEP_RX = /citron|vinaigre|piment|\bail\b|cacahuete|beurre d.amande|puree d.amande/;
 const GOURMAND = [...GOURMAND_A, ...GOURMAND_B, ...GOURMAND_C, ...GOURMAND_D, ...GOURMAND_E];
 NEW_RECIPES.length = 0; NEW_RECIPES.push(...GOURMAND);
@@ -2960,15 +2975,6 @@ const VEGS = {
     ctl:"la chair est tendre, légèrement dorée",
     err:"trop d'huile : l'aubergine l'absorbe comme une éponge",
     keep:"L'aubergine se cuit à la minute."},
-  panais:{ss:[10,11,12,1,2,3],n:"panais",h:"Le panais",ing:[["panais",130,"g"]],t:18,
-    mat:"une casserole ou une plaque de four, un économe",
-    cut:"éplucher le panais et le couper en bâtonnets de 1 cm de section",
-    feu:"four à 200 °C",
-    cook:"Mélanger les bâtonnets avec 1 c. à café d'huile et les rôtir 18 min au four, en les retournant à mi-cuisson.",
-    rep:"les bords dorent et le parfum devient noisette",
-    ctl:"la pointe d'un couteau entre sans résistance",
-    err:"serrer les bâtonnets : ils cuisent à l'étuvée",
-    keep:"Le panais rôti se garde 2 jours au frais."},
   petitspois:{ss:[5,6,7],n:"petits pois",h:"Les petits pois",ing:[["petits pois",100,"g"]],t:6,
     mat:"une casserole",
     cut:"écosser les petits pois frais, ou utiliser des petits pois surgelés",
@@ -3252,9 +3258,9 @@ const FORMATS = [
 const EXTRA_VEG = {
   bowl:["brocoli","haricotsverts","poivron"], donburi:["brocoli","poireau","haricotsverts"], wok:["brocoli","haricotsverts","poivron","petitspois"],
   nouilles:["brocoli","poireau","poivron","haricotsverts"], cremeuses:["poireau","brocoli","petitspois","choufleur"],
-  bistrot:["haricotsverts","poireau","brocoli","choufleur","panais"], burger:["poivron","aubergine"], wrap:["poivron","aubergine"],
+  bistrot:["haricotsverts","poireau","brocoli","choufleur"], burger:["poivron","aubergine"], wrap:["poivron","aubergine"],
   tartine:["poivron","petitspois"], omelette:["poireau","petitspois","aubergine"], salade:["haricotsverts","brocoli","poivron","petitspois"],
-  curry:["choufleur","brocoli","aubergine","poivron","panais"]
+  curry:["choufleur","brocoli","aubergine","poivron"]
 };
 FORMATS.forEach(f => (EXTRA_VEG[f.id] || []).forEach(v => { if (f.v.indexOf(v) < 0) f.v.push(v); }));
 ["donburi","bistrot","cremeuses"].forEach(id => { const f = FORMATS.find(x => x.id === id); if (f && f.k < 2) f.k = 2; });
@@ -4485,7 +4491,7 @@ function afterSelect(t){
   if (t.s !== "p") { if (S.autoVeg !== false) autoSide(m);
   if (S.autoAdapt !== false) adaptMeal(m, slotTarget(t)); }
   save(); const d = diffIng(a, ingSig(m)), lines = d.lines.slice(); if (kcalOf(m) !== k0) lines.push("≈ " + fmtK(k0) + " → " + fmtK(kcalOf(m)) + " kcal");
-  closeModal(); CK = { swap: null, addVeg: false, addIng: false };
+  closeModal(); CK = { swap: null, addVeg: false, addIng: false, sw: null, pend: [] };
   COOKMSG = { title: lines.length ? "Recette adaptée à ton planning" : slotLabel(t.s) + " ajouté", lines: lines.length ? lines : [m.name], undo: true };
   FLASH = new Set(d.names); openCook("meal", t);
 }
@@ -4587,7 +4593,7 @@ function cookFooter(kind, ref, o){
     : `<button class="btn primary" data-act="tempPlace">Ajouter au planning</button><button class="btn" data-act="tempSave">Enregistrer dans le carnet</button>${mod}
       <button class="btn ghost push" data-act="close">Fermer</button>`;
 }
-let CK = { swap: null, addVeg: false, addIng: false }, COOKMSG = null, FLASH = new Set();
+let CK = { swap: null, addVeg: false, addIng: false, sw: null, pend: [] }, COOKMSG = null, FLASH = new Set();
 function vegOptions(o, exceptKey){
   const season = seasonVegs(o, 12).filter(k => k !== exceptKey);
   const other = Object.keys(VEGS).filter(k => k !== "oignons" && k !== exceptKey && season.indexOf(k) < 0 && !(o.ing || []).some(i => norm(i.n) === norm(VEGS[k].ing[0][0])));
@@ -4609,11 +4615,20 @@ function cookHTML(o, kind, ref){
   const pill = (icon, label, val) => `<div class="cpill">${ic(icon)}<span class="cp-l">${label}</span><strong>${val}</strong></div>`;
   const flash = r => FLASH.has(norm(r.i.n)) ? " flash" : "";
   const stepper = r => hasQ(r.i) ? `<div class="qs"><button class="qb" data-act="ingQ" data-i="${r.idx}" data-d="-1" aria-label="Moins de ${esc(r.i.n)}">${ic("minus")}</button><span class="qv">${esc(qtyStr(r.i))}</span><button class="qb" data-act="ingQ" data-i="${r.idx}" data-d="1" aria-label="Plus de ${esc(r.i.n)}">${ic("plus")}</button></div>` : `<span class="qs"><span class="qv">${esc(qtyStr(r.i))}</span></span>`;
-  const ingRow = r => `<li class="ci${flash(r)}"><span class="ci-n">${esc(r.i.n)}</span>${stepper(r)}<button class="qx" data-act="ingDelCook" data-i="${r.idx}" aria-label="Retirer ${esc(r.i.n)}">${ic("x")}</button></li>`;
-  const vegRow = r => { const k = vegKeyOfIng(r.i.n), sea = seasonOf(r.i.n) && seasonOf(r.i.n).indexOf(curMonth()) >= 0;
-    return `<li class="ci vg${flash(r)}"><span class="ci-n">${esc(r.i.n)}${sea ? ` <em class="ing-sea" title="de saison">${ic("leaf")}</em>` : ""}</span>${stepper(r)}<button class="qx" data-act="ingDelCook" data-i="${r.idx}" aria-label="Retirer ${esc(r.i.n)}">${ic("x")}</button>
+  const pend = CK.pend || [], opAt = i => pend.find(p => p.t !== "add" && p.i === i);
+  const pendRow = (r, op) => `<li class="ci pend"><span class="ci-n"><s>${esc(r.i.n)}</s> ${op.t === "swap" ? `<em class="pend-to">→ ${esc(op.to.n)}${qtyStr(op.to) ? " · " + esc(qtyStr(op.to)) : ""}</em>` : `<em class="pend-to">sera retiré</em>`}</span><button class="qx" data-act="ckUnstage" data-k="${pend.indexOf(op)}" aria-label="Annuler ce changement">${ic("x")}</button></li>`;
+  const swapForm = r => `<div class="add-form ci-form"><p class="muted small">Remplacer ${esc(r.i.n)} par :</p><input id="ckSwName" list="ckList" placeholder="Nouvel ingrédient, ex. potiron" autocomplete="off" aria-label="Nouvel ingrédient">
+    <div class="add-row"><input id="ckSwQ" inputmode="decimal" placeholder="Qté" value="${esc(r.i.q)}" aria-label="Quantité"><select id="ckSwU" aria-label="Unité">${UNITS.map(u => `<option${u === r.i.u ? " selected" : ""}>${esc(u)}</option>`).join("")}</select><button class="btn primary" data-act="ckSwapGo" data-i="${r.idx}">Remplacer</button></div></div>`;
+  const ingRow = r => { const op = opAt(r.idx); if (op) return pendRow(r, op);
+    return `<li class="ci ci-4${flash(r)}"><span class="ci-n">${esc(r.i.n)}</span>${stepper(r)}<button class="qx" data-act="ckSwapOpen" data-i="${r.idx}" aria-expanded="${CK.sw === r.idx}" title="Changer cet ingrédient" aria-label="Changer ${esc(r.i.n)}">${ic("swap")}</button><button class="qx" data-act="ckRemove" data-i="${r.idx}" title="Retirer" aria-label="Retirer ${esc(r.i.n)}">${ic("x")}</button>${CK.sw === r.idx ? swapForm(r) : ""}</li>`; };
+  const vegRow = r => { const op = opAt(r.idx); if (op) return pendRow(r, op); const k = vegKeyOfIng(r.i.n), sea = seasonOf(r.i.n) && seasonOf(r.i.n).indexOf(curMonth()) >= 0;
+    return `<li class="ci vg${flash(r)}"><span class="ci-n">${esc(r.i.n)}${sea ? ` <em class="ing-sea" title="de saison">${ic("leaf")}</em>` : ""}</span>${stepper(r)}<button class="qx" data-act="ckRemove" data-i="${r.idx}" aria-label="Retirer ${esc(r.i.n)}">${ic("x")}</button>
       <button class="mini" data-act="vegSwap" data-i="${r.idx}" aria-expanded="${CK.swap === r.idx}">${ic("swap")} Changer de légume</button>
       ${CK.swap === r.idx ? `<div class="vg-panel"><p class="muted small">Remplacer ${esc(r.i.n)} par :</p>${vegChips(o, "vegSwapTo", r.idx, k)}</div>` : ""}</li>`; };
+  const addRow = (p, k) => `<li class="ci pend"><span class="ci-n"><em class="pend-to">+ ${esc(p.to.n)}${qtyStr(p.to) ? " · " + esc(qtyStr(p.to)) : ""}</em></span><button class="qx" data-act="ckUnstage" data-k="${k}" aria-label="Annuler cet ajout">${ic("x")}</button></li>`;
+  const adds = pend.map((p, k) => p.t === "add" ? addRow(p, k) : "").join("");
+  const pendPanel = pend.length ? `<div id="ckPend" class="rew-bar"><div><strong>${pend.length} changement${pend.length > 1 ? "s" : ""} en attente</strong><span>La recette ne change pas tant que Claude ne l'a pas réécrite avec ${pend.length > 1 ? "ces ingrédients" : "cet ingrédient"}.</span></div><div class="rew-bar-act"><button class="btn ghost" data-act="ckClear">Annuler</button><button class="btn primary" data-act="rewGo">${ic("sparkle")} Réécrire la recette</button></div></div>`
+    : `<button class="link ck-review" data-act="rewGo">${ic("sparkle")} Faire revoir la recette par Claude</button>`;
   const lis = body.map(({ s, i }, n) => {
     const sp = splitBody(s.body), rc = recallFor(s.raw, named), isD = done.indexOf(i) >= 0;
     const dur = s.mins ? `<button class="dur" data-act="timer" data-i="${i}" data-m="${s.mins}" data-n="${n + 1}" aria-label="Lancer un minuteur">${ic("timer")}<span class="dl">${s.expl ? "" : "≈ "}${fmtMin(s.mins)}</span></button>` : "";
@@ -4643,12 +4658,13 @@ function cookHTML(o, kind, ref){
       <button class="mini-add" data-act="vegAddOpen" aria-expanded="${CK.addVeg}">${ic("plus")} Ajouter un légume</button>
       ${CK.addVeg ? `<div class="vg-panel"><p class="muted small">Ajouter à la recette :</p>${vegChips(o, "vegAdd", "", null)}</div>` : ""}</section>
     <section class="ed-sec"><h3>${ic("basket")} Ingrédients</h3>
-      <p class="muted small">Touche − ou + pour la quantité, ✕ pour retirer. ${unit}</p>
-      <ul class="ci-list">${others.map(ingRow).join("") || '<li class="muted small">Aucun autre ingrédient.</li>'}</ul>
+      <p class="muted small">− ou + règle la quantité. Changer ↔, retirer ✕ ou ajouter un ingrédient : Claude réécrit ensuite toute la recette. ${unit}</p>
+      <ul class="ci-list">${others.map(ingRow).join("") + adds || '<li class="muted small">Aucun autre ingrédient.</li>'}</ul>
       <button class="mini-add" data-act="ingAddOpen" aria-expanded="${CK.addIng}">${ic("plus")} Ajouter un ingrédient</button>
       ${CK.addIng ? `<div class="add-form"><input id="ckName" list="ckList" placeholder="Ingrédient, ex. parmesan" autocomplete="off" aria-label="Ingrédient">
         <div class="add-row"><input id="ckQ" inputmode="decimal" placeholder="Qté" aria-label="Quantité"><select id="ckU" aria-label="Unité">${UNITS.map(u => `<option>${esc(u)}</option>`).join("")}</select><button class="btn primary" data-act="ingAddGo">Ajouter</button></div>
-        <datalist id="ckList">${ING_DB.map(e => `<option value="${esc(e.k)}">`).join("")}</datalist></div>` : ""}</section>
+        </div>` : ""}
+      <datalist id="ckList">${ING_DB.map(e => `<option value="${esc(e.k)}">`).join("")}</datalist>${pendPanel}</section>
     ${intro ? `<details class="cook-fold"><summary>${ic("list")} Matériel et mise en place</summary><p>${fmtStep(intro.body)}</p></details>` : ""}
     <section class="ed-sec"><h3>${ic("list")} Préparation pas à pas</h3>
       <div class="cprog"><span class="cprog-bar"><i style="width:${body.length ? Math.round(nDone / body.length * 100) : 0}%"></i></span><span id="cprogTxt">${nDone} / ${body.length} étapes</span><button class="link" data-act="cookReset">Tout décocher</button></div>
@@ -4659,7 +4675,7 @@ function cookHTML(o, kind, ref){
     ${COOKMSG ? `<div class="chg-banner" role="status"><div class="cb-head"><strong>${esc(COOKMSG.title)}</strong><button class="qx" data-act="bannerClose" aria-label="Fermer">${ic("x")}</button></div>${COOKMSG.lines.slice(0, 7).map(l => `<span>${esc(l)}</span>`).join("")}${COOKMSG.undo ? `<button class="link" data-act="cookUndo">Annuler ce changement</button>` : ""}</div>` : ""}
   </div>`;
 }
-function resetCook(){ CK = { swap: null, addVeg: false, addIng: false }; COOKMSG = null; FLASH = new Set(); }
+function resetCook(){ CK = { swap: null, addVeg: false, addIng: false, sw: null, pend: [] }; COOKMSG = null; FLASH = new Set(); }
 function refreshCook(msg, flashNames){
   COOKMSG = msg || null; FLASH = new Set(flashNames || []);
   const sh = document.querySelector("#modal .sheet"), sc = sh ? sh.scrollTop : 0;
@@ -4678,20 +4694,33 @@ function cookOp(fn){
   refreshCook({ title: res.title, lines: lines.length ? lines : ["Aucun autre changement"], undo: persist }, d.names);
 }
 const remInfo = r => { const x = []; if (r.removed.length) x.push("Étape" + (r.removed.length > 1 ? "s" : "") + " retirée" + (r.removed.length > 1 ? "s" : "") + " : " + r.removed.join(", ")); if (r.noted.length) x.push("Marqué « sans » dans : " + r.noted.join(", ")); return x; };
+/* un changement d'ingrédient est mis en attente : la recette ne bouge qu'une fois réécrite par Claude */
+function stageChange(o, op){
+  const name = op.to.n, bad = typeof rewBanned === "function" ? rewBanned([name]) : [];
+  if (bad.length) { refreshCook(COOKMSG, []); return toast("« " + name + " » fait partie de ce que vous ne mangez pas (" + bad.join(", ") + ")."); }
+  const pend = CK.pend || [], taken = o.ing.some((x, k) => norm(x.n) === norm(name) && !pend.some(p => p.t !== "add" && p.i === k)) || pend.some(p => norm(p.to && p.to.n || "") === norm(name));
+  if (taken) { refreshCook(COOKMSG, []); return toast("Cet ingrédient est déjà dans la recette."); }
+  CK.pend = pend.filter(p => op.t === "add" || p.t === "add" || p.i !== op.i).concat(op); CK.sw = CK.swap = null; refreshCook(null, []);
+}
 function defineCookEdit(){
   A.ingQ = ds => cookOp(o => { const i = o.ing[+ds.i], q = parseFloat(String(i.q).replace(",", ".")) || 0, st = qStep(i.u, q);
     i.q = Math.max(st, Math.round((q + st * +ds.d) * 100) / 100); return { title: i.n + " : " + qtyStr(i) }; });
-  A.ingDelCook = ds => cookOp(o => { const name = o.ing[+ds.i].n, r = removeIngredient(o, +ds.i); return { title: "Retiré : " + name, extra: remInfo(r) }; });
+  A.ckRemove = ds => { const o = edObj(), i = +ds.i; if (!o || !o.ing[i]) return; CK.pend = (CK.pend || []).filter(p => p.t === "add" || p.i !== i).concat({ t: "remove", i, from: o.ing[i].n }); CK.swap = CK.sw = null; refreshCook(null, []); };
+  A.ckSwapOpen = ds => { CK.sw = CK.sw === +ds.i ? null : +ds.i; CK.swap = null; refreshCook(COOKMSG, []); const f = $("#ckSwName"); if (f) f.focus(); };
+  A.ckSwapGo = ds => { const o = edObj(), i = +ds.i, name = String($("#ckSwName").value).trim(); if (!o || !o.ing[i]) return;
+    if (!name) return toast("Écris le nom du nouvel ingrédient.");
+    stageChange(o, { t: "swap", i, from: o.ing[i].n, to: { n: name, q: $("#ckSwQ").value.replace(",", "."), u: $("#ckSwU").value } }); };
+  A.ckUnstage = ds => { (CK.pend || []).splice(+ds.k, 1); refreshCook(null, []); };
+  A.ckClear = () => { CK.pend = []; refreshCook(null, []); };
   A.vegSwap = ds => { CK.swap = CK.swap === +ds.i ? null : +ds.i; CK.addVeg = false; refreshCook(COOKMSG, []); };
-  A.vegSwapTo = ds => { CK.swap = null; cookOp(o => { const r = swapVeg(o, +ds.i, ds.k); return { title: cap(r.name) + " remplacé par " + VEGS[ds.k].n, extra: remInfo(r.r) }; }); };
+  A.vegSwapTo = ds => { CK.swap = null; const o = edObj(), x = VEGS[ds.k].ing[0]; if (o && o.ing[+ds.i]) stageChange(o, { t: "swap", i: +ds.i, from: o.ing[+ds.i].n, to: { n: x[0], q: x[1], u: x[2] } }); };
   A.vegAddOpen = () => { CK.addVeg = !CK.addVeg; CK.swap = null; refreshCook(COOKMSG, []); };
-  A.vegAdd = ds => { CK.addVeg = false; cookOp(o => addSide(o, ds.k) ? { title: "Ajouté : " + VEGS[ds.k].n } : null); };
+  A.vegAdd = ds => { CK.addVeg = false; const o = edObj(), x = VEGS[ds.k].ing[0]; if (o) stageChange(o, { t: "add", to: { n: x[0], q: x[1], u: x[2] } }); };
   A.ingAddOpen = () => { CK.addIng = !CK.addIng; refreshCook(COOKMSG, []); const f = $("#ckName"); if (f) f.focus(); };
   A.ingAddGo = () => {
     const name = $("#ckName").value, q = $("#ckQ").value.replace(",", "."), u = $("#ckU").value; if (!String(name).trim()) return toast("Écris le nom de l'ingrédient.");
-    CK.addIng = false; let st = null;
-    cookOp(o => { st = addIngredient(o, name, q, u); return st === "exists" ? null : st ? { title: "Ajouté : " + String(name).trim() } : null; });
-    if (st === "exists") { refreshCook(COOKMSG, []); toast("Cet ingrédient est déjà dans la recette."); }
+    const o = edObj(); if (!o) return; CK.addIng = false;
+    stageChange(o, { t: "add", to: { n: String(name).trim(), q, u } });
   };
   A.adaptThis = () => cookOp(o => { const t = MODAL.t, tg = slotTarget(t), k0 = kcalOf(o); if (!adaptMeal(o, tg)) { toast("Ce repas est déjà dans ta cible"); return null; } return { title: "Portions adaptées à ta cible (" + fmtK(tg) + " kcal)", extra: [] }; });
   A.cookUndo = () => { const k = MODAL.kind, r = modalRef(); undo(); COOKMSG = null; FLASH = new Set(); openCook(k, r); };
@@ -5008,7 +5037,7 @@ function ensureDefaults(){
   if (!S.cooked || typeof S.cooked !== "object") S.cooked = {};
   const ks = Object.keys(S.cooked); if (ks.length > 80) ks.slice(0, ks.length - 80).forEach(k => delete S.cooked[k]);
 }
-function migrateAll(){ if (!S.v || S.v < 3) migrate(); if (S.v < 4) migrate4(); if (S.v < 5) migrate5(); if (S.v < 6) migrate6(); if (S.v < 7) migrate7(); if (S.v < 8 || (S.rv || 0) < RECIPES_REV) migrate8(); if (S.v < 9) migrate9(); }
+function migrateAll(){ if (!S.v || S.v < 3) migrate(); if (S.v < 4) migrate4(); if (S.v < 5) migrate5(); if (S.v < 6) migrate6(); if (S.v < 7) migrate7(); if (S.v < 8 || (S.rv || 0) < RECIPES_REV) migrate8(); if (S.v < 9) migrate9(); if (S.v < 10) migrate10(); }
 /* v5 : recettes fournies mises à jour (version chef) et un légume de saison intégré dans celles du carnet qui en manquent */
 function migrate5(){
   NEW_RECIPES.forEach(nr => { const k = S.recipes.findIndex(r => r.id === nr.id), fresh = recipeToState(nr);
@@ -5439,6 +5468,26 @@ function migrate9(){
   }));
   S.v = 9;
 }
+
+/* ---------- version 10 : plus de panais dans les recettes fournies ni dans les repas du planning (les recettes faites main ne sont pas touchées) ---------- */
+function migrate10(){
+  try { const raw = localStorage.getItem(LS_KEY); if (raw && !localStorage.getItem(LS_KEY + "-avant-v10")) localStorage.setItem(LS_KEY + "-avant-v10", raw); } catch (e) {}
+  const isPan = i => /panais/.test(norm(i.n || "")), fresh = new Map(NEW_RECIPES.map(r => [r.id, r]));
+  S.recipes = S.recipes.map(r => {
+    if (r.own || !(r.ing || []).some(isPan)) return r;
+    if (fresh.has(r.id) && !fresh.get(r.id).ing.some(isPan)) return recipeToState(fresh.get(r.id));
+    let k; while ((k = (r.ing || []).findIndex(isPan)) >= 0) removeIngredient(r, k);
+    return r;
+  });
+  S.weeks.forEach(w => w.days.forEach(d => ["l", "d", "p"].forEach(k => {
+    const m = d.meals && d.meals[k]; if (!m || m.own) return;
+    let i = (m.ing || []).findIndex(isPan); if (i < 0) return;
+    const r = m.recipeId && S.recipes.find(x => x.id === m.recipeId);
+    if (r && !(r.ing || []).some(isPan)) { const nm = mealFromRecipe(r); nm.id = m.id; if (m.adj && Math.abs(m.adj - 1) > .02) scaleMeal(nm, m.adj); d.meals[k] = nm; return; }
+    while (i >= 0) { removeIngredient(m, i); i = (m.ing || []).findIndex(isPan); }
+  })));
+  S.v = 10;
+}
 /* =====================================================================
    v7 : sauvegarde sur le compte (capacité « db ») : la page retrouve tout à l'ouverture
    ===================================================================== */
@@ -5564,14 +5613,14 @@ function qtyChip(i){
    v8 : après un changement d'ingrédients, « Valider » demande à Claude de vérifier la logique
    de la recette, de la repenser si besoin, puis propose de l'ajouter au carnet.
    ===================================================================== */
-const REW = { key: null, base: null, cur: null, prop: null, ctl: null };
+const REW = { key: null, base: null, cur: null, prop: null, ctl: null, cook: false };
 
 /* contraintes d'Olivier : ce qui ne doit jamais apparaître dans une recette */
 const REW_BAN = [
   ["agrumes et citron", /\b(citron|citrons|agrume|agrumes|orange|oranges|pamplemousse|pamplemousses|mandarine|mandarines|clementine|clementines|lime|limes|yuzu)\b/],
   ["vinaigre", /\bvinaigres?\b/], ["tomate", /\btomates?\b/], ["piment", /\bpiments?\b/], ["gochujang", /\bgochujang\b/],
   ["cornichons et câpres", /\b(cornichons?|capres?)\b/], ["fromage de chèvre", /\bchevre\b/],
-  ["chou", /\bchoux?\b(?![- ]?(fleur|rave))/], ["poireau", /\bpoireaux?\b/], ["betterave", /\bbetteraves?\b/], ["navet", /\bnavets?\b/],
+  ["chou", /\bchoux?\b(?![- ]?(fleur|rave))/], ["poireau", /\bpoireaux?\b/], ["betterave", /\bbetteraves?\b/], ["navet", /\bnavets?\b/], ["panais", /\bpanais\b/],
   ["légumineuses", /\b(lentilles?|pois chiches?|pois casses?|flageolets?|feves?|graines? de soja|edamames?|houmous|hummus|falafels?|haricots (rouges?|blancs?|secs?|noirs?|azuki))\b/],
   ["soba", /\bsoba\b/], ["cacahuètes", /\bcacahuetes?\b|\barachides?\b/]
 ];
@@ -5613,7 +5662,7 @@ function rewTrack(){
 /* affiche ou masque la barre « Valider » sous la liste des ingrédients */
 function rewSync(){
   const old = document.getElementById("rewBar");
-  if (!MODAL || !REW.key || !rewChanged()) { if (old) old.remove(); return; }
+  if (!MODAL || !REW.key || document.querySelector("#edWrap.cook") || !rewChanged()) { if (old) old.remove(); return; }
   const sec = [...document.querySelectorAll("#edWrap section")].find(s => !s.classList.contains("vg-sec") && /Ingrédients/.test((s.querySelector("h3") || {}).textContent || ""));
   if (!sec) { if (old) old.remove(); return; }
   if (old && old.parentNode === sec) return;
@@ -5632,6 +5681,18 @@ function rewSync(){
   }, true);
 })();
 
+/* fiche cuisine : liste d'ingrédients visée = liste actuelle + changements en attente */
+function rewTarget(o){
+  const pend = CK.pend || [], out = [];
+  (o.ing || []).forEach((i, k) => { const op = pend.find(p => p.t !== "add" && p.i === k); if (!op) out.push({ n: i.n, q: i.q, u: i.u }); else if (op.t === "swap") out.push({ n: op.to.n, q: op.to.q, u: op.to.u }); });
+  pend.forEach(p => { if (p.t === "add") out.push({ n: p.to.n, q: p.to.q, u: p.to.u }); });
+  return out.filter(i => String(i.n).trim());
+}
+function rewPendLines(){
+  const w = x => x.n + (qtyStr(x) ? " (" + qtyStr(x) + ")" : "");
+  return (CK.pend || []).map(p => p.t === "swap" ? "Remplacer " + p.from + " par " + w(p.to) : p.t === "remove" ? "Retirer " + p.from : "Ajouter " + w(p.to));
+}
+
 /* ---------- fenêtre de Claude ---------- */
 function rewShow(html){
   let ov = document.getElementById("rewOv");
@@ -5645,17 +5706,18 @@ const rewMsg = (title, text, btns) => rewShow(`<p class="rew-eyebrow">Claude</p>
 /* ---------- la demande à Claude ---------- */
 function rewPrompt(cur, base, note){
   const lst = l => l.map(i => "- " + i.n + " : " + (qtyStr(i) || "à votre goût")).join("\n");
-  const dl = diffIng(base.ing, cur.ing).lines;
+  const dl = cur.changes || diffIng(base.ing, cur.ing).lines;
   return "Tu es chef cuisinier. Tu aides Olivier, qui vient de modifier les ingrédients d'une recette de son application.\n\n" +
     "RECETTE D'ORIGINE (cohérente) : " + (base.name || "sans nom") + (base.cat ? " (" + base.cat + ")" : "") + "\n" +
     "Ingrédients d'origine :\n" + lst(base.ing) + "\n" +
     "Étapes d'origine (une par ligne) :\n" + base.steps.join("\n") + "\n" + (base.tip ? "Astuce d'origine : " + base.tip + "\n" : "") + "\n" +
-    "INGRÉDIENTS VOULUS PAR OLIVIER :\n" + lst(cur.ing) + "\n" +
-    "Changements : " + (dl.length ? dl.join(" ; ") : "aucun repérable") + "\n\n" +
+    "INGRÉDIENTS FINAUX VOULUS PAR OLIVIER :\n" + lst(cur.ing) + "\n" +
+    (dl.length ? "CHANGEMENTS DEMANDÉS : " + dl.join(" ; ") : "AUCUN CHANGEMENT D'INGRÉDIENT : vérifie que la recette est cohérente avec la liste et corrige-la.") + "\n" +
+    "Dans les étapes d'origine, la mention ⟦sans X⟧ signale un ingrédient X retiré à la main : réécris proprement ces étapes, sans X et sans cette mention.\n\n" +
     "TA MISSION, DANS L'ORDRE\n" +
-    "1. Vérifie la logique culinaire : les ingrédients voulus vont-ils ensemble (saveurs, textures, cuissons, rôle dans l'assiette) ? Exemple d'erreur à éviter : mélanger des haricots dans une purée.\n" +
+    "1. Vérifie la logique culinaire (si un ingrédient en remplace un autre, adapte la cuisson, le geste et l'assaisonnement à sa nature) : les ingrédients voulus vont-ils ensemble (saveurs, textures, cuissons, rôle dans l'assiette) ? Exemple d'erreur à éviter : mélanger des haricots dans une purée.\n" +
     "2. Réécris ce qu'il faut pour intégrer chaque changement de façon naturelle : modifie une étape existante, ajoute une étape bien placée (jamais après le dressage ou le service), retire une étape devenue inutile, ajuste quantités et durées. Conserve tous les autres ingrédients et le caractère du plat, sauf si la logique l'impose. Si l'association ne fonctionne pas telle quelle, repense la recette pour qu'elle fonctionne (par exemple des haricots verts poêlés à côté de la purée) en gardant les ingrédients voulus ; si c'est vraiment impossible, retire le moins possible et dis-le dans « verdict ».\n" +
-    "3. Respecte les contraintes d'Olivier. Jamais : agrumes et citron, vinaigre, tomate, piment, gochujang, cornichons et câpres, fromage de chèvre, chou, poireau, betterave, navet, légumineuses, bœuf gras, soba, cacahuètes et beurre de cacahuète. Épices douces seulement, cuisine pauvre en graisses. Portions de féculents (poids cuit) : 200 g de riz, 250 g de pomme de terre, 220 g de pâtes. Environ 850 kcal au plus pour le plat.\n\n" +
+    "3. Respecte les contraintes d'Olivier. Jamais : agrumes et citron, vinaigre, tomate, piment, gochujang, cornichons et câpres, fromage de chèvre, chou, poireau, betterave, navet, panais, légumineuses, bœuf gras, soba, cacahuètes et beurre de cacahuète. Épices douces seulement, cuisine pauvre en graisses. Portions de féculents (poids cuit) : 200 g de riz, 250 g de pomme de terre, 220 g de pâtes. Environ 850 kcal au plus pour le plat.\n\n" +
     "FORMAT DES ÉTAPES : « Titre court — consigne détaillée et concrète. [N min] ». Garde, s'ils existent, « Avant de commencer — … » en premier et « Organisation — … » en dernier, mis à jour. Dans une étape, chaque quantité s'écrit {{nom exact de l'ingrédient}} (exemple : « Ajouter {{haricots verts}} de haricots verts ») : l'application remplace par la quantité de la liste. Les noms entre accolades doivent être identiques à ceux du tableau « ing ».\n\n" +
     (note ? "ATTENTION, ta réponse précédente était refusée : " + note + " Corrige.\n\n" : "") +
     "RÉPONDS UNIQUEMENT PAR UN OBJET JSON, sans texte autour, sans bloc de code :\n" +
@@ -5675,6 +5737,9 @@ function rewParse(txt){
 function rewCheck(p, base){
   const hard = [], warn = [], had = base ? rewBanned(base.ing.map(i => i.n).concat(base.steps, [base.name, base.tip])) : [];
   const bad = rewBanned(p.ing.map(i => i.n).concat(p.steps, [p.name, p.tip])).filter(x => had.indexOf(x) < 0); if (bad.length) hard.push("la proposition contient « " + bad.join(", ") + " », exclu des contraintes d'Olivier.");
+  if (p.steps.some(s => /⟦/.test(s))) hard.push("des marqueurs ⟦sans …⟧ restent dans les étapes.");
+  if (base) { const txt = " " + norm(p.steps.join(" ")) + " ", gone = base.ing.filter(i => !p.ing.some(x => norm(x.n) === norm(i.n))).map(i => ({ n: i.n, k: ingKey(i.n) })).filter(x => x.k && x.k.length >= 4 && STOP_KEYS.indexOf(x.k) < 0 && txt.indexOf(x.k) >= 0);
+    if (gone.length) hard.push("les étapes citent encore " + gone.map(x => x.n).join(", ") + ", qui n'est plus dans la liste d'ingrédients."); }
   const miss = []; (p.steps.join(" ").match(/\{\{([^}]+)\}\}/g) || []).forEach(m => { const n = norm(m.slice(2, -2)); if (!p.ing.some(i => norm(i.n) === n || norm(i.n).indexOf(n) >= 0) && miss.indexOf(n) < 0) miss.push(n); });
   if (miss.length) hard.push("les quantités {{" + miss.join("}}, {{") + "}} ne correspondent à aucun ingrédient de la liste.");
   const kc = kcalOf({ ing: p.ing }); if (kc > 850) warn.push("≈ " + fmtK(kc) + " kcal : au-delà de 850. Le bouton « Adapter à ma cible » ajustera les portions.");
@@ -5693,18 +5758,22 @@ async function rewCall(sample, cur, base){
   return { p: null, c: null, note };
 }
 A.rewGo = async () => {
-  const cur = rewCtx(), base = REW.base; if (!cur || !base) return;
-  REW.cur = cur; REW.prop = null;
+  const cook = !!document.querySelector("#edWrap.cook") && MODAL && MODAL.kind !== "creator";
+  let cur, base;
+  if (cook) { base = rewCtx(); const o = edObj(); cur = base && o ? Object.assign({}, base, { ing: rewTarget(o), changes: rewPendLines() }) : null; }
+  else { cur = rewCtx(); base = REW.base; }
+  if (!cur || !base) return;
+  REW.cur = cur; REW.prop = null; REW.cook = cook;
   const had = base.ing.map(i => norm(i.n)), bad = rewBanned(cur.ing.filter(i => had.indexOf(norm(i.n)) < 0).map(i => i.n));
   if (bad.length) return rewMsg("Ingrédient exclu", "« " + bad.join(", ") + " » fait partie de ce que vous ne mangez pas. Retirez-le de la liste, puis validez de nouveau.", `<button class="btn primary push" data-act="rewClose">Compris</button>`);
   let sample = null; try { sample = window.claude && window.claude.use ? await window.claude.use("sample") : null; } catch (e) {}
-  if (!sample) return rewMsg("Claude n'est pas disponible ici", "Cette fonction marche dans la version publiée sur Claude (page claude.ai), pas dans le fichier ouvert depuis l'ordinateur. Vos ingrédients sont bien enregistrés ; les étapes de la recette n'ont pas été modifiées.", `<button class="btn primary push" data-act="rewClose">Fermer</button>`);
+  if (!sample) return rewMsg("Claude n'est pas disponible ici", "Cette fonction marche dans la version publiée sur Claude (page claude.ai), pas dans le fichier ouvert depuis l'ordinateur. " + (cook && (CK.pend || []).length ? "Vos changements restent en attente : la recette n'a pas été modifiée. Vous pouvez aussi les appliquer sans Claude, mais les étapes seront moins précises." : "La recette n'a pas été modifiée."), cook && (CK.pend || []).length ? `<button class="btn" data-act="rewMech">Appliquer sans Claude</button><button class="btn primary push" data-act="rewClose">Fermer</button>` : `<button class="btn primary push" data-act="rewClose">Fermer</button>`);
   REW.ctl = new AbortController();
   rewShow(`<p class="rew-eyebrow">Claude</p><h2 class="rew-title">Je vérifie la recette…</h2><p class="rew-text">Je contrôle que les ingrédients vont ensemble, puis j'adapte les étapes. Cela peut prendre une minute.</p><div class="rew-pulse" aria-hidden="true"><i></i><i></i><i></i></div><div class="rew-foot"><button class="btn ghost push" data-act="rewStop">Arrêter</button></div>`);
   try {
     const res = await rewCall(sample, cur, base);
     if (!res.p) return rewMsg("Je n'ai pas pu proposer une version fiable", "Claude n'a pas renvoyé de recette exploitable (" + (res.note || "réponse incomplète") + "). Votre recette n'a pas été modifiée.", `<button class="btn" data-act="rewGo">Réessayer</button><button class="btn primary push" data-act="rewClose">Fermer</button>`);
-    if (res.c.hard.length) return rewMsg("Je n'ai pas pu proposer une version fiable", "Claude a proposé une recette qui ne respecte pas vos contraintes : " + res.c.hard.join(" ") + " Votre recette n'a pas été modifiée.", `<button class="btn" data-act="rewGo">Réessayer</button><button class="btn primary push" data-act="rewClose">Fermer</button>`);
+    if (res.c.hard.length) return rewMsg("Je n'ai pas pu proposer une version fiable", "Claude a proposé une recette qui ne passe pas les contrôles : " + res.c.hard.join(" ") + " Votre recette n'a pas été modifiée.", `<button class="btn" data-act="rewGo">Réessayer</button><button class="btn primary push" data-act="rewClose">Fermer</button>`);
     REW.prop = res.p; rewProposal(res.p, res.c, cur);
   } catch (e) {
     if (REW.ctl.signal.aborted || (e && (e.code === "aborted" || e.name === "AbortError"))) return;
@@ -5726,9 +5795,18 @@ function rewProposal(p, c, cur){
     ${lines.length ? `<h3 class="rew-h">Ce qui change</h3><ul class="rew-list">${lines.map(l => `<li>${esc(l.replace(/^[+−-]\s+/, ""))}</li>`).join("")}</ul>` : ""}
     <h3 class="rew-h">Ingrédients</h3><ul class="rew-ings">${p.ing.map(i => `<li><span>${esc(i.n)}</span><b>${esc(qtyStr(i))}</b></li>`).join("")}</ul>
     <h3 class="rew-h">Préparation</h3><ol class="rew-steps">${steps.map(s => `<li>${s.h ? `<strong>${esc(s.h)}</strong>` : ""}<span>${esc(s.body)}</span></li>`).join("")}</ol>
-    <div class="rew-foot"><button class="btn ghost" data-act="rewKeep">Garder ma version</button><button class="btn primary push" data-act="rewUse">Utiliser cette recette</button></div>`);
+    <div class="rew-foot"><button class="btn ghost" data-act="rewKeep">${REW.cook ? "Pas maintenant" : "Garder ma version"}</button><button class="btn primary push" data-act="rewUse">Utiliser cette recette</button></div>`);
 }
-A.rewKeep = () => { REW.base = rewCtx(); rewHide(); rewSync(); };
+A.rewKeep = () => { if (!REW.cook) REW.base = rewCtx(); rewHide(); rewSync(); };
+/* sans Claude : mêmes changements, mais appliqués mécaniquement aux étapes */
+A.rewMech = () => {
+  rewHide(); const o = edObj(); if (!o) return; const pend = (CK.pend || []).slice(); CK.pend = [];
+  cookOp(o => {
+    const at = n => o.ing.findIndex(x => norm(x.n) === norm(n));
+    pend.forEach(p => { if (p.t !== "add") { const i = at(p.from); if (i >= 0) removeIngredient(o, i); } if (p.t !== "remove") addIngredient(o, p.to.n, p.to.q, p.to.u); });
+    return { title: "Changements appliqués sans Claude", extra: [] };
+  });
+};
 
 /* applique la proposition à la recette ouverte */
 function rewApply(p){
@@ -5745,7 +5823,7 @@ function rewApply(p){
   o.ing = p.ing.map(i => ({ id: id(i.n), n: i.n, q: i.q, u: i.u })); o.steps = p.steps.slice();
   if (p.name) o[nameKey()] = p.name; if (p.tip) o.tip = p.tip; if (p.t) o.t = p.t;
   o.iv = (o.iv || []).filter(x => o.ing.some(i => { const vk = vegKeyOfIng(i.n); return vk && VEGS[vk] && VEGS[vk].n === x; }));
-  delete o.gen; if (S.cooked) delete S.cooked[key];
+  delete o.gen; if (S.cooked) delete S.cooked[key]; CK.pend = []; CK.sw = CK.swap = null;
   if (persist) save();
   if (document.querySelector("#edWrap.cook")) refreshCook({ title: "Recette mise à jour par Claude", lines: ["Les étapes et la liste d'ingrédients correspondent à nouveau."], undo: persist }, []);
   else openEditorEdit(MODAL.kind, modalRef());

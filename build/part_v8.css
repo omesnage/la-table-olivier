@@ -40,3 +40,18 @@
   .rew-panel{width:100%;max-height:92dvh;border-radius:22px 22px 0 0;padding:26px 20px calc(20px + env(safe-area-inset-bottom,0px))}
   .rew-foot .btn{flex:1 1 auto;justify-content:center}
 }
+
+/* fiche cuisine : changements d'ingrédients en attente */
+.rew-bar>.rew-bar-act{flex-direction:row;align-items:center;gap:8px;flex:none}
+.rew-bar-act .btn{display:inline-flex;align-items:center;gap:6px}
+.ci.pend{grid-template-columns:1fr 40px}
+.ci.pend s{color:var(--mute)}
+.pend-to{font-style:normal;color:var(--celadon)}
+.ci.ci-4{grid-template-columns:1fr auto 40px 40px}
+.ci.ci-4 .qx{color:var(--mute)}
+.ci.ci-4 .qx[aria-expanded="true"]{color:var(--celadon)}
+.ci-form .add-row{flex-wrap:wrap}.ci-form .add-row>*{min-width:0}.ci-form .add-row .btn{flex:1 1 100%}
+#ckPend{position:static;box-shadow:none;margin-top:16px}
+.ci-form{grid-column:1/-1}
+.ck-review{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13.5px;color:var(--celadon);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:640px){.rew-bar>.rew-bar-act{width:100%}.rew-bar-act .btn{flex:1 1 auto;justify-content:center}}

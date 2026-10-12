@@ -213,7 +213,7 @@ function afterSelect(t){
   if (t.s !== "p") { if (S.autoVeg !== false) autoSide(m);
   if (S.autoAdapt !== false) adaptMeal(m, slotTarget(t)); }
   save(); const d = diffIng(a, ingSig(m)), lines = d.lines.slice(); if (kcalOf(m) !== k0) lines.push("≈ " + fmtK(k0) + " → " + fmtK(kcalOf(m)) + " kcal");
-  closeModal(); CK = { swap: null, addVeg: false, addIng: false };
+  closeModal(); CK = { swap: null, addVeg: false, addIng: false, sw: null, pend: [] };
   COOKMSG = { title: lines.length ? "Recette adaptée à ton planning" : slotLabel(t.s) + " ajouté", lines: lines.length ? lines : [m.name], undo: true };
   FLASH = new Set(d.names); openCook("meal", t);
 }
@@ -315,7 +315,7 @@ function cookFooter(kind, ref, o){
     : `<button class="btn primary" data-act="tempPlace">Ajouter au planning</button><button class="btn" data-act="tempSave">Enregistrer dans le carnet</button>${mod}
       <button class="btn ghost push" data-act="close">Fermer</button>`;
 }
-let CK = { swap: null, addVeg: false, addIng: false }, COOKMSG = null, FLASH = new Set();
+let CK = { swap: null, addVeg: false, addIng: false, sw: null, pend: [] }, COOKMSG = null, FLASH = new Set();
 function vegOptions(o, exceptKey){
   const season = seasonVegs(o, 12).filter(k => k !== exceptKey);
   const other = Object.keys(VEGS).filter(k => k !== "oignons" && k !== exceptKey && season.indexOf(k) < 0 && !(o.ing || []).some(i => norm(i.n) === norm(VEGS[k].ing[0][0])));
@@ -337,11 +337,20 @@ function cookHTML(o, kind, ref){
   const pill = (icon, label, val) => `<div class="cpill">${ic(icon)}<span class="cp-l">${label}</span><strong>${val}</strong></div>`;
   const flash = r => FLASH.has(norm(r.i.n)) ? " flash" : "";
   const stepper = r => hasQ(r.i) ? `<div class="qs"><button class="qb" data-act="ingQ" data-i="${r.idx}" data-d="-1" aria-label="Moins de ${esc(r.i.n)}">${ic("minus")}</button><span class="qv">${esc(qtyStr(r.i))}</span><button class="qb" data-act="ingQ" data-i="${r.idx}" data-d="1" aria-label="Plus de ${esc(r.i.n)}">${ic("plus")}</button></div>` : `<span class="qs"><span class="qv">${esc(qtyStr(r.i))}</span></span>`;
-  const ingRow = r => `<li class="ci${flash(r)}"><span class="ci-n">${esc(r.i.n)}</span>${stepper(r)}<button class="qx" data-act="ingDelCook" data-i="${r.idx}" aria-label="Retirer ${esc(r.i.n)}">${ic("x")}</button></li>`;
-  const vegRow = r => { const k = vegKeyOfIng(r.i.n), sea = seasonOf(r.i.n) && seasonOf(r.i.n).indexOf(curMonth()) >= 0;
-    return `<li class="ci vg${flash(r)}"><span class="ci-n">${esc(r.i.n)}${sea ? ` <em class="ing-sea" title="de saison">${ic("leaf")}</em>` : ""}</span>${stepper(r)}<button class="qx" data-act="ingDelCook" data-i="${r.idx}" aria-label="Retirer ${esc(r.i.n)}">${ic("x")}</button>
+  const pend = CK.pend || [], opAt = i => pend.find(p => p.t !== "add" && p.i === i);
+  const pendRow = (r, op) => `<li class="ci pend"><span class="ci-n"><s>${esc(r.i.n)}</s> ${op.t === "swap" ? `<em class="pend-to">→ ${esc(op.to.n)}${qtyStr(op.to) ? " · " + esc(qtyStr(op.to)) : ""}</em>` : `<em class="pend-to">sera retiré</em>`}</span><button class="qx" data-act="ckUnstage" data-k="${pend.indexOf(op)}" aria-label="Annuler ce changement">${ic("x")}</button></li>`;
+  const swapForm = r => `<div class="add-form ci-form"><p class="muted small">Remplacer ${esc(r.i.n)} par :</p><input id="ckSwName" list="ckList" placeholder="Nouvel ingrédient, ex. potiron" autocomplete="off" aria-label="Nouvel ingrédient">
+    <div class="add-row"><input id="ckSwQ" inputmode="decimal" placeholder="Qté" value="${esc(r.i.q)}" aria-label="Quantité"><select id="ckSwU" aria-label="Unité">${UNITS.map(u => `<option${u === r.i.u ? " selected" : ""}>${esc(u)}</option>`).join("")}</select><button class="btn primary" data-act="ckSwapGo" data-i="${r.idx}">Remplacer</button></div></div>`;
+  const ingRow = r => { const op = opAt(r.idx); if (op) return pendRow(r, op);
+    return `<li class="ci ci-4${flash(r)}"><span class="ci-n">${esc(r.i.n)}</span>${stepper(r)}<button class="qx" data-act="ckSwapOpen" data-i="${r.idx}" aria-expanded="${CK.sw === r.idx}" title="Changer cet ingrédient" aria-label="Changer ${esc(r.i.n)}">${ic("swap")}</button><button class="qx" data-act="ckRemove" data-i="${r.idx}" title="Retirer" aria-label="Retirer ${esc(r.i.n)}">${ic("x")}</button>${CK.sw === r.idx ? swapForm(r) : ""}</li>`; };
+  const vegRow = r => { const op = opAt(r.idx); if (op) return pendRow(r, op); const k = vegKeyOfIng(r.i.n), sea = seasonOf(r.i.n) && seasonOf(r.i.n).indexOf(curMonth()) >= 0;
+    return `<li class="ci vg${flash(r)}"><span class="ci-n">${esc(r.i.n)}${sea ? ` <em class="ing-sea" title="de saison">${ic("leaf")}</em>` : ""}</span>${stepper(r)}<button class="qx" data-act="ckRemove" data-i="${r.idx}" aria-label="Retirer ${esc(r.i.n)}">${ic("x")}</button>
       <button class="mini" data-act="vegSwap" data-i="${r.idx}" aria-expanded="${CK.swap === r.idx}">${ic("swap")} Changer de légume</button>
       ${CK.swap === r.idx ? `<div class="vg-panel"><p class="muted small">Remplacer ${esc(r.i.n)} par :</p>${vegChips(o, "vegSwapTo", r.idx, k)}</div>` : ""}</li>`; };
+  const addRow = (p, k) => `<li class="ci pend"><span class="ci-n"><em class="pend-to">+ ${esc(p.to.n)}${qtyStr(p.to) ? " · " + esc(qtyStr(p.to)) : ""}</em></span><button class="qx" data-act="ckUnstage" data-k="${k}" aria-label="Annuler cet ajout">${ic("x")}</button></li>`;
+  const adds = pend.map((p, k) => p.t === "add" ? addRow(p, k) : "").join("");
+  const pendPanel = pend.length ? `<div id="ckPend" class="rew-bar"><div><strong>${pend.length} changement${pend.length > 1 ? "s" : ""} en attente</strong><span>La recette ne change pas tant que Claude ne l'a pas réécrite avec ${pend.length > 1 ? "ces ingrédients" : "cet ingrédient"}.</span></div><div class="rew-bar-act"><button class="btn ghost" data-act="ckClear">Annuler</button><button class="btn primary" data-act="rewGo">${ic("sparkle")} Réécrire la recette</button></div></div>`
+    : `<button class="link ck-review" data-act="rewGo">${ic("sparkle")} Faire revoir la recette par Claude</button>`;
   const lis = body.map(({ s, i }, n) => {
     const sp = splitBody(s.body), rc = recallFor(s.raw, named), isD = done.indexOf(i) >= 0;
     const dur = s.mins ? `<button class="dur" data-act="timer" data-i="${i}" data-m="${s.mins}" data-n="${n + 1}" aria-label="Lancer un minuteur">${ic("timer")}<span class="dl">${s.expl ? "" : "≈ "}${fmtMin(s.mins)}</span></button>` : "";
@@ -371,12 +380,13 @@ function cookHTML(o, kind, ref){
       <button class="mini-add" data-act="vegAddOpen" aria-expanded="${CK.addVeg}">${ic("plus")} Ajouter un légume</button>
       ${CK.addVeg ? `<div class="vg-panel"><p class="muted small">Ajouter à la recette :</p>${vegChips(o, "vegAdd", "", null)}</div>` : ""}</section>
     <section class="ed-sec"><h3>${ic("basket")} Ingrédients</h3>
-      <p class="muted small">Touche − ou + pour la quantité, ✕ pour retirer. ${unit}</p>
-      <ul class="ci-list">${others.map(ingRow).join("") || '<li class="muted small">Aucun autre ingrédient.</li>'}</ul>
+      <p class="muted small">− ou + règle la quantité. Changer ↔, retirer ✕ ou ajouter un ingrédient : Claude réécrit ensuite toute la recette. ${unit}</p>
+      <ul class="ci-list">${others.map(ingRow).join("") + adds || '<li class="muted small">Aucun autre ingrédient.</li>'}</ul>
       <button class="mini-add" data-act="ingAddOpen" aria-expanded="${CK.addIng}">${ic("plus")} Ajouter un ingrédient</button>
       ${CK.addIng ? `<div class="add-form"><input id="ckName" list="ckList" placeholder="Ingrédient, ex. parmesan" autocomplete="off" aria-label="Ingrédient">
         <div class="add-row"><input id="ckQ" inputmode="decimal" placeholder="Qté" aria-label="Quantité"><select id="ckU" aria-label="Unité">${UNITS.map(u => `<option>${esc(u)}</option>`).join("")}</select><button class="btn primary" data-act="ingAddGo">Ajouter</button></div>
-        <datalist id="ckList">${ING_DB.map(e => `<option value="${esc(e.k)}">`).join("")}</datalist></div>` : ""}</section>
+        </div>` : ""}
+      <datalist id="ckList">${ING_DB.map(e => `<option value="${esc(e.k)}">`).join("")}</datalist>${pendPanel}</section>
     ${intro ? `<details class="cook-fold"><summary>${ic("list")} Matériel et mise en place</summary><p>${fmtStep(intro.body)}</p></details>` : ""}
     <section class="ed-sec"><h3>${ic("list")} Préparation pas à pas</h3>
       <div class="cprog"><span class="cprog-bar"><i style="width:${body.length ? Math.round(nDone / body.length * 100) : 0}%"></i></span><span id="cprogTxt">${nDone} / ${body.length} étapes</span><button class="link" data-act="cookReset">Tout décocher</button></div>
@@ -387,7 +397,7 @@ function cookHTML(o, kind, ref){
     ${COOKMSG ? `<div class="chg-banner" role="status"><div class="cb-head"><strong>${esc(COOKMSG.title)}</strong><button class="qx" data-act="bannerClose" aria-label="Fermer">${ic("x")}</button></div>${COOKMSG.lines.slice(0, 7).map(l => `<span>${esc(l)}</span>`).join("")}${COOKMSG.undo ? `<button class="link" data-act="cookUndo">Annuler ce changement</button>` : ""}</div>` : ""}
   </div>`;
 }
-function resetCook(){ CK = { swap: null, addVeg: false, addIng: false }; COOKMSG = null; FLASH = new Set(); }
+function resetCook(){ CK = { swap: null, addVeg: false, addIng: false, sw: null, pend: [] }; COOKMSG = null; FLASH = new Set(); }
 function refreshCook(msg, flashNames){
   COOKMSG = msg || null; FLASH = new Set(flashNames || []);
   const sh = document.querySelector("#modal .sheet"), sc = sh ? sh.scrollTop : 0;
@@ -406,20 +416,33 @@ function cookOp(fn){
   refreshCook({ title: res.title, lines: lines.length ? lines : ["Aucun autre changement"], undo: persist }, d.names);
 }
 const remInfo = r => { const x = []; if (r.removed.length) x.push("Étape" + (r.removed.length > 1 ? "s" : "") + " retirée" + (r.removed.length > 1 ? "s" : "") + " : " + r.removed.join(", ")); if (r.noted.length) x.push("Marqué « sans » dans : " + r.noted.join(", ")); return x; };
+/* un changement d'ingrédient est mis en attente : la recette ne bouge qu'une fois réécrite par Claude */
+function stageChange(o, op){
+  const name = op.to.n, bad = typeof rewBanned === "function" ? rewBanned([name]) : [];
+  if (bad.length) { refreshCook(COOKMSG, []); return toast("« " + name + " » fait partie de ce que vous ne mangez pas (" + bad.join(", ") + ")."); }
+  const pend = CK.pend || [], taken = o.ing.some((x, k) => norm(x.n) === norm(name) && !pend.some(p => p.t !== "add" && p.i === k)) || pend.some(p => norm(p.to && p.to.n || "") === norm(name));
+  if (taken) { refreshCook(COOKMSG, []); return toast("Cet ingrédient est déjà dans la recette."); }
+  CK.pend = pend.filter(p => op.t === "add" || p.t === "add" || p.i !== op.i).concat(op); CK.sw = CK.swap = null; refreshCook(null, []);
+}
 function defineCookEdit(){
   A.ingQ = ds => cookOp(o => { const i = o.ing[+ds.i], q = parseFloat(String(i.q).replace(",", ".")) || 0, st = qStep(i.u, q);
     i.q = Math.max(st, Math.round((q + st * +ds.d) * 100) / 100); return { title: i.n + " : " + qtyStr(i) }; });
-  A.ingDelCook = ds => cookOp(o => { const name = o.ing[+ds.i].n, r = removeIngredient(o, +ds.i); return { title: "Retiré : " + name, extra: remInfo(r) }; });
+  A.ckRemove = ds => { const o = edObj(), i = +ds.i; if (!o || !o.ing[i]) return; CK.pend = (CK.pend || []).filter(p => p.t === "add" || p.i !== i).concat({ t: "remove", i, from: o.ing[i].n }); CK.swap = CK.sw = null; refreshCook(null, []); };
+  A.ckSwapOpen = ds => { CK.sw = CK.sw === +ds.i ? null : +ds.i; CK.swap = null; refreshCook(COOKMSG, []); const f = $("#ckSwName"); if (f) f.focus(); };
+  A.ckSwapGo = ds => { const o = edObj(), i = +ds.i, name = String($("#ckSwName").value).trim(); if (!o || !o.ing[i]) return;
+    if (!name) return toast("Écris le nom du nouvel ingrédient.");
+    stageChange(o, { t: "swap", i, from: o.ing[i].n, to: { n: name, q: $("#ckSwQ").value.replace(",", "."), u: $("#ckSwU").value } }); };
+  A.ckUnstage = ds => { (CK.pend || []).splice(+ds.k, 1); refreshCook(null, []); };
+  A.ckClear = () => { CK.pend = []; refreshCook(null, []); };
   A.vegSwap = ds => { CK.swap = CK.swap === +ds.i ? null : +ds.i; CK.addVeg = false; refreshCook(COOKMSG, []); };
-  A.vegSwapTo = ds => { CK.swap = null; cookOp(o => { const r = swapVeg(o, +ds.i, ds.k); return { title: cap(r.name) + " remplacé par " + VEGS[ds.k].n, extra: remInfo(r.r) }; }); };
+  A.vegSwapTo = ds => { CK.swap = null; const o = edObj(), x = VEGS[ds.k].ing[0]; if (o && o.ing[+ds.i]) stageChange(o, { t: "swap", i: +ds.i, from: o.ing[+ds.i].n, to: { n: x[0], q: x[1], u: x[2] } }); };
   A.vegAddOpen = () => { CK.addVeg = !CK.addVeg; CK.swap = null; refreshCook(COOKMSG, []); };
-  A.vegAdd = ds => { CK.addVeg = false; cookOp(o => addSide(o, ds.k) ? { title: "Ajouté : " + VEGS[ds.k].n } : null); };
+  A.vegAdd = ds => { CK.addVeg = false; const o = edObj(), x = VEGS[ds.k].ing[0]; if (o) stageChange(o, { t: "add", to: { n: x[0], q: x[1], u: x[2] } }); };
   A.ingAddOpen = () => { CK.addIng = !CK.addIng; refreshCook(COOKMSG, []); const f = $("#ckName"); if (f) f.focus(); };
   A.ingAddGo = () => {
     const name = $("#ckName").value, q = $("#ckQ").value.replace(",", "."), u = $("#ckU").value; if (!String(name).trim()) return toast("Écris le nom de l'ingrédient.");
-    CK.addIng = false; let st = null;
-    cookOp(o => { st = addIngredient(o, name, q, u); return st === "exists" ? null : st ? { title: "Ajouté : " + String(name).trim() } : null; });
-    if (st === "exists") { refreshCook(COOKMSG, []); toast("Cet ingrédient est déjà dans la recette."); }
+    const o = edObj(); if (!o) return; CK.addIng = false;
+    stageChange(o, { t: "add", to: { n: String(name).trim(), q, u } });
   };
   A.adaptThis = () => cookOp(o => { const t = MODAL.t, tg = slotTarget(t), k0 = kcalOf(o); if (!adaptMeal(o, tg)) { toast("Ce repas est déjà dans ta cible"); return null; } return { title: "Portions adaptées à ta cible (" + fmtK(tg) + " kcal)", extra: [] }; });
   A.cookUndo = () => { const k = MODAL.kind, r = modalRef(); undo(); COOKMSG = null; FLASH = new Set(); openCook(k, r); };
@@ -736,7 +759,7 @@ function ensureDefaults(){
   if (!S.cooked || typeof S.cooked !== "object") S.cooked = {};
   const ks = Object.keys(S.cooked); if (ks.length > 80) ks.slice(0, ks.length - 80).forEach(k => delete S.cooked[k]);
 }
-function migrateAll(){ if (!S.v || S.v < 3) migrate(); if (S.v < 4) migrate4(); if (S.v < 5) migrate5(); if (S.v < 6) migrate6(); if (S.v < 7) migrate7(); if (S.v < 8 || (S.rv || 0) < RECIPES_REV) migrate8(); if (S.v < 9) migrate9(); }
+function migrateAll(){ if (!S.v || S.v < 3) migrate(); if (S.v < 4) migrate4(); if (S.v < 5) migrate5(); if (S.v < 6) migrate6(); if (S.v < 7) migrate7(); if (S.v < 8 || (S.rv || 0) < RECIPES_REV) migrate8(); if (S.v < 9) migrate9(); if (S.v < 10) migrate10(); }
 /* v5 : recettes fournies mises à jour (version chef) et un légume de saison intégré dans celles du carnet qui en manquent */
 function migrate5(){
   NEW_RECIPES.forEach(nr => { const k = S.recipes.findIndex(r => r.id === nr.id), fresh = recipeToState(nr);

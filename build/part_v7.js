@@ -112,3 +112,23 @@ function migrate9(){
   }));
   S.v = 9;
 }
+
+/* ---------- version 10 : plus de panais dans les recettes fournies ni dans les repas du planning (les recettes faites main ne sont pas touchées) ---------- */
+function migrate10(){
+  try { const raw = localStorage.getItem(LS_KEY); if (raw && !localStorage.getItem(LS_KEY + "-avant-v10")) localStorage.setItem(LS_KEY + "-avant-v10", raw); } catch (e) {}
+  const isPan = i => /panais/.test(norm(i.n || "")), fresh = new Map(NEW_RECIPES.map(r => [r.id, r]));
+  S.recipes = S.recipes.map(r => {
+    if (r.own || !(r.ing || []).some(isPan)) return r;
+    if (fresh.has(r.id) && !fresh.get(r.id).ing.some(isPan)) return recipeToState(fresh.get(r.id));
+    let k; while ((k = (r.ing || []).findIndex(isPan)) >= 0) removeIngredient(r, k);
+    return r;
+  });
+  S.weeks.forEach(w => w.days.forEach(d => ["l", "d", "p"].forEach(k => {
+    const m = d.meals && d.meals[k]; if (!m || m.own) return;
+    let i = (m.ing || []).findIndex(isPan); if (i < 0) return;
+    const r = m.recipeId && S.recipes.find(x => x.id === m.recipeId);
+    if (r && !(r.ing || []).some(isPan)) { const nm = mealFromRecipe(r); nm.id = m.id; if (m.adj && Math.abs(m.adj - 1) > .02) scaleMeal(nm, m.adj); d.meals[k] = nm; return; }
+    while (i >= 0) { removeIngredient(m, i); i = (m.ing || []).findIndex(isPan); }
+  })));
+  S.v = 10;
+}
