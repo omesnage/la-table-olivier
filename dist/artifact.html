@@ -2332,10 +2332,10 @@ PD("pdj-granola-orange","Bol de fromage blanc, orange pelée à vif & graines de
   "Dorer les graines — Faire dorer {{flocons d'avoine}} de flocons d'avoine et {{graines de courge}} de graines de courge dans une poêle sèche. [cuisson 2 min]",
   "Servir — Mettre {{fromage blanc}} de fromage blanc dans un bol. Ajouter les quartiers d'orange et le mélange croquant. Verser {{sirop d'érable}} de sirop d'érable en filet. [1 min]"],
  "Retirer la peau blanche enlève toute l'amertume de l'orange."),
-PD("pdj-smoothie-bowl","Smoothie bowl framboises, banane & beurre de cacahuète","Sucré","Fruits",10,1,
- [["framboises",100,"g"],["banane",1,"pièce"],["yaourt grec",100,"g"],["beurre de cacahuète",1,"c. à soupe"],["flocons de sarrasin",15,"g"]],
+PD("pdj-smoothie-bowl","Smoothie bowl framboises & banane","Sucré","Fruits",10,1,
+ [["framboises",100,"g"],["banane",1,"pièce"],["yaourt grec",100,"g"],["flocons de sarrasin",15,"g"]],
  ["Mixer — Mixer {{framboises}} de framboises, {{banane}} et {{yaourt grec}} de yaourt grec, jusqu'à obtenir une crème épaisse. [2 min]",
-  "Servir — Verser dans un bol. Poser {{beurre de cacahuète}} de beurre de cacahuète au centre et parsemer de {{flocons de sarrasin}} de flocons de sarrasin. [2 min]"],
+  "Servir — Verser dans un bol et parsemer de {{flocons de sarrasin}} de flocons de sarrasin. [2 min]"],
  "Prenez une banane très mûre : elle sucre le bol sans rien ajouter."),
 PD("pdj-brioche-perdue","Pain perdu doré, mandarines & cannelle","Sucré","Pain",15,2,
  [["pain au levain",90,"g"],["œufs",1,"pièce"],["lait",80,"ml"],["mandarine",2,"pièce"],["beurre",8,"g"],["cannelle",1,"pincée"],["sirop d'érable",1,"c. à café"]],
@@ -2419,12 +2419,12 @@ PD("pdj7-yaourt-banane","Yaourt grec, banane rôtie, noisettes et éclats de cho
   "Écraser les noisettes — Écraser grossièrement {{noisettes}} de noisettes et {{chocolat noir}} de chocolat noir avec un couteau. [2 min]",
   "Servir — Mettre {{yaourt grec}} de yaourt grec dans un bol. Poser les bananes tièdes dessus, puis parsemer de noisettes et de chocolat. [2 min]"],
  "La banane tiède fait fondre un peu le chocolat : c'est tout le plaisir de ce bol."),
-PD("pdj7-tartine-cacahuete","Tartine croustillante beurre de cacahuète, banane et graines de chia","Sucré","Pain",6,1,
- [["pain au levain",60,"g"],["beurre de cacahuète",2,"c. à café"],["banane",1,"pièce"],["graines de chia",1,"c. à café"]],
+PD("pdj7-tartine-banane","Tartine croustillante banane, sirop d'érable et graines de chia","Sucré","Pain",6,1,
+ [["pain au levain",60,"g"],["banane",1,"pièce"],["sirop d'érable",1,"c. à café"],["graines de chia",1,"c. à café"]],
  ["Griller le pain — Faire griller {{pain au levain}} de pain au levain jusqu'à ce qu'il soit bien doré. [2 min]",
-  "Garnir la tartine — Étaler {{beurre de cacahuète}} de beurre de cacahuète sur le pain chaud. Couvrir avec {{banane}} coupée en rondelles. [2 min]",
+  "Garnir la tartine — Couvrir le pain chaud avec {{banane}} coupée en rondelles, puis verser {{sirop d'érable}} de sirop d'érable en filet. [2 min]",
   "Finir — Parsemer la tartine de {{graines de chia}} de graines de chia, puis servir aussitôt. [1 min]"],
- "Tartinez quand le pain est encore chaud : le beurre de cacahuète devient bien crémeux."),
+ "Garnissez quand le pain est encore chaud : la banane devient tiède et fondante."),
 PD("pdj7-crepes","Crêpes fines au beurre, compote de pomme tiède","Sucré","Farine",20,1,
  [["farine",50,"g"],["œuf",1,"pièce"],["lait",120,"ml"],["beurre",5,"g"],["pomme",1,"pièce"],["sirop d'érable",1,"c. à café"]],
  ["Préparer le matériel — Sortir un saladier, un fouet, une poêle antiadhésive et une casserole. [1 min]",
@@ -2442,8 +2442,8 @@ PD("pdj7-fromage-blanc","Fromage blanc, myrtilles et flocons d'avoine dorés","S
 ];
 PDJ_RECIPES.push(...PDJ7);
 /* ===== v7 : le carnet = les recettes gourmandes (plus de petit-déjeuner) ===== */
-const BAN_RX = /citron|vinaigre|moutarde|\bchoux?\b|poireau|betterave|navet|chevre|soba|piment|tomate|\bail\b|oignon|echalote|pois chiche|lentille|haricots? (?:blanc|rouge|sec)|edamame|tofu|tempeh|falafel|houmous|hummus|kiwi|orange|pamplemousse|mandarine|clementine|ananas|framboise|fraise|raisin|grenade|kimchi|gochugaru|radis|cornichon|cresson|vin blanc/;
-const BAN_STEP_RX = /citron|vinaigre|moutarde|piment|oignon|\bail\b/;
+const BAN_RX = /citron|vinaigre|\bchoux?\b|poireau|betterave|navet|chevre|soba|piment|tomate|\bail\b|pois chiche|lentille|haricots? (?:blanc|rouge|sec)|edamame|tofu|tempeh|falafel|houmous|hummus|orange|pamplemousse|mandarine|clementine|kimchi|gochugaru|radis|cornichon|cresson|vin blanc|cacahuete|beurre d.amande|puree d.amande/;
+const BAN_STEP_RX = /citron|vinaigre|piment|\bail\b|cacahuete|beurre d.amande|puree d.amande/;
 const GOURMAND = [...GOURMAND_A, ...GOURMAND_B, ...GOURMAND_C, ...GOURMAND_D, ...GOURMAND_E];
 NEW_RECIPES.length = 0; NEW_RECIPES.push(...GOURMAND);
 DEFAULT_RECIPES.length = 0; DEFAULT_RECIPES.push(...GOURMAND);
@@ -2510,7 +2510,7 @@ const ING_DB = [
   ["soba","Féculents",{g:100}],["vermicelles de patate douce","Féculents",{g:110}],["quinoa","Féculents",{g:120}],["riz complet cuit","Féculents",{g:125}],
   ["pain au levain","Pain",{g:245}],["pain sans gluten","Pain",{g:240}],["flocons d'avoine","Épicerie",{g:370,c:8}],["flocons de sarrasin","Épicerie",{g:340,c:8}],
   ["sirop d'erable","Épicerie",{g:260,c:20}],["pignons","Épicerie",{g:670,c:30}],["graines de courge","Épicerie",{g:560,c:30}],["graines de chia","Épicerie",{g:490,c:30}],
-  ["beurre de cacahuete","Épicerie",{g:600,c:30}],["cacahuetes","Épicerie",{g:590}],["noix de coco rapee","Épicerie",{g:650,c:20}],["chocolat noir","Épicerie",{g:560,c:25}],
+  ["noix de coco rapee","Épicerie",{g:650,c:20}],["chocolat noir","Épicerie",{g:560,c:25}],
   ["furikake","Épicerie",{g:300,c:5}],["huile de sesame","Épicerie",{g:900,c:45}],["sauce soja sucree","Épicerie",{g:90,c:10}],["gochugaru","Épicerie",{c:5}],
   ["fraises","Fruits",{g:33,s:[5,6,7]}],["framboises","Fruits",{g:50,s:[6,7,8,9]}],["myrtilles","Fruits",{g:57,s:[6,7,8,9]}],["kiwi","Fruits",{g:60,p:45,s:[11,12,1,2,3,4]}],
   ["orange","Fruits",{g:47,p:70,s:[12,1,2,3,4]}],["mandarine","Fruits",{g:50,p:40,s:[11,12,1,2]}],["clementine","Fruits",{g:47,p:40,s:[11,12,1,2]}],
@@ -4956,7 +4956,7 @@ function ensureDefaults(){
   if (!S.cooked || typeof S.cooked !== "object") S.cooked = {};
   const ks = Object.keys(S.cooked); if (ks.length > 80) ks.slice(0, ks.length - 80).forEach(k => delete S.cooked[k]);
 }
-function migrateAll(){ if (!S.v || S.v < 3) migrate(); if (S.v < 4) migrate4(); if (S.v < 5) migrate5(); if (S.v < 6) migrate6(); if (S.v < 7) migrate7(); if (S.v < 8 || (S.rv || 0) < RECIPES_REV) migrate8(); }
+function migrateAll(){ if (!S.v || S.v < 3) migrate(); if (S.v < 4) migrate4(); if (S.v < 5) migrate5(); if (S.v < 6) migrate6(); if (S.v < 7) migrate7(); if (S.v < 8 || (S.rv || 0) < RECIPES_REV) migrate8(); if (S.v < 9) migrate9(); }
 /* v5 : recettes fournies mises à jour (version chef) et un légume de saison intégré dans celles du carnet qui en manquent */
 function migrate5(){
   NEW_RECIPES.forEach(nr => { const k = S.recipes.findIndex(r => r.id === nr.id), fresh = recipeToState(nr);
@@ -5285,7 +5285,8 @@ randomGen = function(filters, tries){
   for (let i = 0; i < 40; i++) { const m = _randomGen0(filters, tries || 60); if (!m) return null; if (!isBanned(m)) return m; }
   return null;
 };
-pickFruit = function(){ return ""; };
+const _pickFruit0 = pickFruit;
+pickFruit = function(f){ for (let i = 0; i < 8; i++) { const x = _pickFruit0(f); if (!x || !BAN_RX.test(norm(x))) return x; } return ""; };
 
 /* ---------- remplacer un repas en un geste ---------- */
 const sameDayCat = (t, m) => { const d = S.weeks[t.w].days[t.d]; return ["l", "d"].some(k => k !== t.s && d.meals[k] && d.meals[k].cat === m.cat && m.cat !== "Petit-déjeuner"); };
@@ -5367,6 +5368,24 @@ function migrate8(){
     });
   }));
   S.cooked = {}; S.rv = RECIPES_REV; S.v = 8;
+}
+
+/* ---------- version 9 : plus de beurre de cacahuète ni d'amande dans les recettes fournies ni dans les repas proposés ---------- */
+function migrate9(){
+  try { const raw = localStorage.getItem(LS_KEY); if (raw && !localStorage.getItem(LS_KEY + "-avant-v9")) localStorage.setItem(LS_KEY + "-avant-v9", raw); } catch (e) {}
+  const bad = i => /cacahu|beurre d.amande|puree d.amande/.test(norm(i.n || ""));
+  S.recipes = S.recipes.filter(r => r.own || !(r.ing || []).some(bad));
+  const ownIds = new Set(S.recipes.filter(r => r.own).map(r => r.id));
+  const fresh = buildDefaultPlan(S.recipes);
+  S.weeks.forEach((w, wi) => w.days.forEach((d, di) => {
+    ["l", "d", "p"].forEach(k => {
+      const m = d.meals && d.meals[k];
+      if (!m || m.own || (m.recipeId && ownIds.has(m.recipeId)) || !(m.ing || []).some(bad)) return;
+      const f = fresh[wi % fresh.length].days[di % 7].meals[k];
+      if (f) d.meals[k] = copyMeal(f); else delete d.meals[k];
+    });
+  }));
+  S.v = 9;
 }
 /* =====================================================================
    v7 : sauvegarde sur le compte (capacité « db ») : la page retrouve tout à l'ouverture

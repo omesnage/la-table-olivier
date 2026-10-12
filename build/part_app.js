@@ -735,7 +735,7 @@ function ensureDefaults(){
   if (!S.cooked || typeof S.cooked !== "object") S.cooked = {};
   const ks = Object.keys(S.cooked); if (ks.length > 80) ks.slice(0, ks.length - 80).forEach(k => delete S.cooked[k]);
 }
-function migrateAll(){ if (!S.v || S.v < 3) migrate(); if (S.v < 4) migrate4(); if (S.v < 5) migrate5(); if (S.v < 6) migrate6(); if (S.v < 7) migrate7(); if (S.v < 8 || (S.rv || 0) < RECIPES_REV) migrate8(); }
+function migrateAll(){ if (!S.v || S.v < 3) migrate(); if (S.v < 4) migrate4(); if (S.v < 5) migrate5(); if (S.v < 6) migrate6(); if (S.v < 7) migrate7(); if (S.v < 8 || (S.rv || 0) < RECIPES_REV) migrate8(); if (S.v < 9) migrate9(); }
 /* v5 : recettes fournies mises à jour (version chef) et un légume de saison intégré dans celles du carnet qui en manquent */
 function migrate5(){
   NEW_RECIPES.forEach(nr => { const k = S.recipes.findIndex(r => r.id === nr.id), fresh = recipeToState(nr);
