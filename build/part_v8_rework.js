@@ -9,7 +9,7 @@ const REW_BAN = [
   ["agrumes et citron", /\b(citron|citrons|agrume|agrumes|orange|oranges|pamplemousse|pamplemousses|mandarine|mandarines|clementine|clementines|lime|limes|yuzu)\b/],
   ["vinaigre", /\bvinaigres?\b/], ["tomate", /\btomates?\b/], ["piment", /\bpiments?\b/], ["gochujang", /\bgochujang\b/],
   ["cornichons et câpres", /\b(cornichons?|capres?)\b/], ["fromage de chèvre", /\bchevre\b/],
-  ["chou", /\bchoux?\b(?![- ]?(fleur|rave))/], ["poireau", /\bpoireaux?\b/], ["betterave", /\bbetteraves?\b/], ["navet", /\bnavets?\b/],
+  ["chou", /\bchoux?\b(?![- ]?(fleur|rave))/], ["poireau", /\bpoireaux?\b/], ["betterave", /\bbetteraves?\b/], ["navet", /\bnavets?\b/], ["panais", /\bpanais\b/],
   ["légumineuses", /\b(lentilles?|pois chiches?|pois casses?|flageolets?|feves?|graines? de soja|edamames?|houmous|hummus|falafels?|haricots (rouges?|blancs?|secs?|noirs?|azuki))\b/],
   ["soba", /\bsoba\b/], ["cacahuètes", /\bcacahuetes?\b|\barachides?\b/]
 ];
@@ -93,7 +93,7 @@ function rewPrompt(cur, base, note){
     "TA MISSION, DANS L'ORDRE\n" +
     "1. Vérifie la logique culinaire : les ingrédients voulus vont-ils ensemble (saveurs, textures, cuissons, rôle dans l'assiette) ? Exemple d'erreur à éviter : mélanger des haricots dans une purée.\n" +
     "2. Réécris ce qu'il faut pour intégrer chaque changement de façon naturelle : modifie une étape existante, ajoute une étape bien placée (jamais après le dressage ou le service), retire une étape devenue inutile, ajuste quantités et durées. Conserve tous les autres ingrédients et le caractère du plat, sauf si la logique l'impose. Si l'association ne fonctionne pas telle quelle, repense la recette pour qu'elle fonctionne (par exemple des haricots verts poêlés à côté de la purée) en gardant les ingrédients voulus ; si c'est vraiment impossible, retire le moins possible et dis-le dans « verdict ».\n" +
-    "3. Respecte les contraintes d'Olivier. Jamais : agrumes et citron, vinaigre, tomate, piment, gochujang, cornichons et câpres, fromage de chèvre, chou, poireau, betterave, navet, légumineuses, bœuf gras, soba, cacahuètes et beurre de cacahuète. Épices douces seulement, cuisine pauvre en graisses. Portions de féculents (poids cuit) : 200 g de riz, 250 g de pomme de terre, 220 g de pâtes. Environ 850 kcal au plus pour le plat.\n\n" +
+    "3. Respecte les contraintes d'Olivier. Jamais : agrumes et citron, vinaigre, tomate, piment, gochujang, cornichons et câpres, fromage de chèvre, chou, poireau, betterave, navet, panais, légumineuses, bœuf gras, soba, cacahuètes et beurre de cacahuète. Épices douces seulement, cuisine pauvre en graisses. Portions de féculents (poids cuit) : 200 g de riz, 250 g de pomme de terre, 220 g de pâtes. Environ 850 kcal au plus pour le plat.\n\n" +
     "FORMAT DES ÉTAPES : « Titre court — consigne détaillée et concrète. [N min] ». Garde, s'ils existent, « Avant de commencer — … » en premier et « Organisation — … » en dernier, mis à jour. Dans une étape, chaque quantité s'écrit {{nom exact de l'ingrédient}} (exemple : « Ajouter {{haricots verts}} de haricots verts ») : l'application remplace par la quantité de la liste. Les noms entre accolades doivent être identiques à ceux du tableau « ing ».\n\n" +
     (note ? "ATTENTION, ta réponse précédente était refusée : " + note + " Corrige.\n\n" : "") +
     "RÉPONDS UNIQUEMENT PAR UN OBJET JSON, sans texte autour, sans bloc de code :\n" +

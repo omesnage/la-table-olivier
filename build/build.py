@@ -31,9 +31,9 @@ rep('keep:"Les oignons fondants se préparent 3 jours à l\'avance."}\n};\nconst
 rep('function combos(arr, k){','''const EXTRA_VEG = {
   bowl:["brocoli","haricotsverts","poivron"], donburi:["brocoli","poireau","haricotsverts"], wok:["brocoli","haricotsverts","poivron","petitspois"],
   nouilles:["brocoli","poireau","poivron","haricotsverts"], cremeuses:["poireau","brocoli","petitspois","choufleur"],
-  bistrot:["haricotsverts","poireau","brocoli","choufleur","panais"], burger:["poivron","aubergine"], wrap:["poivron","aubergine"],
+  bistrot:["haricotsverts","poireau","brocoli","choufleur"], burger:["poivron","aubergine"], wrap:["poivron","aubergine"],
   tartine:["poivron","petitspois"], omelette:["poireau","petitspois","aubergine"], salade:["haricotsverts","brocoli","poivron","petitspois"],
-  curry:["choufleur","brocoli","aubergine","poivron","panais"]
+  curry:["choufleur","brocoli","aubergine","poivron"]
 };
 FORMATS.forEach(f => (EXTRA_VEG[f.id] || []).forEach(v => { if (f.v.indexOf(v) < 0) f.v.push(v); }));
 ["donburi","bistrot","cremeuses"].forEach(id => { const f = FORMATS.find(x => x.id === id); if (f && f.k < 2) f.k = 2; });
