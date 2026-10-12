@@ -14,7 +14,7 @@ def rep(old,new,count=1):
 # 1. meta
 rep('<meta name="theme-color" content="#FAFAF7">','<meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#151513" media="(prefers-color-scheme: dark)"><meta name="color-scheme" content="light dark">')
 # 2. css
-rep('\n</style>\n</head>', rd('part_css.css')+rd('part_v7.css')+'\n</style>\n</head>')
+rep('\n</style>\n</head>', rd('part_css.css')+rd('part_v7.css')+rd('part_v8.css')+'\n</style>\n</head>')
 # 3. ING_DB
 rep('["concombre","Légumes",{g:12}]','["concombre","Légumes",{g:12,s:[5,6,7,8,9]}]')
 rep('["courgette","Légumes",{g:17}]','["courgette","Légumes",{g:17,s:[6,7,8,9,10]}]')
@@ -161,7 +161,7 @@ rep('    ${filterBar("insp")}\n    <div class="insp-go">','    ${INSP.scope === 
 rep('    ${filterBar("prop")}\n','    ${PROP.t.s === "p" ? bfFilter("prop") : filterBar("prop")}\n')
 
 # 21 addendum
-extra=rd('part_v7_pre.js')+rd('part_app.js')+rd('part_v6.js')+rd('part_v7.js')+rd('part_v7_sync.js')+rd('part_v7_ask.js')+'''
+extra=rd('part_v7_pre.js')+rd('part_app.js')+rd('part_v6.js')+rd('part_v7.js')+rd('part_v7_sync.js')+rd('part_v7_ask.js')+rd('part_v8_rework.js')+'''
 /* proposition d'une journée : on garde, parmi plusieurs essais, celle qui s'approche le plus de la cible */
 function proposeDay(f, avoid){
   let best = null; const tg = dayTarget();
