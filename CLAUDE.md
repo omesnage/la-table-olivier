@@ -18,6 +18,7 @@ et on commite `build/` **et** `index.html` ensemble. Le script échoue si une an
 - `part_gen2.js` : générateur de plats. `part_pdj*.js` : petits-déjeuners.
 - `part_gourmand_a` à `e.js` : recettes déjeuner/dîner. `part_v7_recipes.js` : recettes de la v7.
 - `part_v6.js`, `part_v7.js` : règles de la version et migrations (`migrate6`, `migrate7`, `migrate8`). `part_v7_pre.js`, `part_v7_ask.js`, `part_v7_sync.js` : préférences, questions à Claude, sauvegarde sur le compte.
+- `part_v8_rework.js`, `part_v8.css` : bouton « Valider » après un changement d'ingrédients. Claude (capacité `sample`, page publiée sur claude.ai seulement) vérifie la logique, réécrit étapes et ingrédients, puis propose d'ajouter au carnet. Les contraintes d'Olivier sont revérifiées en code (`REW_BAN`). Aucune migration : la structure des recettes ne change pas.
 
 ## Données et migrations
 - État en version 8 ; `RECIPES_REV` (dans `part_v7.js`) vaut 4.
