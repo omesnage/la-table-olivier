@@ -177,6 +177,10 @@ function viewInsp(){
 '''
 rep('/* ---------- démarrage ---------- */',extra+'\n/* ---------- démarrage ---------- */')
 
+# reprise de la recette ouverte : oubliée à la fermeture, rouverte au rechargement
+rep('  MODAL = null; save(); render();','  MODAL = null; if (S.ui) delete S.ui.open; save(); render();')
+rep('\nload(); render();\n','\nload(); render();\ntry { const op = S.ui && S.ui.open; if (op) { const ok = op.kind === "meal" ? getMeal(op.ref) : recipeById(op.ref); if (ok) openCook(op.kind, op.ref); else delete S.ui.open; } } catch (e) {}\n')
+
 # --- thème sombre : jetons sur :root + forme attendue par l'hébergement (data-theme)
 m=re.search(r'@media \(prefers-color-scheme: dark\)\{(.*?)\n\}\n@media print',s,re.S)
 inner=m.group(1)
